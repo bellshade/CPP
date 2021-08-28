@@ -1,4 +1,4 @@
-name: C/Cpp
+name: Cpp Testing
 
 on:
   push:
