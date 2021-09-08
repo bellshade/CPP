@@ -22,8 +22,46 @@ jobs:
           git config --global user.name github.actions
           git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+      - name: format filename
+        run: |
+          IFS=$'\n'
+          for fname in `find . -type f -name '*.cpp' -o -name '*.cc' -o -name '*.h'`
+          do
+            echo "${fname}"
+            new_fname=`echo ${fname} | tr ' ' '_'`
+            echo "      ${new_fname}"
+            new_fname=`echo ${new_fname} | tr 'A-Z' 'a-z'`
+            echo "      ${new_fname}"
+            new_fname=`echo ${new_fname} | tr '-' '_'`
+            echo "      ${new_fname}"
+            new_fname=${new_fname/.cc/.cpp}
+            echo "      ${new_fname}"
+            if [ ${fname} != ${new_fname}]
+            then
+              echo "      ${fname} --> ${new_fname}"
+              git "mv" "${fname}" ${new_fname}
+            fi
+          done
+          git commit -am "format filaneme ${GITHUB_SHA::8}" || true
+
+      - name: mengambil file yang telah dirubah
+        run: |
+          git remote -v
+          git branch
+          git remote set-url origin https://x-acces-token:${{ secrets.GITHUB_TOKEN }}@github.com/GITHUB_REPOSITORY
+          git diff --diff-filter=dr --name-only origin/main > git_diff.txt
+          echo "file diubah-- `cat git_diff.txt`" 
       - name: Konfigurasi statik lint cpp
-        run: cmake -B build -S . -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+        run: cmake -B build -S . -DCMAKE_EXPORT_COMPILE_COMMANDS=ON      
+      - name: lint file yang telah di commit
+        shell: python
+        run: |
+          import os
+          import subprocess
+          import sys
+          
+          print("python {}.{}.{}".format(*sys.version_info))
+          
     
   build:
     name: cek compile
