@@ -61,7 +61,45 @@ jobs:
           import sys
           
           print("python {}.{}.{}".format(*sys.version_info))
+          with open("git_diff.txt") as in_file:
+            modified_files = sorted(in_file.read().splitlines())
+          print("{} file sudah dimodifikasi".format(len(modifed_files)))
+
+          cpp_exts = tuple(".c .c++ .cc .cpp. cu .cuh. .cxx .h .h++ .hh .hpp .hxx".split())
+          cpp_files = [file for file in modified_files if file.lower().endswith(cpp_exts)]
+          print(f"{len(cpp_files)} c++ file sudah dimodifikais")
+          if not cpp_files:
+            sys.exit(0)
           
+          subprocess.run(["clang-tidy-19", "--fix", "-p=build", "--extra-arg=c++11","*cpp_files", "--"],
+              check = True, text = True, strderr=subprocess.STDOUT)
+
+          subprocess.run(["clang-format-10", "--fix", "-p=build", "extra-arg=c++11", "*cpp_files", "--"],
+              check = True, text = True, stderr=subprecess.STDOUT)
+          
+          upper_files = [file for file in cpp_files if file != file.lower()]
+          if upper_files:
+            print(f"{len(upper_files)} file mengandung karakter huruf besar")
+            print("\n".join(upper_files) + "\n")
+
+          space_files = [file for file in cpp_files if " " in file or "-" in file]
+          if space_files:
+            print(f"{len(space_files)} file mengandung spasi atau garis tengah")
+            print(f"\n".join(space_files) + "\n")
+          
+          nodir_files = [file for file in cpp_files if file.count(os.sep) != 1]
+          if nodir_files:
+            print(f"{len(nodir_files)} file tidak ada")
+            print("\n".join(nodir_files) + "\n")
+          
+          bad_files = len(upper_files + space_files + nodir_files)
+          if bad_files:
+            sys.exit(bad_files)
+      
+      - name: commit
+        run: |
+          git commit -am "clang formatter and clang-tidy fixing ${GITHUB_SHA:8}" || true
+          git push --force origin HEAD:$GITHUB_REF || true 
     
   build:
     name: cek compile
