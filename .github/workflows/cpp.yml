@@ -12,6 +12,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - uses: actions/setup-python@v2
+      - name: install requirement
+        run: |
+          sudo apt -qq -y update
+          sudo apt -qq install clang-tidy-10 clang-format-10
+      - name: git
+        run: |
+          git config --global user.name github.actions
+          git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
       - name: Konfigurasi statik lint cpp
         run: cmake -B build -S . -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
     
