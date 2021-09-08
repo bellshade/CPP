@@ -63,7 +63,7 @@ jobs:
           print("python {}.{}.{}".format(*sys.version_info))
           with open("git_diff.txt") as in_file:
             modified_files = sorted(in_file.read().splitlines())
-          print("{} file sudah dimodifikasi".format(len(modifed_files)))
+          print("{} file sudah dimodifikasi".format(len(modified_files)))
 
           cpp_exts = tuple(".c .c++ .cc .cpp. cu .cuh. .cxx .h .h++ .hh .hpp .hxx".split())
           cpp_files = [file for file in modified_files if file.lower().endswith(cpp_exts)]
