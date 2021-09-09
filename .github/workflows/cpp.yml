@@ -1,3 +1,11 @@
+# cpp testing menggunakan clang-tidy-10 dan clang-format
+# informasi dan dokumentasi clang-tidy
+# https://clang.llvm.org/extra/clang-tidy/
+
+# informasi dan dokumentasi clang-format
+# https://clang.llvm.org/docs/ClangFormat.html
+
+
 name: Cpp Testing
 
 on: [push, pull_request]
