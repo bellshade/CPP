@@ -43,7 +43,14 @@ namespace sorting
             }
         }
     }
-
+    void tampilkanUrutan(std::vector<int> numbers)
+    {
+        for (auto &x : numbers)
+        {
+            std::cout << x;
+        }
+        std::cout << "\n";
+    }
 } // namespace sorting
 
 /**
@@ -54,11 +61,11 @@ static void test()
 {
     std::vector<int> numbers = {5, 3, 8, 4, 6};
     std::vector<int> expectationSortResult = {3, 4, 5, 6, 8};
+    std::cout << "Sebelum diurut\n";
+    sorting::tampilkanUrutan(numbers);
     sorting::bubbleSort(numbers);
-    // for (auto &x : numbers) {
-    //   std::cout << x;
-    // }
-    // std::cout << "\n";
+    std::cout << "Sesudah diurut\n";
+    sorting::tampilkanUrutan(numbers);
     assert(numbers == expectationSortResult);
 }
 int main()
