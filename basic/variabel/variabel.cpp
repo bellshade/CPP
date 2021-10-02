@@ -2,6 +2,7 @@
 
 #include <iostream>
 
+using namespace std;
 int main() {
   //Metode 1
   //1. Melakukan deklarasi variabel dengan menetapkan nilainya pada baris terpisah
@@ -16,7 +17,7 @@ int main() {
   c = a + b; 
 
   // Menampilkan hasil penjumlahan a + b
-  std::cout << a << " + " << b << " = " << c << '\n';
+  cout << a << " + " << b << " = " << c << '\n';
 
   //Metode 2
   //Melakukan deklarasi variabel dengan menetapkan nilainya pada baris yang sama
@@ -26,7 +27,7 @@ int main() {
   float f = d + e;
 
   // Menampilkan hasil penjumlahan d + e
-  std::cout << d << " + " << e << " = " << f << '\n';
+  cout << d << " + " << e << " = " << f << '\n';
 
   return 0;
 }

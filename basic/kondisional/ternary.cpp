@@ -8,6 +8,7 @@
 
 #include <iostream>
 
+using namespace std;
 int main() {
   int a = 5;
   int b = 10;
@@ -19,7 +20,7 @@ int main() {
   int c = a > b ? a : b;
 
   // Tampilkan Hasilnya
-  std::cout << "Nilai dari variabel c adalah: " << c << '\n';
+  cout << "Nilai dari variabel c adalah: " << c << '\n';
 
   return 0;
 }

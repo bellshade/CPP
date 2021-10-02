@@ -5,6 +5,7 @@
 
 #include <iostream>
 
+using namespace std;
 int main() {
   int a = 7;
 
@@ -12,17 +13,17 @@ int main() {
   switch (a) {
     // Saat a = 1 jalankan program di bawah ini
     case 1: 
-      std::cout << "Saat case = 1!\n";
+      cout << "Saat case = 1!\n";
       break;
 
     // Saat a = 1 jalankan program di bawah ini
     case 2:
-      std::cout << "Saat case = 2!\n";
+      cout << "Saat case = 2!\n";
       break;
 
     // Jalankan program dibawah ini saat semua kondisi di atas tidak terpenuhi
     default:
-      std::cout << "Nilai default pada case!\n";
+      cout << "Nilai default pada case!\n";
   }
 
   return 0;
