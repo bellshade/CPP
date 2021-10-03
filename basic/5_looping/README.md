@@ -44,3 +44,34 @@ Penjelasan:
 - Karena kondisi terpenuhi, program akan menjalankan code di dalam blok, yaitu mencetak "Hello World"
 - Setelah sampai di akhir blok, program akan mengeksekusi bagian `perubahan`, yaitu menambah `i` dengan 1, lalu kembali ke awal dari `for`
 - Program akan kembali melakukan pengecekan dan mengulangi langkah di atas sampai kondisi tidak terpenuhi.
+
+## 2.  While
+
+Perulangan dengan `while` biasanya digunakan untuk melakukan proses perulangan yang belum diketahui jumlahnya. Untuk pengecekan kondisi akan dilakukan terlebih dahulu, jika kondisi masih bernilai true, maka proses perulangan akan terus berlanjut. Berbeda dengan perulangan `for` yang dapat mengetahui jumlah dari proses perulangannya.
+
+```cpp
+while (kondisi){
+    // lakukan sesuatu
+}
+```
+
+- `kondisi`: dapat diisi dengan inisialisasi suatu kondisi.
+
+Berikut cara menulis program menggunakan perulangan `while`:
+
+```cpp
+// mencetak "Hello World" sebanyak 5 kali
+int i=1;
+while (i<=5) {
+	std::cout << "Hello World"<< endl;
+	i++;
+}
+```
+
+Penjelasan:
+- Saat pertama kali meinisialisasi nilai awal dari variabel i `int i=1`
+- Lalu program memeriksa apakah nilai dari variabel `i<=5` ? Jika nilainya benar maka akan dicetak kalimat "Hello World"
+- Setelah sampai di akhir blok, program akan mengeksekusi bagian `perubahan`, yaitu menambah `i` dengan 1, lalu kembali ke awal dari `while`
+- Program akan kembali melakukan pengecekan lagi apakah kondisi variabel i, apakah masih memiliki nilai `<=5` jika kondisi niali dari variabel i bernilai benar, maka kalimat akan trus dicetak kalimat "Hello World", hingga nilai variabel i lebih dari 5. maka kondisi bernilai false dan perulangan while akan berhenti.
+
+
