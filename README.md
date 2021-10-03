@@ -8,4 +8,5 @@ Dipersilahkan bila ingin melakukan open pull requets atau kontribusi pada reposi
 
 ## Quick Access
 Semua *script* yang ada pada repositori ini, dapat diakses dengan cepat lewat link berikut:
-- [Backtracking](https://github.com/bellshade/CppAlgorithm/tree/main/backtracking)
+- [Basic](basic/)
+- [Backtracking](backtracking/)
