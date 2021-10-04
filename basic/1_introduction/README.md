@@ -47,6 +47,24 @@ int main() {
 }
 ```
 
+## Komentar
+
+Komentar pada kode sangat berguna dalam menerangkan/menginformasikan kode yang kita tulis, komentar yang ditulis pada kode tidak akan dieksekusi oleh mesin.
+Terdapat 2 cara dalam menulisan kode pada C++ yaitu komentar 1 baris menggunakan simbol `//`, dan komentar multiline yang diapit oleh simbol `/*` dan `*/`
+
+```cpp
+#include <iostream>
+
+int main() {
+	// Komentar 1 baris, komentar ini tidak akan di eksekusi oleh mesin
+
+	/*
+			ini komentar multiline
+			yang berisi lebih dari 1 baris
+	*/
+}
+```
+
 **Catatan dalam penamaan file:**
 
 - Disarankan untuk memberi nama file tanpa spasi
