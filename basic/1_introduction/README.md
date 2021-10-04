@@ -33,6 +33,20 @@ int main() {
 
 Penjelasan tentang code ini dapat dilihat [di sini](hello_world.cpp).
 
+## Namespace
+
+Namespace berguna untuk memperpendek kode jika kita menggunakan suatu library yang telah ada,
+jika kita bandingkan kode di atas dan dibawah maka akan ada perbedaan penggunaan `cout` dan `std::cout` (tanpa menggunakan `using namespace std;` )
+
+```cpp
+#include <iostream>
+
+int main() {
+	std::cout << "Hello World!";
+	return 0;
+}
+```
+
 **Catatan dalam penamaan file:**
 
 - Disarankan untuk memberi nama file tanpa spasi
