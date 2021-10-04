@@ -39,7 +39,7 @@ int main() {
   z = x * y;
 
   // Menampilkan hasil perkalian x * z
-  cout << x << " + " << y << " = " << z<< '\n';
+  cout << x << " * " << y << " = " << z<< '\n';
 
   return 0;
 }

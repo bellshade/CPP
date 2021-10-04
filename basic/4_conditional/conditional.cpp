@@ -34,7 +34,7 @@ int if_else_if() {
   // Deklarasi variabel
   int a = 4;
 
-  // Else akan menjadi alternatif jika kondisi pada if sebelumnya tidak terpenuhi
+  // Else if akan menjadi alternatif jika kondisi pada if sebelumnya tidak terpenuhi
   // Akan menjalankan program dibawahnya
   if (a == 1) { // Jika a = 1 jalankan program di bawah ini
     cout << "Nilai a = 1!\n";
