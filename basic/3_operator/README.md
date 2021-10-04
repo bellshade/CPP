@@ -61,5 +61,5 @@ Operator logika digunakan untuk menggabungkan dua—atau lebih—kondisi
 | Operator | Nama Operasi |
 | - | - |
 | `&&` | AND |
-| `||` | OR |
+| `\|\|` | OR |
 | `!` | NOT |
