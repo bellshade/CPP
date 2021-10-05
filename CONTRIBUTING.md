@@ -11,7 +11,7 @@ Semua boleh ikut berkontribusi walaupun hal kecil dengan pengecualian sebagai be
 - Hasil kerja kamu wajib mengikuti standar dan style koding dari kami
 - Menghindari penggunaan library pada koding (jika dibutuhkan silahkan diskusikan di [issue](https://github.com/bellshade/CppAlgorithm/issues))
 
-## Apa itu algoritma?**
+## Apa itu Algoritma?
 
 Algoritma adalah langkah-langkah untuk menyelesaikan suatu pekerjaan dimana terdiri dari 3 bagian utama, yaitu:
 
@@ -21,9 +21,9 @@ Algoritma adalah langkah-langkah untuk menyelesaikan suatu pekerjaan dimana terd
 
 Algoritma harus dikemas sedemikian rupa sehingga memudahkan pembaca untuk memasukkannya ke dalam program yang lebih besar.
 
-## Informasi perubahan dan penambahan
+## Informasi Perubahan dan Penambahan Kode
 
-### Persyaratan Perubahan atau Penambahan Kode
+### Persyaratan 
 - Pastikan file ekstensi berupa ``*.cpp``
 - Tidak menggunakan ``bits/stdc++.h`` karena ini cukup spesifik untuk linux dan memperlambat proses kompilasi
 - Gunakan snake_case (underscore_snake_case) dalam nama file
@@ -73,7 +73,7 @@ Pull request `merged` jika:
 - Lulus test dan cek dari beberapa test yang sudah kami siapkan
 
 ### Tambahan
-- Jika ada kendala atau masalah dalam pull request, kamu bisa laporkan masalah pada issue
+- Jika ada kendala atau masalah dalam pull request, kamu bisa laporkan masalah lewat [issue](https://github.com/bellshade/CppAlgorithm/issues)
 - Jika ada test yang tidak lewat atau gagal, kami akan mengecek kembali perubahan.
 
 Untuk pull request kami sarankan untuk menjelaskan secara detail yang kamu ubah atau tambahkan, dan bersikap sopan, serta selalu berterima kasih, itu salah satu bentuk tata krama yang baik terhadap sesama contributor dan programmer lainnya.Terima kasih sudah berkontribusi di **CppAlgorithm**.
