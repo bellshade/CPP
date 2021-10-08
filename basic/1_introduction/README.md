@@ -33,6 +33,38 @@ int main() {
 
 Penjelasan tentang code ini dapat dilihat [di sini](hello_world.cpp).
 
+## Namespace
+
+Namespace berguna untuk memperpendek kode jika kita menggunakan suatu library yang telah ada,
+jika kita bandingkan kode di atas dan dibawah maka akan ada perbedaan penggunaan `cout` dan `std::cout` (tanpa menggunakan `using namespace std;` )
+
+```cpp
+#include <iostream>
+
+int main() {
+	std::cout << "Hello World!";
+	return 0;
+}
+```
+
+## Komentar
+
+Komentar pada kode sangat berguna dalam menerangkan/menginformasikan kode yang kita tulis, komentar yang ditulis pada kode tidak akan dieksekusi oleh mesin.
+Terdapat 2 cara dalam menulisan kode pada C++ yaitu komentar 1 baris menggunakan simbol `//`, dan komentar multiline yang diapit oleh simbol `/*` dan `*/`
+
+```cpp
+#include <iostream>
+
+int main() {
+	// Komentar 1 baris, komentar ini tidak akan di eksekusi oleh mesin
+
+	/*
+			ini komentar multiline
+			yang berisi lebih dari 1 baris
+	*/
+}
+```
+
 **Catatan dalam penamaan file:**
 
 - Disarankan untuk memberi nama file tanpa spasi
