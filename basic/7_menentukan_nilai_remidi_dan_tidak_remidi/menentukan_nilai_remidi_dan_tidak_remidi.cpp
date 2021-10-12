@@ -23,6 +23,6 @@ int main() // Judul fungsi
     else if (i>50&&i<70) // jika nilai (i) lebih dari 50 DAN i kurang dari 70
         cout<<"Remidi Anda Mengerjakan 5 soal"<<endl; // maka menampilkan "Remidi Anda Mengerjakan 5 soal"
 
-    //  sendiri memiliki arti untuk komputer kita. Setelah program kita selesai di kompilasi, dan saat CPU memulai mengeksekusi program kita, CPU akan selalu memulai pada function utama dan berakhir pada function utama, yaitu int main();
+    // return0; sendiri memiliki arti untuk komputer kita. Setelah program kita selesai di kompilasi, dan saat CPU memulai mengeksekusi program kita, CPU akan selalu memulai pada function utama dan berakhir pada function utama, yaitu int main();
     return 0;
 }
