@@ -28,3 +28,11 @@ for (int i = 0; i < 50; i++){
     std::cout<<i<<"\n";
 }
 ```
+pada penjelasan diatas variabel ``i`` yang semula 0 akan bertambah berulang ``0 ke 49``, tetapi disini memliki kondisi dimana jika value dari i sudah mencapai 20 (``0 ke 19``) maka value yang ``20`` akan dilewati
+```
+18
+19
+21
+22
+23
+```
