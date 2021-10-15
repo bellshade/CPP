@@ -6,3 +6,5 @@ Apa yang ada dalam folder ini?
 3. [Operator](3_operator/)
 4. [Percabangan](4_conditional/)
 5. [Perulangan](5_looping/)
+6. [Break dan continue](6_break_continue/)
+7. [Array](8_array/)
