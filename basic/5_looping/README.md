@@ -44,3 +44,42 @@ Penjelasan:
 - Karena kondisi terpenuhi, program akan menjalankan code di dalam blok, yaitu mencetak "Hello World"
 - Setelah sampai di akhir blok, program akan mengeksekusi bagian `perubahan`, yaitu menambah `i` dengan 1, lalu kembali ke awal dari `for`
 - Program akan kembali melakukan pengecekan dan mengulangi langkah di atas sampai kondisi tidak terpenuhi.
+
+## 2. While Loop
+Perulangan `while` merupakan perulangan yang biasa digunakan apabila jumlah perulangannya belum diketahui. Proses perulangan akan terus berlanjut selama kondisinya bernilai benar (`true`) dan akan berhenti apabila kondisinya bernilai salah (`false`).
+
+```cpp
+kondisi_awal;
+while (kondisi_ulang) {
+	// lakukan sesuatu
+	perubahan;
+}
+```
+
+- `kondisi_awal`: dapat diisi dengan inisialisasi variabel untuk perulangan. Contoh: `int i=1`
+- `kondisi_ulang`: biasanya berupa ekspresi yang menghasilkan `boolean`. Di bagian ini terdapat kondisi yang harus dipenuhi agar perulangan berjalan. Apabila kondisi tidak terpenuhi, perulangan akan dihentikan. Contoh: `i <= 5`
+- `perubahan`: bagian yang dieksekusi pada akhir setiap siklus perulangan. Contoh: `i++`
+
+Catatan : Perulangan `while` sangat berkaitan dengan variabel boolean karena penentuan kapan suatu blok kode akan diulang-ulang ditinjau dari (`true`) atau (`false`) dari suatu pernyataan logika pada `kondisi_ulang`. jika suatu kondisi itu selalu benar, maka perulangannya pun akan selalu di eksekusi.
+
+Berikut cara menulis program sebelumnya menggunakan perulangan `while`:
+
+```cpp
+int i = 1; //kondisi_awal
+while (i <= 5) { //kondisi_ulang
+	// mencetak "Hello World" sebanyak 5 kali
+	std::cout << "Hello World" << endl;
+	
+	i++; //perubahan
+}
+```
+
+Penjelasan:
+
+- Pertama, kita akan menginisialisasi variabel `i = 1`
+- Kemudian, masuk kondisi while loop dengan `i` bernilai 1. 
+- Lalu program memeriksa apakah kondisi terpenuhi. (`1 <= 5`)
+- Karena kondisi terpenuhi, program akan menjalankan code di dalam blok dengan mencetak "Hello World"
+- Kemudian di bagian `perubahan`, program juga akan menambah nilai variabel `i` dengan 1. Dengan demikian, nilai `i` sekarang menjadi 2
+- Setelah sampai di akhir blok, program akan kembali ke awal dari `while`
+- Program akan kembali melakukan pengecekan dan mengulangi langkah-langkah di atas sampai kondisi tidak terpenuhi.
