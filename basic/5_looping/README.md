@@ -33,7 +33,7 @@ Berikut cara menulis program sebelumnya menggunakan perulangan `for`:
 ```cpp
 // mencetak "Hello World" sebanyak 5 kali
 for (int i = 1; i <= 5; i++) {
-	std::cout << "Hello World" << endl;
+	std::cout << "Hello World" << '\n';
 }
 ```
 
@@ -60,7 +60,7 @@ while (kondisi_ulang) {
 - `kondisi_ulang`: biasanya berupa ekspresi yang menghasilkan `boolean`. Di bagian ini terdapat kondisi yang harus dipenuhi agar perulangan berjalan. Apabila kondisi tidak terpenuhi, perulangan akan dihentikan. Contoh: `i <= 5`
 - `perubahan`: bagian yang dieksekusi pada akhir setiap siklus perulangan. Contoh: `i++`
 
-Catatan : Perulangan `while` sangat berkaitan dengan variabel boolean karena penentuan kapan suatu blok kode akan diulang-ulang ditinjau dari (`true`) atau (`false`) dari suatu pernyataan logika pada `kondisi_ulang`. jika suatu kondisi itu selalu benar, maka perulangannya pun akan selalu di eksekusi.
+Catatan : Perulangan `while` sangat berkaitan dengan variabel boolean karena penentuan kapan suatu blok kode akan diulang-ulang ditinjau dari (`true`) atau (`false`) dari suatu pernyataan logika pada `kondisi_ulang`. jika suatu kondisi itu selalu benar, maka perulangannya pun akan selalu dieksekusi.
 
 Berikut cara menulis program sebelumnya menggunakan perulangan `while`:
 
