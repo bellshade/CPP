@@ -68,7 +68,7 @@ Berikut cara menulis program sebelumnya menggunakan perulangan `while`:
 int i = 1; //kondisi_awal
 while (i <= 5) { //kondisi_ulang
 	// mencetak "Hello World" sebanyak 5 kali
-	std::cout << "Hello World" << endl;
+	std::cout << "Hello World\n";
 	
 	i++; //perubahan
 }
