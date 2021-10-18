@@ -39,7 +39,7 @@ Operasi unary dapat dilakukan dengan hanya satu operand. Operator yang sering di
 | - | - | - |
 | `-` | Negatif | `-1` |
 | `++` | Penambahan | `i++`, `++i` |
-| `—` | Pengurangan | `i—`, `—i` |
+| `--` | Pengurangan | `i--`, `--i` |
 
 ## 2. Operator Relasional
 
