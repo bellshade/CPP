@@ -1,0 +1,5 @@
+Rectangle
+Trapezoidal
+SimpsonsRule
+MonteCarlo
+GaussianQuadrature

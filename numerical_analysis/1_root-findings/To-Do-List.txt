@@ -1,0 +1,5 @@
+Bisection
+Regula Falsi
+Newton - Raphson
+Secant
+Steffenson
