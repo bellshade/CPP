@@ -17,7 +17,7 @@ Akan tetapi, cara ini tidak mungkin digunakan jika harus mencetak sangat banyak.
 Perulangan dengan `for` biasanya digunakan ketika kita tahu berapa kali perulangan perlu dilakukan
 
 ```cpp
-for (kondisi_awal; kondisi_ulang; perubahan) {
+for (<kondisi_awal>; <kondisi_ulang>; <perubahan>) {
 	// lakukan sesuatu
 }
 ```
@@ -49,10 +49,10 @@ Penjelasan:
 Perulangan `while` merupakan perulangan yang biasa digunakan apabila jumlah perulangannya belum diketahui. Proses perulangan akan terus berlanjut selama kondisinya bernilai benar (`true`) dan akan berhenti apabila kondisinya bernilai salah (`false`).
 
 ```cpp
-kondisi_awal;
+<kondisi_awal>;
 while (kondisi_ulang) {
 	// lakukan sesuatu
-	// perubahan;
+	<perubahan>;
 }
 ```
 
@@ -88,10 +88,10 @@ Penjelasan:
 Perulangan ini mirip dengan While Loop pada dasarnya. Perbedaannya, `do while` menjalankan aksinya terlebih dahulu kemudian mengecek persyaratan Looping.
 
 ```cpp
-kondisi_awal;
+<kondisi_awal>;
 do {
 	// lakukan sesuatu
-	perubahan;
+	<perubahan>;
 } while(kondisi_ulang);
 ```
 
