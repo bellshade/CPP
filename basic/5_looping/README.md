@@ -3,11 +3,11 @@
 Perulangan dilakukan ketika kamu ingin menjalankan sebuah blok secara berulang-ulang. Jika kamu ingin mencetak "Hello World" sebanyak 5 kali, kamu bisa menulisnya seperti berikut
 
 ```cpp
-std::cout<<"Hello World"<<endl;
-std::cout<<"Hello World"<<endl;
-std::cout<<"Hello World"<<endl;
-std::cout<<"Hello World"<<endl;
-std::cout<<"Hello World"<<endl;
+std::cout << "Hello World" << std::endl;
+std::cout << "Hello World" << std::endl;
+std::cout << "Hello World" << std::endl;
+std::cout << "Hello World" << std::endl;
+std::cout << "Hello World" << std::endl;
 ```
 
 Akan tetapi, cara ini tidak mungkin digunakan jika harus mencetak sangat banyak. Karena itu, dibutuhkan sebuah perulangan agar kamu tidak perlu menuliskan code berulang-ulang.
@@ -17,7 +17,7 @@ Akan tetapi, cara ini tidak mungkin digunakan jika harus mencetak sangat banyak.
 Perulangan dengan `for` biasanya digunakan ketika kita tahu berapa kali perulangan perlu dilakukan
 
 ```cpp
-for (kondisi_awal; kondisi_ulang; perubahan) {
+for (<kondisi_awal>; <kondisi_ulang>; <perubahan>) {
 	// lakukan sesuatu
 }
 ```
@@ -33,7 +33,7 @@ Berikut cara menulis program sebelumnya menggunakan perulangan `for`:
 ```cpp
 // mencetak "Hello World" sebanyak 5 kali
 for (int i = 1; i <= 5; i++) {
-	std::cout << "Hello World" << endl;
+	std::cout << "Hello World" << std::endl;
 }
 ```
 
@@ -49,10 +49,10 @@ Penjelasan:
 Perulangan `while` merupakan perulangan yang biasa digunakan apabila jumlah perulangannya belum diketahui. Proses perulangan akan terus berlanjut selama kondisinya bernilai benar (`true`) dan akan berhenti apabila kondisinya bernilai salah (`false`).
 
 ```cpp
-kondisi_awal;
+<kondisi_awal>;
 while (kondisi_ulang) {
 	// lakukan sesuatu
-	perubahan;
+	<perubahan>;
 }
 ```
 
@@ -68,7 +68,7 @@ Berikut cara menulis program sebelumnya menggunakan perulangan `while`:
 int i = 1; //kondisi_awal
 while (i <= 5) { //kondisi_ulang
 	// mencetak "Hello World" sebanyak 5 kali
-	std::cout << "Hello World\n";
+	std::cout << "Hello World" << std::endl;
 	
 	i++; //perubahan
 }
@@ -83,3 +83,43 @@ Penjelasan:
 - Kemudian di bagian `perubahan`, program juga akan menambah nilai variabel `i` dengan 1. Dengan demikian, nilai `i` sekarang menjadi 2
 - Setelah sampai di akhir blok, program akan kembali ke awal dari `while`
 - Program akan kembali melakukan pengecekan dan mengulangi langkah-langkah di atas sampai kondisi tidak terpenuhi.
+
+## 3. Do While Loop
+Perulangan ini mirip dengan While Loop pada dasarnya. Perbedaannya, `do while` menjalankan aksinya terlebih dahulu kemudian mengecek persyaratan Looping.
+
+```cpp
+<kondisi_awal>;
+do {
+	// lakukan sesuatu
+	<perubahan>;
+} while(kondisi_ulang);
+```
+
+- `kondisi_awal`: dapat diisi dengan inisialisasi variabel untuk perulangan. Contoh: `int i=1`
+- `kondisi_ulang`: biasanya berupa ekspresi yang menghasilkan `boolean`. Di bagian ini terdapat kondisi yang harus dipenuhi agar perulangan berjalan. Apabila kondisi tidak terpenuhi, perulangan akan dihentikan. Contoh: `i <= 5`
+- `perubahan`: bagian yang dieksekusi pada akhir setiap siklus perulangan. Contoh: `i++`
+
+Catatan: Pada perulangan `do while` aksi dijalankan terlebih dahulu. Jadi, meski persyaratan while bernilai `false` aksi yang ada di dalam `do` akan **berjalan setidaknya sekali** tanpa perlu memenuhi syarat while. Jika kondisi while bernilai `true`, maka aksi dalam `do` akan selalu dijalankan/dieksekusi.
+
+Berikut cara menulis program sebelumnya menggunakan perulangan `do while`:
+
+```cpp
+int i = 1; // kondisi_awal
+do {
+	/* cetak "Hello World" sebanyak 1 + 4 kali
+	mengapa sebanyak 1 + 4 kali?
+	karena aksi pertama dijalankan tanpa persyaratan lalu melakukan perubahan dan kondisi_ulang
+	*/
+	std::cout << "Hello World" << std::endl;
+	i++; // perubahan
+} while (i <= 5); // kondisi_ulang
+```
+
+Penjelasan:
+
+- Pertama, kita akan menginisialisasi variabel `i = 1`
+- Kemudian, masuk kondisi `do` dengan `i` bernilai 1 dan melakukan aksinya tanpa persyaratan.
+- Lalu program memelakukan perubahan terhadap `i` yaitu menamah nilainya dengan 1. Dengan demikian, nilai `i` sekarang menadi 2. (`i++`)
+- Kemudian program melakukan pengecekan terhadap variable `i` jika nilainya sama dengan dan kurang dari 5, lakukan aksi dalam `do`. (`i <= 5`)
+- Karena kondisi terpenuhi, program akan menjalankan code di dalam blok dengan mencetak "Hello World"
+- Setelah sampai di akhir blok `do`, program akan kembali melakukan pengecekan terhadap `while` dan mengulangi aksi dalam `do` sampai kondisi tidak terpenuhi.
