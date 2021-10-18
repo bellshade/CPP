@@ -52,7 +52,7 @@ Perulangan `while` merupakan perulangan yang biasa digunakan apabila jumlah peru
 kondisi_awal;
 while (kondisi_ulang) {
 	// lakukan sesuatu
-	perubahan;
+	// perubahan;
 }
 ```
 
