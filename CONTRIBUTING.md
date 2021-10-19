@@ -41,7 +41,7 @@ Algoritma harus dikemas sedemikian rupa sehingga memudahkan pembaca untuk memasu
 ```bash
 git checkout -b <branch_name>
 git add .
-git commit -m "add: menambahkan algoritma baru"
+git commit -m "feat: menambahkan algoritma baru"
 ```
 
 - Lakukan push ke branch kamu dan kemudian open pull request
@@ -49,7 +49,7 @@ git commit -m "add: menambahkan algoritma baru"
 ### Pesan Commit
 
 Pesan / message commit harus mengikuti conventional commit. Kami menggunakan bot label agar tidak susah dalam labeling.
-Berikut adalah jenis - jenis pesan commit.
+Berikut adalah jenis-jenis pesan commit.
 
 - `fix:` untuk memperbaiki bug (label `bug`).
 - `feat:` untuk menambahkan algoritma terbaru (label `enhancement`).
