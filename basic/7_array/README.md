@@ -1,5 +1,5 @@
 # CPP Array
-Array digunakan untuk menyimpan dan menghasilkan beberapa atau banyak value dalam satu variabel, untuk mendekalarasikan array, deklarasikan berupa tipe data dari array, nama variabel dari array, dan jumlah value yang diinginkan yang dimasukkan di dalam tutup kurung kotak ``[]``, contoh
+Array digunakan untuk menyimpan dan menghasilkan beberapa atau banyak value dalam satu variabel, untuk mendeklarasikan array, deklarasikan berupa tipe data dari array, nama variabel dari array, dan jumlah value yang diinginkan yang dimasukkan di dalam tutup kurung kotak ``[]``, contoh kode:
 
 ```cpp
 std::string nama_siswa[5];
@@ -35,7 +35,7 @@ for (int i = 0; i < 3; i++){
     std::cout << nama_siswa[i] << std::endl;
 }
 ```
-pada penjelasan diatas, perulangan diulang sebanyak 3 kali dimana sesuai denagan jumlah element dari array, kemudian menampilkan output dari nama siswa dari perulangan tersebut sehingga mengeluarkan output
+pada penjelasan diatas, perulangan diulang sebanyak 3 kali dimana sesuai dengan jumlah element dari array, kemudian menampilkan output dari nama siswa pada perulangan tersebut sehingga mengeluarkan output
 ```
 erik
 mark
