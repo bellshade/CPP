@@ -46,7 +46,7 @@ contoh lain
 ```cpp
 std::string nama_siswa[3] = {"erik", "mark", "spencer"};
 for (int i = 0; i < 3; i++){
-    std::cout << i[nama_siswa] << endl;
+    std::cout << i[nama_siswa] << std::endl;
 }
 ```
 
