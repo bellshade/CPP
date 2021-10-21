@@ -1,5 +1,5 @@
 # CPP Pointer
-Address dan Pointer ini ekslusif untuk bahasa pemrograman C dan C++, address dan pointer ini memiliki tiga fungsi utama yaitu, untuk melokasikan object baru, untuk _melemparkan_ atau _mengoper_ function ke function yang lainnya, dan untuk mengulangi atau _loop_ elemen yang terdapat dalam array atau data struktur lain.
+Address dan Pointer adalah fitur ekslusif bahasa pemrograman C dan C++, address dan pointer ini memiliki tiga fungsi utama yaitu, melokasikan objek baru, _melemparkan/mengoper_ fungsi ke fungsi yang lainnya, dan melakukan perulangan atau _loop_ elemen yang terdapat dalam array atau data struktur lain.
 
 **References:** 
 - [Apa itu pointer?](https://docs.microsoft.com/en-us/cpp/cpp/pointers-cpp?view=msvc-160)
