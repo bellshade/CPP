@@ -1,7 +1,6 @@
 // Contoh penggunan variabel dengan tipe data integer dan float
 #include <iostream>
 
-using namespace std;
 int main() {
   // Metode 1
   // Melakukan deklarasi variabel dengan menetapkan nilainya pada baris terpisah
@@ -16,7 +15,7 @@ int main() {
   c = a + b; 
 
   // Menampilkan hasil penjumlahan a + b
-  cout << a << " + " << b << " = " << c << '\n';
+  std::cout << a << " + " << b << " = " << c << '\n';
 
   // Metode 2
   // Melakukan deklarasi variabel dengan menetapkan nilainya pada baris yang sama
@@ -26,7 +25,7 @@ int main() {
   float f = d + e;
 
   // Menampilkan hasil penjumlahan d + e
-  cout << d << " + " << e << " = " << f << '\n';
+  std::cout << d << " + " << e << " = " << f << '\n';
 
   // Metode 3
   // Melakukan deklarasi beberapa variabel dalam 2 baris
@@ -39,7 +38,7 @@ int main() {
   z = x * y;
 
   // Menampilkan hasil perkalian x * z
-  cout << x << " * " << y << " = " << z<< '\n';
+  std::cout << x << " * " << y << " = " << z<< '\n';
 
   return 0;
 }
