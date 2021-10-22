@@ -4,25 +4,19 @@
 // yang berfungsi untuk input dan ouput data
 #include <iostream>
 
-// using namespace adalah deklarasi penggunaan
-// pada satu lingkup fungsi atau dokumen C++
-// std adalah namespace yang digunakan C++ 
-// untuk menandakan objek dan variabel
-// yang terdapat pada seluruh standar library C++
-// termasuk iostream
-using namespace std;
-
-
 // fungsi main() di bawah adalah entry point yang
 // merupakan tempat dimana kode akan pertama kali 
 // dieksekusi dan dijalankan oleh compiler
 // setiap statement pada c++ wajib diakhiri dengan ; (titik koma)
 int main(){
     
-    // cout yang merupakan singkatan dari "Character OUTput" digunakan sebagai
+    // std:: merupakan namespace yang digunakan untuk
+    // seluruh standard library C++ termasuk iostream
+    // cout yang merupakan salah satu objek dari library iostream,
+    // singkatan dari "Character OUTput" digunakan sebagai
     // perintah output dengan menggunakan operator left shift (<<)
     // Pada contoh berikut, kita akan memasukkan kata "bellshade"
-    cout<<"bellshade!";
+    std::cout<<"bellshade!";
 
     // return 0 adalah perintah untuk mengeluarkan nilai integer 0
     // apabila program berhasil dijalankan tanpa error
