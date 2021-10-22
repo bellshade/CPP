@@ -19,7 +19,7 @@ int main() {
   int c = a > b ? a : b;
 
   // Tampilkan Hasilnya
-  std::cout << "Nilai dari variabel c adalah: " << c << '\n';
+  std::cout << "Nilai dari variabel c adalah: " << c << std::endl;
 
   return 0;
 }
