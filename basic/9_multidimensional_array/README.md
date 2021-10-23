@@ -1,5 +1,5 @@
 # CPP Multidimensional Array
-Dalam bahasa pemrograman C++ diizinkan untuk menggunakan Multidimensional Array, Berikut cara mendeklarasikan Multidimensional Array:
+Dalam bahasa pemrograman C++ kita bisa mendefinisikan Multidimensional Array, Data dalam multidimensional array tersimpan seperti sebuah tabel, Berikut cara mendeklarasikan multidimensional array:
 
 ```
 tipe_data nama_array[size1][size2]...[sizeN];
@@ -25,7 +25,7 @@ int duaDim[3][4];
 ```
 Maka bisa di referensikan seperti:
 
-(Foto disini gan)
+![multiArray](https://user-images.githubusercontent.com/87674246/138548355-b2725bfd-f852-4605-abbd-8f6144d22790.jpg)
 
 ## Menginisialisasi Two-Dimensional Array
 Multidimesional Array bisa di inisialisasikan dengan menuliskan kurung kurawal `{ }` untuk tiap barisnya, Berikut merupakan array dengan 3 baris yang memiliki 4 kolom.
@@ -89,3 +89,6 @@ int main(){
     "Hasil dari 5+2 adalah 7"
 }
 ```
+## References
+- Referensi selengkapnya seperti Three-Dimensional Array, Mengambil input, dan lain-lainnya bisa cek [disini](https://www.programiz.com/cpp-programming/multidimensional-arrays)
+- Apa itu [multidimensional array dan berapa ukuran maksimumnya](https://www.geeksforgeeks.org/multidimensional-arrays-c-cpp/)?
