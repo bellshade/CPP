@@ -72,7 +72,7 @@ Semua *script* yang ada pada repositori ini, dapat diakses dengan cepat lewat li
 - [Backtracking](backtracking/)
 - [Sorting](sorting)
 
-## Ayo ikut kami dan berkontribusi! 
+## 🤩 Ayo ikut kami dan berkontribusi! 🤩 
 Bantuan kalian diperlukan! Untuk Bellshade dapat lebih jauh lagi membantu anak - anak Indonesia belajar *programming*, kita butuh tenaga kalian.
 > "Dengan Bellshade, aku jadi bisa *ngoding*! Terima kasih Bellshade!!"
 
