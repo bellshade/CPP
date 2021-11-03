@@ -49,6 +49,23 @@ Jika kalian sudah menguasai dasar - dasar pemograman berserta dengan paradigma *
 09. [Simulasi Fisika]()
 10. [*Game Engine*]()
 
+## 📃 Panduan Pengunaan 📃
+Seluruh kode yang tersedia pada repositori ini dapat kalian jalankan dengan melakukan kompilasi terlebih dahulu. <br>
+Kami menyarankan untuk menggunakan *compiler* `g++` yang dapat kalian dapatkan di [sini]() dan tutorial instalasi [berikut](). <br>
+Untuk melakukan kompilasi, buka terminal pada folder kode yang ingin kalian *compile* lalu jalankan perintah
+```
+LINUX
+g++ nama_file_kode.cpp -o nama_file_kode
+./nama_file_kode
+```
+```
+WINDOWS
+g++ nama_file_kode.cpp -o nama_file_kode.exe
+.\nama_file_kode.exe
+```
+Apabila program yang kalian *compile* tidak bisa jalan silahkan lakukan [*troubleshooting*]() secara mandiri.<br>
+
+
 ## ⚡ Quick Access ⚡
 Semua *script* yang ada pada repositori ini, dapat diakses dengan cepat lewat link berikut:
 - [Basic](basic/)
