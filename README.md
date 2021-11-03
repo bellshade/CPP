@@ -8,6 +8,9 @@
 
 Repositori ini berisi kumpulan berbagai macam *source code* struktur data, algoritma, analisis matematika dan sebagainya yang diimplementasikan dengan menggunakan bahasa pemrograman C++.
 
+![image](https://user-images.githubusercontent.com/68750286/140185089-b47098bf-695c-4a4a-b579-06169ce45d16.png)
+
+
 ## 🎉🎉 Selamat Datang di C++ 🎉🎉
 C++ adalah bahasa pemograman multi fungsi dengan tipe *compiled language*. Artinya, kode yang ditulis dalam C++ harus dikompilasi atau diubah terlebih dahulu menjadi file `binary` yang dapat dimengerti komputer. 
 
