@@ -42,7 +42,7 @@ Jika kalian sudah menguasai dasar - dasar pemograman berserta dengan paradigma *
 02. [Algoritma Struktur Data]()
 03. [Statistik dan Probabilitas]()
 04. [Matematika Komputasi]()
-05. [Linear Algebra]()
+05. [Aljabar Linear]()
 06. [Metode Numerik Dasar]()
 07. [Metode Numerik Lanjut]()
 08. [Fisika Komputasi]()
@@ -56,8 +56,9 @@ Semua *script* yang ada pada repositori ini, dapat diakses dengan cepat lewat li
 - [Sorting](sorting)
 
 ## Ayo ikut kami dan berkontribusi! 
-Bantuan kalian diperlukan! Untuk Bellshade dapat lebih jauh lagi membantu anak - anak Indonesia belajar *programming* kita butuh tenaga kalian. Untuk informasi lebih lanjut silahkan melihat halaman [issues]() yang ada pada repositori ini.
+Bantuan kalian diperlukan! Untuk Bellshade dapat lebih jauh lagi membantu anak - anak Indonesia belajar *programming*, kita butuh tenaga kalian.
+> "Dengan Bellshade, aku jadi bisa *ngoding*! Terima kasih Bellshade!!"
 
-Kami sangat senang bila kalian ingin melakukan kontribusi pada repositori **CPP** ini. Tapi, sebelum itu, baca terlebih dahulu [peraturan dan pedomannya](CONTRIBUTING.md) yang telah kami siapkan. Terima kasih! 
+Kami sangat senang bila kalian ingin melakukan kontribusi pada repositori **CPP** ini. Tapi, sebelum itu, silahkan baca terlebih dahulu [peraturan dan pedomannya](CONTRIBUTING.md) yang telah kami siapkan. Terima kasih! 
 
 Untuk informasi lebih lanjut, mari gabung dalam komunitas [Discord Channel WPU](http://discord.gg/S4rrXQU)
