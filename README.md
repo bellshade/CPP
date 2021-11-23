@@ -4,6 +4,8 @@
 
 ![lisensi](https://img.shields.io/github/license/bellshade/CPP?style=for-the-badge)
 ![build-cpp](https://img.shields.io/github/workflow/status/bellshade/CppAlgorithm/Cpp%20Testing?style=for-the-badge)
+![Visitor Badge](https://visitor-badges.glitch.me?username=bellshade&repo=cpp&label=VISITOR&style=for-the-badge&color=%2338FF26&contentType=svg)
+[![discord](https://img.shields.io/discord/722002048643497994?label=discord&style=for-the-badge)](http://discord.gg/S4rrXQ)
 
 
 Repositori ini berisi kumpulan berbagai macam *source code* struktur data, algoritma, analisis matematika dan sebagainya yang diimplementasikan dengan menggunakan bahasa pemrograman C++.
