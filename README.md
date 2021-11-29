@@ -25,8 +25,8 @@ Efeknya, *runtime* C++ dapat disandingkan dengan bahasa C yang notabene memiliki
 
 | Langkah | Topik | Target Pembelajaran | Video Rujukan |
 | :-----------: | :----------------------------------------: |:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------: |
-| 01 | Introduksi Pemograman dan C++ | Memahami apa itu membuat program dan apa peran C++ dalam proses pembuatan program | [Video]() |
-| 02 | Variabel dan Tipe Data | Memahami apa itu variabel dan tipe data berserta dengan perannya terhadap memori dan pointer | [Video]() |
+| 01 | Introduksi Pemograman dan C++ | Memahami apa itu membuat program dan apa peran C++ dalam proses pembuatan program | [Materi](basic/01_introduction) |
+| 02 | Variabel dan Tipe Data | Memahami apa itu variabel dan tipe data berserta dengan perannya terhadap memori dan pointer | [Materi](02_variabel_datatype) |
 | 03 | Operasi Aritmatik | Dapat melakukan operasi aritmatika sederhana menggunakan program yang ditulis menggunakan C++ | [Video]() |
 | 04 | Operasi Boolean | Mengenal operasi boolean dan perannya dalam proses pemograman | [Video]() |
 | 05 | Pengkondisian | Memahami salah satu dari inti dari membuat pemograman yaitu melakukan pengkondisian | [Video]() |
