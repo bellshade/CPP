@@ -1,0 +1,64 @@
+pull_request_rules:
+  # membuat requirement dari automerge dengan sistem
+  # ketika workflow build passed maka akan dicentang
+  # ketika target pull request ke main maka akan dicentang
+  # ketika dikasih label 'ready-to-merge' akan dicentang
+
+  # ketika requirement telah terpenuhi maka bot akan bekerja
+  # dan pull request secara otomatis akan merge
+  - name: ci testing kalo sukses ke squash dengan label
+    conditions:
+      - base=main
+      - label=ready-to-merge
+    actions:
+      # menambahkan komentar jika sudah di merge
+      comment:
+        message: terima kasih atas kontribusinya @{{author}}!
+      # menambahkan label jika sudah di merge
+      label:
+        add: 
+          - sudah dirieview!
+      # metode sistem dari automerge
+      merge:
+        method: merge
+  # menghapus branch pada pull_request
+  - name: menghapus head branch ketika pull request selesai di merged
+    conditions:
+      - merged
+    actions:
+      delete_head_branch: true
+  
+  # membuat label dengan kondisi jika pull request terdapat
+  # file cpp
+  - name: label cpp
+    conditions:
+      - files~=\.py$
+    actions:
+      # menambahkan lebel 'python files'
+      # dan label 'request tim cpp untuk review'
+      label:
+        add:
+          - cpp files
+          - request tim cpp untuk review
+  
+  # membuat label dengan kondisi jika di dalam pull request
+  # terdapat file markdown
+  - name: markdown label
+    conditions:
+      - files~=\.md$
+    actions:
+      # menambahkan label 'markdown files'
+      label:
+        add:
+          - markdown files
+  
+  # membuat sistem bot me mention cpp team untuk mereciew
+  # dari pull request jika terdapat file cpp
+  - name: review tim cpp untuk review markdown
+    conditions:
+      - label=cpp files
+    actions:
+      request_reviews:
+        teams:
+          - "@bellshade/cpp-team"
+          
