@@ -1,4 +1,4 @@
-#include <iostrea>
+#include <iostream>
 
 class Tambah{
     public:
@@ -24,7 +24,7 @@ class Tambah{
 int main(){
     // memanggil kelas
     // dan membuat objek baru
-    Adder a;
+    Tambah a;
     
     // memanggil fungsi tambah angka
     a.tambahAngka(2);

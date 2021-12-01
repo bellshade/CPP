@@ -31,7 +31,7 @@ dengan mendifinisikananggotadata hanya di bagian pribadi kelas, pembuat kelasbeb
 setiap program c++ di mana kita mengimplementasikan kelas dengan anggota publik dan pribadi adalah contoh dari abstraksi data
 
 ```cpp
-#include <iostrea>
+#include <iostream>
 
 class Tambah{
     public:
