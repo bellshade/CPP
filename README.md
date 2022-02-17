@@ -1,5 +1,5 @@
 # Bellshade C++
-> Part of Bellshade Project, managed by [WPU Discord Community](http://discord.gg/S4rrXQU) <br>
+> Part of Bellshade Project, managed by [WPU Discord Community](http://discord.gg/wpu) <br>
 > WPU Community is the fastest growing software developer forum initiated by [Mr. Sandhika Galih](https://www.youtube.com/c/WebProgrammingUNPAS)
 
 ![lisensi](https://img.shields.io/github/license/bellshade/CPP?style=for-the-badge)
