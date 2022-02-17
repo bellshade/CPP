@@ -31,6 +31,8 @@ Operasi numerik adalah operasi yang dilakukan pada bilangan. Operasi numerik jug
 - Operasi pembagian pada `integer` akan dibulatkan ke bawah
 - Operasi modulo hanya bisa digunakan pada `integer`
 
+contoh lebih lanjut dari operator numerik bisa dilihat [disini](https://www.youtube.com/watch?v=bxNqTu4N-Is&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=15)
+
 ### Operator Unary
 
 Operasi unary dapat dilakukan dengan hanya satu operand. Operator yang sering digunakan adalah increment (++) dan decrement (—).
@@ -40,6 +42,8 @@ Operasi unary dapat dilakukan dengan hanya satu operand. Operator yang sering di
 | `-` | Negatif | `-1` |
 | `++` | Penambahan | `i++`, `++i` |
 | `--` | Pengurangan | `i--`, `--i` |
+
+lebih lanjut dari operator unary bisa dilihat [disini](https://www.youtube.com/watch?v=cmKs-eEsHfY&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=23)
 
 ## 2. Operator Relasional
 
@@ -54,6 +58,8 @@ Operasi relasional yaitu membandingkan dua operand dan mengembalikan `boolean` (
 | `<=`| Kurang dari atau sama dengan |
 | `>=` | Lebih dari atau sama dengan |
 
+contoh lebih lanjut dari operator relasional bisa dilihat [disini](https://www.youtube.com/watch?v=rgdgn4yFg18&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=16)
+
 ## 3. Operator Logika
 
 Operator logika digunakan untuk menggabungkan dua—atau lebih—kondisi
@@ -63,3 +69,5 @@ Operator logika digunakan untuk menggabungkan dua—atau lebih—kondisi
 | `&&` | AND |
 | `\|\|` | OR |
 | `!` | NOT |
+
+lebih lanjut dari operator logika bisa dilihat [disini](https://www.youtube.com/watch?v=k9nBTzvba34&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=17)

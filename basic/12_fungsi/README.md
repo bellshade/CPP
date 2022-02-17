@@ -134,3 +134,7 @@ int main(){
 
 }
 ```
+
+- [fungsi](https://www.youtube.com/watch?v=iTUO1DWVUv8&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=31)
+- [fungsi dengan kembalian (return)](https://www.youtube.com/watch?v=LXZimpRJwno&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=33)
+- [fungsi tanpa kembalian (void)](https://www.youtube.com/watch?v=4R4QZhsb8lQ&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=34)

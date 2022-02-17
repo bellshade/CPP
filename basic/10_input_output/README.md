@@ -80,3 +80,5 @@ int main(){
 ```
 
 Kamu tidak akan dapat melihat perbedaan apa pun dalam cout, cerr, dan clog dengan contoh-contoh kecil ini, tetapi saat menulis dan menjalankan program besar, perbedaannya menjadi jelas. Jadi itu adalah praktik yang baik untuk menampilkan pesan kesalahan menggunakan aliran cerr dan saat menampilkan pesan log lainnya maka clog harus digunakan.
+
+contoh lebih lanjut dari fungsi input output bisa dilihat [disini](https://www.youtube.com/watch?v=-N-iONms8uw&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=13)

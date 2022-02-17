@@ -71,3 +71,5 @@ int main() {
 - Gunakan `_` atau `-` jika nama file lebih dari satu kata, misal `hello_world.cpp` atau `hello-world.cpp`
 
 Selamat! Kamu sudah berhasil menulis program pertamamu.
+
+contoh lebih lanjut [kelas terbuka - apa itu c++](https://www.youtube.com/watch?v=WtBF_-pLrjE&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=1)

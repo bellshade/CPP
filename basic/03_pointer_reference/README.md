@@ -93,3 +93,5 @@ int main(){
     std::cout << "Nilai dari val adalah " << val; // Output: Nilai dari val adalah 20
 }
 ```
+
+topik lanjutan pada pointer bisa dilihat [disini](https://www.youtube.com/watch?v=O1kWNj5Ikro&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=43)

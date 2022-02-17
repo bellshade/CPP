@@ -135,3 +135,4 @@ int main(){
 - Referensi selengkapnya seperti Three-Dimensional Array, Mengambil input, dan lain-lainnya bisa cek [disini](https://www.programiz.com/cpp-programming/multidimensional-arrays)
 - Apa itu [multidimensional array dan berapa ukuran maksimumnya](https://www.geeksforgeeks.org/multidimensional-arrays-c-cpp/)?
 - Referensi [Pointer to Multidimensional array](https://www.geeksforgeeks.org/pointer-array-array-pointer/)
+- [kelas terbuka - multidimensional array](https://www.youtube.com/watch?v=-hsKUD4fVRE&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=51)

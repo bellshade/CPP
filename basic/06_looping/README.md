@@ -45,6 +45,8 @@ Penjelasan:
 - Setelah sampai di akhir blok, program akan mengeksekusi bagian `perubahan`, yaitu menambah `i` dengan 1, lalu kembali ke awal dari `for`
 - Program akan kembali melakukan pengecekan dan mengulangi langkah di atas sampai kondisi tidak terpenuhi.
 
+contoh lebih lanjut dari operator ``for loop`` bisa dilihat [disini](https://www.youtube.com/watch?v=ZeqJewFm7zc&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=26)
+
 ## 2. While Loop
 Perulangan `while` merupakan perulangan yang biasa digunakan apabila jumlah perulangannya belum diketahui. Proses perulangan akan terus berlanjut selama kondisinya bernilai benar (`true`) dan akan berhenti apabila kondisinya bernilai salah (`false`).
 
@@ -83,6 +85,8 @@ Penjelasan:
 - Kemudian di bagian `perubahan`, program juga akan menambah nilai variabel `i` dengan 1. Dengan demikian, nilai `i` sekarang menjadi 2
 - Setelah sampai di akhir blok, program akan kembali ke awal dari `while`
 - Program akan kembali melakukan pengecekan dan mengulangi langkah-langkah di atas sampai kondisi tidak terpenuhi.
+
+contoh lebih lanjut dari opeartor ``while loop`` bisa dilihat [disini](https://www.youtube.com/watch?v=Pzy3XWzORNw&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=25)
 
 ## 3. Do While Loop
 Perulangan ini mirip dengan While Loop pada dasarnya. Perbedaannya, `do while` menjalankan aksinya terlebih dahulu kemudian mengecek persyaratan Looping.
@@ -123,6 +127,8 @@ Penjelasan:
 - Kemudian program melakukan pengecekan terhadap variable `i` jika nilainya sama dengan dan kurang dari 5, lakukan aksi dalam `do`. (`i <= 5`)
 - Karena kondisi terpenuhi, program akan menjalankan code di dalam blok dengan mencetak "Hello World"
 - Setelah sampai di akhir blok `do`, program akan kembali melakukan pengecekan terhadap `while` dan mengulangi aksi dalam `do` sampai kondisi tidak terpenuhi.
+
+contoh lebih lanjut dari operator ``do while`` bisa dilihat [disini](https://www.youtube.com/watch?v=Pzy3XWzORNw&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=25)
 
 ## Keyword Spesial dalam Perulangan
 

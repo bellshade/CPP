@@ -29,4 +29,6 @@ int main(){
     std::cout<<"angka pertama "<<objek_saya.angka_saya<<std::endl;
     std::cout<<"angka kedua "<<objek_saya.angka_saya2<<std::endl;
 }
-``
+```
+
+informasi lebih lanjut dari struct bisa dilihat [disini](https://www.youtube.com/watch?v=ELCI_U4OF5w&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=61)

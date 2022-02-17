@@ -20,13 +20,13 @@ C++ dikembangkan dari predesesornya yaitu C dengan mengimplementasi paradigma *O
 
 Efeknya, *runtime* C++ dapat disandingkan dengan bahasa C yang notabene memiliki waktu `runtime` yang tercepat diantara semua bahasa pemograman. Alhasil, C++ sering digunakan untuk implementasi perangkat lunak yang membutuhkan tenaga komputasi yang besar seperti *Game Engine*, *Physics Simulations*, dan bahkan *library* yang digunakan bahasa lain (e.g. Numpy, Scipy, dll)
 
-> ### Baru Belajar? Mulai dari [sini]() 🌟
+> ### Baru Belajar? Mulai dari [sini](basic) 🌟
 > Untuk menggunakan repositori dengan maksimal, kalian perlu belajar programming dasar dahulu. Silahkan ikuti alur belajar berikut untuk mempelajari dasar - dasar pemograman langsung menggunakan C++ 
 
 | Langkah | Topik | Target Pembelajaran | Video Rujukan |
 | :-----------: | :----------------------------------------: |:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------: |
 | 01 | Introduksi Pemograman dan C++ | Memahami apa itu membuat program dan apa peran C++ dalam proses pembuatan program | [Materi](basic/01_introduction) |
-| 02 | Variabel dan Tipe Data | Memahami apa itu variabel dan tipe data berserta dengan perannya terhadap memori dan pointer | [Materi](02_variabel_datatype) |
+| 02 | Variabel dan Tipe Data | Memahami apa itu variabel dan tipe data berserta dengan perannya terhadap memori dan pointer | [Materi](basic/02_variabel_datatype) |
 | 03 | Operasi Aritmatik | Dapat melakukan operasi aritmatika sederhana menggunakan program yang ditulis menggunakan C++ | [Video]() |
 | 04 | Operasi Boolean | Mengenal operasi boolean dan perannya dalam proses pemograman | [Video]() |
 | 05 | Pengkondisian | Memahami salah satu dari inti dari membuat pemograman yaitu melakukan pengkondisian | [Video]() |
@@ -65,8 +65,7 @@ WINDOWS
 g++ nama_file_kode.cpp -o nama_file_kode.exe
 .\nama_file_kode.exe
 ```
-Apabila program yang kalian *compile* tidak bisa jalan silahkan lakukan [*troubleshooting*]() secara mandiri.<br>
-
+contoh penginstalan c++ pada windows menggunakan codeblocks bisa lihat [disini](https://www.youtube.com/watch?v=KSMQXpoBfzY&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=3), serta untuk yang ingin menggunakan visual studio code bisa dilihat [disini](https://www.youtube.com/watch?v=UUX1vHGIcNQ&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=4)
 
 ## ⚡ Quick Access ⚡
 Semua *script* yang ada pada repositori ini, dapat diakses dengan cepat lewat link berikut:

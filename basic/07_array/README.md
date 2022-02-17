@@ -52,3 +52,13 @@ for (int i = 0; i < 3; i++){
 
 ## Reference
 - [Arrays in CPP](https://www.w3schools.com/cpp/cpp_arrays.asp)
+
+contoh lebih lanjut dari array
+
+- [pendahuluan array](https://www.youtube.com/watch?v=8WhUADLI4RQ&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=47)
+- [array || standard library](https://www.youtube.com/watch?v=o1DegduG140&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=48)
+- [latihan array](https://www.youtube.com/watch?v=PGV8VigBVcg&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=49)
+- [looping array](https://www.youtube.com/watch?v=5jTGrD55Ws4&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=50)
+- [multidimensional array](https://www.youtube.com/watch?v=-hsKUD4fVRE&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=51)
+- [sort array | std library](https://www.youtube.com/watch?v=G0cml-wvaBc&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=53)
+- [search array | std library](https://www.youtube.com/watch?v=QFC4DXvRu8o&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=54)

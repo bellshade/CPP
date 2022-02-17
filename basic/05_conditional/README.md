@@ -32,6 +32,8 @@ if (N > 0) {
 }
 ```
 
+contoh lebih lanjut dari operator logika if statement bisa dilihat [disini](https://www.youtube.com/watch?v=6dAAX5B85PM&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=18)
+
 ## 2. Else Clause
 
 Sebelumnya, kamu sudah mencetak "positif" jika N lebih dari 0. Lalu bagaimana jika nilai N tidak lebih dari 0 atau kondisi bernilai `false`?
@@ -59,6 +61,8 @@ if (N > 0) {
 	cout << "bukan positif";
 }
 ```
+
+contoh lebih lanjut dari operator logika if else bisa dilihat [disini](https://www.youtube.com/watch?v=-9IyBehKm4g&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=19)
 
 ## 3. Else If Statement
 
