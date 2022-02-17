@@ -32,7 +32,7 @@ pull_request_rules:
   # file cpp
   - name: label cpp
     conditions:
-      - files~=\.py$
+      - files~=\.cpp$
     actions:
       # menambahkan lebel 'python files'
       # dan label 'request tim cpp untuk review'
