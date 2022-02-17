@@ -27,8 +27,8 @@ jobs:
           sudo apt -qq install clang-tidy-10 clang-format-10
       - name: git
         run: |
-          git config --global user.name github.actions
-          git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
+          git config --global user.name bellshadebot
+          git config --global user.email 'bellshade07@gmail.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
       - name: format filename
         run: |
