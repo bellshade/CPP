@@ -1,5 +1,5 @@
 # Vector
-Pengenalan: Vector adalah suatu class template yang merupakan bagian dari STL (Standard Template Library) dan dapat digunakan untuk menggantikan array. Sama dengan array, vector juga menyimpan elemen-elemen secara bersebelahan dan elemen tesebut dapat diakses sesuai subscript/index.
+**Pengenalan** Vector adalah suatu class template yang merupakan bagian dari STL (Standard Template Library) dan dapat digunakan untuk menggantikan array. Sama dengan array, vector juga menyimpan elemen-elemen secara bersebelahan dan elemen tesebut dapat diakses sesuai subscript/index.
 
 mari kita sama-sama mempelajari cara menggunakan:
 ```cpp
