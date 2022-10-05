@@ -50,7 +50,7 @@ Jika kalian sudah menguasai dasar - dasar pemograman berserta dengan paradigma *
 08. [Fisika Komputasi]()
 09. [Simulasi Fisika]()
 10. [*Game Engine*]()
-11. [*Game Development*]()
+11. [*Web Development*]()
 
 ## 📃 Panduan Pengunaan 📃
 Seluruh kode yang tersedia pada repositori ini dapat kalian jalankan dengan melakukan kompilasi terlebih dahulu. <br>
