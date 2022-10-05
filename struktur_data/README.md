@@ -1,7 +1,7 @@
 # Struktur Data
 Struktur data adalah format khusus untuk mengatur, memproses, mengambil, dan menyimpan data. Struktur data memudahkan programmer untuk menyimpan dan memproses data untuk sebuah aktivitas tertentu. Secara general, penggunaan struktur data yang tepat adalah kunci dari mendesain algoritma yang efisien.
 
-### Implementasi Struktur Data
+## Implementasi Struktur Data
 Struktur data sering kali diimplementasi menggunakan tiga komponen, yaitu tipe data, pointer, dan sekumpulan operasi. 
 
 - Tipe data: mendefinisikan tipe data atau nilai yang dapat disimpan dalam sebuah struktur data.
