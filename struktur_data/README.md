@@ -5,9 +5,7 @@ Struktur data adalah format khusus untuk mengatur, memproses, mengambil, dan men
 Struktur data sering kali diimplementasi menggunakan tiga komponen, yaitu tipe data, pointer, dan sekumpulan operasi. 
 
 - Tipe data: mendefinisikan tipe data atau nilai yang dapat disimpan dalam sebuah struktur data.
-
 - Pointer: membantu programmer dalam mendesain struktur data yang lebih kompleks dan terlepas dari heap memory seperti array.
-
 - Operasi: merupakan kumpulan operasi yang digunakan untuk berinteraksi dengan struktur data tersebut. Contohnya seperti `insert`, `delete`, `find`, dst.
 
 Kemudian, ketiga komponen ini dikemas dengan struktur [Struct](./struct_ds).
