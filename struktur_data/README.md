@@ -10,7 +10,7 @@ Struktur data sering kali diimplementasi menggunakan tiga komponen, yaitu tipe d
 
 Kemudian, ketiga komponen ini dikemas dengan struktur [Struct](./struct_ds).
 
-### Tipe Struktur Data
+## Tipe Struktur Data
 Ada banyak struktur data yang dapat kita gunakan, masing-masing memiliki aturan pengaplikasian yang berbeda-beda. Berikut adalah contoh struktur data elementer yang sering dipelajari beserta deskripsinya:
 
 - Linked-list: adalah struktur data linear dimana data-data yang disimpan dihubungkan menggunakan pointer.
