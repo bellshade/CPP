@@ -86,6 +86,7 @@ dan saya akan menjelaskan kegunaan-kegunaannya sebelum nanti saya akan gunakan s
 **1. push_back**
 
 Singkatnya ini berguna untuk menambahkan nilai / data, pada vector yang sudah kita deklarasikan.
+
 sebagai contoh disini saya, menambahkan nilai: 1, 2 & 3
 ```cpp
 v.push_back(1);
@@ -110,6 +111,7 @@ nilai vector: [1] [2] [3]
 **2. pop_back**
 
 Singkatnya ini berguna untuk menghapus nilai akhir, pada vector yang sudah kita deklarasikan.
+
 sesuai nama syntax nya `pop_back` yang menghapus nilai dari belakang (nilai akhir vector), 
 juga ada `pop_front` dimana ini kebalikannya dari `pop_back`
 sebagai contoh disini saya, menghapus nilai paling akhir: 3
@@ -125,6 +127,7 @@ output:
 **3. at**
 
 Singkatnya ini berguna untuk mencari nilai, pada vector yang sudah kita deklarasikan.
+
 sebagai contoh disini saya, mencari nilai pada index 1
 ```cpp
 std::cout << "\nNilai pencarian: [" << v.at(1) << "]";
@@ -143,6 +146,7 @@ nilai vector: [1] [2] [3]
 jawabannya adalah karena index ke-1 memiliki nilai 2.
 
 disini kita dapat juga mengimplementasikan merubah nilai, pada vector yang sudah kita deklarasikan.
+
 sebagai contoh disini saya, mencari nilai pada index 1 dan merubahnya menjadi nilai 3
 ```cpp
 v.at(1) = 3;
