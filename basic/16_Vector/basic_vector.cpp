@@ -25,6 +25,8 @@ int main(int argc, char const *argv[])
     loop(v);
 
     // 3. at
+    std::cout << "\nNilai pencarian: [" << v.at(1) << "]";
+
     v.at(1) = 3;
     loop(v);
 
