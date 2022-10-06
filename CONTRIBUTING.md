@@ -76,7 +76,7 @@ Berikut adalah format standar pembuatan `Issues` pada repositori ini.
 
 - Lakukan fork pada repository kami
 - Setelah melakukan fork kalian dibebaskan untuk mengubah atau menambah algoritma
-  - Untuk pull request merubah diusahakan kaliamn menerapkan algoritma yang lebih baik dan lebih mudah
+  - Untuk pull request merubah diusahakan kalian menerapkan algoritma yang lebih baik dan lebih mudah
 - Setelah merubah, menambah, atau perbaikan dokumentasi, usahakan kalian membuat branch baru
 
 ```bash
