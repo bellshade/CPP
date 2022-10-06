@@ -6,12 +6,12 @@ mari kita sama-sama mempelajari cara menggunakan:
 #include <vector>
 ```
 
-## Keuntungan dari Vektor
+## Keuntungan dari Vector
 - Ukuran vektor dapat diubah
 - Beberapa objek dapat disimpan
 - Elemen dapat dihapus dari vektor
 
-## Kekurangan Vektor
+## Kekurangan Vector
 - Vektor adalah objek, konsumsi memori lebih banyak.
 
 ## Terdapat Member Function Vector, seperti:
