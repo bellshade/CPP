@@ -1,14 +1,14 @@
 ## fungsi
 
-Fungsi adalah sekelompok pernyataan yang bersama=sama melakukan tugas. setiapprogram c++ memiliki setidaknya saatu fungsi yaitu ``main()``, dan semua program yang paling  mudah dapat mendifinisikan fungsi tambahan.
+Fungsi adalah sekelompok pernyataan yang bersama-sama melakukan tugas. setiap program c++ memiliki setidaknya satu fungsi yaitu ``main()``, dan semua program yang paling  mudah dapat mendifinisikan fungsi tambahan.
 
-kita dapat membagi kode kita menjadi fungsi-fungsi yang erpisah.deklarasi fungsi memberi tahu kompiler tentang nama fungsi, tipe pengembalian, dan parameter. definisi fungsi memberikan tubuh fungsi yabg sebenarnya.
+kita dapat membagi kode kita menjadi fungsi-fungsi yang terpisah.deklarasi fungsi memberi tahu kompiler tentang nama fungsi, tipe pengembalian, dan parameter. definisi fungsi memberikan tubuh fungsi yang sebenarnya.
 
-pustaka standar c++ menyediakanbanyak fungsi bawaan yang dapat dipanggil oleh program kita. misalnya fungsi ``strcat()`` untuk menggabungkan dua string, fungsi ``memcpy()`` untuk menyalin satu lokasi memori ke lokasi lain dan banyak lagi fungsi lainnya
+pustaka standar c++ menyediakan banyak fungsi bawaan yang dapat dipanggil oleh program kita. misalnya fungsi ``strcat()`` untuk menggabungkan dua string, fungsi ``memcpy()`` untuk menyalin satu lokasi memori ke lokasi lain dan banyak lagi fungsi lainnya
 
 ## mendifinisikan fungsi
 
-bentuk umum dari defini fungsi  c++ adalah sebagai berikut
+bentuk umum dari definisi fungsi  c++ adalah sebagai berikut
 ```
 tipe_return nama_fungsi(paraneter){
     isi_dari_fungsi
@@ -62,15 +62,15 @@ nama parameter tidak penting dalam dekalari fungsi hanya tipenya yang diperlukan
 int tambah(int, int);
 ```
 
-deklarasi fungsi diperlukan ketika mendifinisikan suatu fungsi dalams atu file sumber dan kita memanggil fungsi itu di file lain. dalam kasus seperti itu, kita harus mendklarasikan fungsi di bagian atas file yang memanggil fungsi tersebut.
+deklarasi fungsi diperlukan ketika mendifinisikan suatu fungsi dalams atu file sumber dan kita memanggil fungsi itu di file lain. dalam kasus seperti itu, kita harus mendeklarasikan fungsi di bagian atas file yang memanggil fungsi tersebut.
 
 ### memanggil fungsi
 
-saat membuat fungsi c++, kita memberikan definisi tentang apa yang harus dilakukan fungsi tersebut. untuk menggunakan suatu fingsi, kita harus memanggil fungsi itu
+saat membuat fungsi c++, kita memberikan definisi tentang apa yang harus dilakukan fungsi tersebut. untuk menggunakan suatu fungsi, kita harus memanggil fungsi itu
 
-ketikasebuah program memanggil fungsi, kontrol program ditransfer ke fungsi yang dipanggil. fungsi yang dipanggil melakukan tugas yang ditentukan dan ketika pernyataan pemgembaliannya deksekusi atau ketika kurung kurawal penutup fungsi tercapa, ia mengembalikan kontrol program kembali ke program utama.
+ketika sebuah program memanggil fungsi, kontrol program ditransfer ke fungsi yang dipanggil. fungsi yang dipanggil melakukan tugas yang ditentukan dan ketika pernyataan pemgembaliannya dieksekusi atau ketika kurung kurawal penutup fungsi tercapai, ia mengembalikan kontrol program kembali ke program utama.
 
-untuk memanggil suatu fungsi, anda hanya perlu meneruskan parameter yang diperlukan bersama dengan nama fungsi, dan jika fungsi mengembalukan nilai, maka anda dapat menyimpan nilai yang dikembalikan
+untuk memanggil suatu fungsi, anda hanya perlu meneruskan parameter yang diperlukan bersama dengan nama fungsi, dan jika fungsi mengembalikan nilai, maka anda dapat menyimpan nilai yang dikembalikan
 
 ```cpp
 #include<iostream>
@@ -103,7 +103,7 @@ int tambah(int angka1, int angka2){
 
 saat kita mendifinisikan suatu fungsi, kita dapat menentukan nilai default untuk setiap parameter terakhir. nilai ini akan digunakan jika argumen yang sesuai dibiarkan kosong saat memanggil fungsi.
 
-ini dilakukan dengan menggunakan opertor penugasasn dan menetapkan nilai untuk argumen dalam definisi fungsi. jika nilai untuk parameter tersebut tidak diteruskan saat fungsi dipanggil, nilai default yang diberikan akan digunakan, jika nilai ditentukan maka nilai default ini akan diabaikan.
+ini dilakukan dengan menggunakan opertor penugasan dan menetapkan nilai untuk argumen dalam definisi fungsi. jika nilai untuk parameter tersebut tidak diteruskan saat fungsi dipanggil, nilai default yang diberikan akan digunakan, jika nilai ditentukan maka nilai default ini akan diabaikan.
 
 ```cpp
 #include <iostream>
