@@ -4,7 +4,6 @@
 
 ![lisensi](https://img.shields.io/github/license/bellshade/CPP?style=for-the-badge)
 ![build-cpp](https://img.shields.io/github/workflow/status/bellshade/CppAlgorithm/Cpp%20Testing?style=for-the-badge)
-![Visitor Badge](https://visitor-badges.glitch.me?username=bellshade&repo=cpp&label=VISITOR&style=for-the-badge&color=%2338FF26&contentType=svg)
 [![discord](https://img.shields.io/discord/722002048643497994?label=discord&style=for-the-badge)](http://discord.gg/S4rrXQ)
 
 
@@ -49,7 +48,8 @@ Jika kalian sudah menguasai dasar - dasar pemograman berserta dengan paradigma *
 07. [Metode Numerik Lanjut]()
 08. [Fisika Komputasi]()
 09. [Simulasi Fisika]()
-10. [*Game Engine*]()
+10. [struktur data](struktur_data)
+11. [*Game Engine*]()
 
 ## 📃 Panduan Pengunaan 📃
 Seluruh kode yang tersedia pada repositori ini dapat kalian jalankan dengan melakukan kompilasi terlebih dahulu. <br>
