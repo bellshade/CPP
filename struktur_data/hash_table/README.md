@@ -160,3 +160,6 @@ int main() {
     return 0;
 }
 ```
+
+Berikut adalah hasil dari kode diatas:
+![hasil demo kode](./asset/tabel_hash_kode_demo.png)
