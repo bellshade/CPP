@@ -18,7 +18,9 @@
 uint64_t fibonacci(uint64_t n) {
   // Jika inputnya 0 atau n-1 saja yang sama
   // ini akan mengatur 2 nilai pertama dari urutan
-  if (n <= 1) {
+  if (n == 0) {
+    return 0;
+  } else if (n == 1) {
     return 1;
   }
 
@@ -43,7 +45,7 @@ static void test() {
 
   uint64_t test_case_3 = fibonacci(2);
   assert(test_case_3 == 1);
-  std::cout << "Test 2 : berhasil !" << std::endl;
+  std::cout << "Test 3 : berhasil !" << std::endl;
 }
 
 // Fungsi utama
