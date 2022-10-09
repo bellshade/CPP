@@ -29,7 +29,7 @@ Arti tiap poin:
     <li> visualisasi adjacency matrix dari graph <i>G</i></li>
 </ol>
 
-**Adjacency List** merepresentasikan hubungan antar node menggunakan array of list ((atau list of list) dengan array sebesar jumlah node yang ada ($V$). Setiap sel dari array $Adj[V_i]$ mempunyai list dengan daftar lengkap node-node yang dapat dituju oleh node $V_i$. Berikut adalah contoh sesuai gambar diatas:
+**Adjacency List** merepresentasikan hubungan antar node menggunakan array of list (atau list of list) dengan array sebesar jumlah node yang ada ( $V$ ). Setiap sel dari array $Adj[V_i]$ mempunyai list dengan daftar lengkap node-node yang dapat dituju oleh node $V_i$. Berikut adalah contoh sesuai gambar diatas:
 
 - `adj[1] = 2 --> 4 --> /`, artinya node `1` memiliki hubungan menuju node `2` dan `4`.
 - `adj[2] = 5 --> /`, artinya node `2` memiliki hubungan menuju node `5`.
@@ -67,8 +67,8 @@ Berikut adalah beberapa perbandingan kompleksitas operasi untuk adjacency list d
     - **Adjacency Matrix**: kompleksitasnya adalah $O(1)$ karena tiap elemen array dapat diakses dengan waktu konstan.
     - **Adjacency List**: kompleksitasnya adalah $O(|E|)$ karena list harus di-*traverse* terlebih dahulu sebelum menemukan *edge* yang ingin dihapus.
 - Query
-    - **Adjacency Matrix**: untuk mengecek hubungan antara dua *vertex* ($V_i$ ke $V_j$), nilai $Adj[i][j]$ harus dicek. Nilai $Adj[i][j]$ dalam $O(1)$
-    - **Adjacency List**: untuk mengecek hubungan antara dua *vertex* ($V_i$ ke $V_j$), kita harus mencari $V_j$ dalam $Adj[V_i]$. Setiap *vertex* dapat memiliki hubungan paling banyak sebanyak $V$ sehingga memiliki kompleksitas $O(|V|)$
+    - **Adjacency Matrix**: untuk mengecek hubungan antara dua *vertex* ( $V_i$ ke $V_j$ ), nilai $Adj[i][j]$ harus dicek. Nilai $Adj[i][j]$ dalam $O(1)$
+    - **Adjacency List**: untuk mengecek hubungan antara dua *vertex* ( $V_i$ ke $V_j$ ), kita harus mencari $V_j$ dalam $Adj[V_i]$. Setiap *vertex* dapat memiliki hubungan paling banyak sebanyak $V$ sehingga memiliki kompleksitas $O(|V|)$
 
 ## Contoh Kode Graph
 Berikut adalah contoh sederhana implementasi Graph menggunakan adjacency matrix:
