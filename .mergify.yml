@@ -34,12 +34,20 @@ pull_request_rules:
     conditions:
       - files~=\.cpp$
     actions:
-      # menambahkan lebel 'python files'
+      # menambahkan lebel 'cpp files'
       # dan label 'request tim cpp untuk review'
       label:
         add:
           - cpp files
           - request tim cpp untuk review
+
+  - name: label header
+    conditions:
+      - files~=\.h$
+    actions:
+      label:
+        add:
+          - header file
   
   # membuat label dengan kondisi jika di dalam pull request
   # terdapat file markdown
