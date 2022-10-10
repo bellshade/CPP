@@ -25,9 +25,8 @@ int dikali(int var1, int var2) {
     std::cout << var1 << " x " << var2 << " : ";
     return var1 * var2;
 }
-
  
-int main(int argc, char const *argv[])
+int main()
 {
     std::cout << dikali(2) << std::endl;
     std::cout << dikali(5, 5) << std::endl;

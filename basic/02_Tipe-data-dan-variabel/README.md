@@ -3,17 +3,27 @@
 
 ## Variabel
 
-Variabel adalah sebuah kontainer yang berfungsi dalam penyimpanan value sehingga dapat digunakan secara berulang kali. Variabel memetakan sebuah nama ke suatu nilai.
+Variabel adalah sebuah kontainer yang berfungsi dalam penyimpanan value (nilai) sehingga dapat digunakan secara berulang kali. Variabel memetakan sebuah nama ke suatu nilai.
 
 ### Aturan Penamaan Variabel
 
 Kamu bisa menamai variabel dengan nama apapun, tetapi ada beberapa aturan yang harus dipenuhi:
 
+- Tidak menggunakan spasi sebagai pemisah kata dalam variabel
 - Hanya terdiri dari huruf, angka, dan underscore (`_`)
 - Tidak dimulai dengan angka
-- Tidak boleh sama dengan *reserved word*. Contoh: `int`, `if`, `string`.
+- Tidak boleh sama dengan *reserved word*. 
+Contoh: 
+    - `int`,
+    - `if`, 
+    - `string`.
 
-Contoh penamaan yang benar, seperti `hasil`, `jumlah_angka`, dan `namaSaya`. Perlu diperhatikan bahwa penggunaan huruf kapital akan berpengaruh (case sensitive). Variabel `angka` dan `Angka` akan dianggap berbeda.
+Contoh penamaan yang benar, seperti:
+- `hasil`, 
+- `jumlah_angka`,
+- `namaSaya`. 
+
+Perlu diperhatikan bahwa penggunaan huruf kapital akan berpengaruh (case sensitive). Variabel `angka` dan `Angka` akan dianggap berbeda.
 
 > Dalam standar penamaan variabel, C++ menggunakan camelCase untuk penamaan pada variabel. Contoh: `angkaSaya`.
 > 

@@ -8,7 +8,7 @@ void loop(std::vector <int> parameter){
     }
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
     // Deklarasi Vector
     std::vector <int> v;

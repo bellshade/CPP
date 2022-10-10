@@ -14,8 +14,8 @@ int main() {
 
   // Contok penggunaan ternary untuk menentukan nilai c
   // cek apakah "a > b" (hasilnya false)
-  //  jika hasilnya "True" nilai c = a.
-  //  Jika hasilnya "False" nilai c = b.
+  // jika hasilnya "True" nilai c = a.
+  // Jika hasilnya "False" nilai c = b.
   int c = a > b ? a : b;
 
   // Tampilkan Hasilnya

@@ -1,10 +1,10 @@
 # Pengenalan C++
 
-C++ adalah bahasa pemrograman yang dibuat pada tahun 1979. Seperti namanya, C++ adalah bahasa turunan dari bahasa C. C++ menyempurnakan konsep OOP yang tidak terdapat dalam bahasa C.
+C++ adalah bahasa pemrograman yang dibuat pada tahun 1979 oleh Bjarne Stroustrup. Seperti namanya, C++ adalah bahasa turunan dari bahasa C. C++ menyempurnakan konsep OOP yang tidak terdapat dalam bahasa C.
 
 Sama seperti bahasa pada umumnya, program C++ dijalankan baris per baris, dari atas ke bawah, dan dari kiri ke kanan.
 
-Struktur dari C++ adalah sebagai berikut:
+Struktur dasar dari C++ adalah sebagai berikut:
 
 ```cpp
 #include <iostream>
@@ -14,12 +14,12 @@ int main() {
 }
 ```
 
-- `#include <iostream>` adalah library yang digunakan
-- `int main()` adalah function yang menampung semua program kamu
+- `#include <iostream>` adalah standard library/header yang digunakan
+- `int main()` adalah function/body yang menampung semua program kamu
 
 ## Menulis Program C++ Pertamamu
 
-Program C++ disimpan dengan ekstensi `.cpp`, yang berarti "C Plus Plus". Silakan buka code editor favorit kamu lalu tulis code di bawah ini dan simpan filenya dengan nama `hello_world.cpp`.
+Program C++ disimpan dengan ekstensi `.cpp`, yang berarti "C Plus Plus". Silakan buka code editor favorit kamu lalu tulis code di bawah ini dan simpan filenya dengan nama `hello_world.cpp`
 
 ```cpp
 #include <iostream>
@@ -59,8 +59,8 @@ int main() {
 	// Komentar 1 baris, komentar ini tidak akan di eksekusi oleh mesin
 
 	/*
-			ini komentar multiline
-			yang berisi lebih dari 1 baris
+		ini komentar multiline
+		yang dapat di isi lebih dari 1 baris
 	*/
 }
 ```
@@ -68,7 +68,7 @@ int main() {
 **Catatan dalam penamaan file:**
 
 - Disarankan untuk memberi nama file tanpa spasi
-- Gunakan `_` atau `-` jika nama file lebih dari satu kata, misal `hello_world.cpp` atau `hello-world.cpp`
+- Gunakan `_` (underscore) atau `-` (strip) jika nama file lebih dari satu kata, misal `hello_world.cpp` atau `hello-world.cpp`
 
 Selamat! Kamu sudah berhasil menulis program pertamamu.
 
