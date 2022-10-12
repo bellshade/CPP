@@ -10,7 +10,7 @@ class Graph {
         int numVertex;
         vector<pair<int, vector<int>>> vertices;
 
-        // fungsi untuk mengecek apakah vertex berada pada graph atau tidak
+        // fungsi untuk mengecek apakah vertex berada pada graph
         bool isInGraph(int vertexName) {
             for(auto vertex : vertices) {
                 if(vertex.first == vertexName) return true;
@@ -32,7 +32,7 @@ class Graph {
             this->numVertex = 0;
         }
 
-        // fungsi untuk menambah x vertex ke graph
+        // fungsi untuk menambah vertex ke graph
         void addVertex(int vertexName) {
             if(isInGraph(vertexName)) {
                 cout << "vertex sudah ada dalam graph";
@@ -56,7 +56,7 @@ class Graph {
             vertices.push_back(vertex);
         }
 
-        // fungsi untuk mengurangi vertex x dari graph
+        // fungsi untuk mengurangi vertex dari graph
         void removeVertex(int vertexName) {
             if(!isInGraph(vertexName)) {
                 cout << "vertex tidak ada dalam graph\n";
