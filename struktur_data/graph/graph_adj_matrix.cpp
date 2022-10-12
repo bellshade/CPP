@@ -25,6 +25,7 @@ class Graph {
             }
             return -1;
         }
+        
     public:
         // constructor untuk menginisialisasi private variable;
         Graph() {
@@ -76,8 +77,9 @@ class Graph {
 
         // fungsi untuk menambah hubungan antar vertex
         void addEdge(int srcVertexName, int dstVertexName) {
-            if(!isInGraph(srcVertexName) && !isInGraph(dstVertexName)) {
+            if(!isInGraph(srcVertexName) || !isInGraph(dstVertexName)) {
                 cout << "vertex tidak ada dalam graph\n";
+                return;
             }
                
             int srcIndex = findInGraph(srcVertexName);
@@ -87,8 +89,9 @@ class Graph {
 
         // fungsi untuk menghapus hubungan antar vertex
         void removeEdge(int srcVertexName, int dstVertexName) {
-            if(!isInGraph(srcVertexName) && !isInGraph(dstVertexName)) {
+            if(!isInGraph(srcVertexName) || !isInGraph(dstVertexName)) {
                 cout << "vertex tidak ada dalam graph\n";
+                return;
             }
 
             int srcIndex = findInGraph(srcVertexName);
@@ -98,8 +101,9 @@ class Graph {
 
         // fungsi untuk mengecek hubungan antara 2 vertex
         int query(int srcVertexName, int dstVertexName) {
-            if(!isInGraph(srcVertexName) && !isInGraph(dstVertexName)) {
+            if(!isInGraph(srcVertexName) || !isInGraph(dstVertexName)) {
                 cout << "vertex tidak ada dalam graph\n";
+                return;
             }
 
             int srcIndex = findInGraph(srcVertexName);
