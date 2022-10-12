@@ -71,10 +71,11 @@ Berikut adalah beberapa perbandingan kompleksitas operasi untuk adjacency list d
     - **Adjacency List**: untuk mengecek hubungan antara dua *vertex* ( $V_i$ ke $V_j$ ), kita harus mencari $V_j$ dalam $Adj[V_i]$. Setiap *vertex* dapat memiliki hubungan paling banyak sebanyak $V$ sehingga memiliki kompleksitas $O(|V|)$
 
 ## Contoh Kode Graph
-Berikut adalah contoh sederhana implementasi Graph menggunakan adjacency matrix:
+Berikut adalah contoh sederhana implementasi Graph yang **menyerupai** adjacency matrix (tidak menggunakan array namun vector):
 ```cpp
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 // banyak vertex pada graph
@@ -82,80 +83,117 @@ class Graph {
     private:
         // menyimpan banyak vertex dan adj matrix
         int numVertex;
-        vector<vector<int>> adjMatrix;
-        // fungsi unguk menginisialisasi adjacency matrixs
-        vector<vector<int>> initializeMatrix(int numVertex) {
-            return vector<vector<int>>(numVertex, vector<int>(numVertex, 0));
-        }
+        vector<pair<int, vector<int>>> vertices;
+
         // fungsi untuk mengecek apakah vertex berada pada graph atau tidak
-        bool isValid(int vertex) {
-            return (0 <= vertex && vertex <= numVertex);
+        bool isInGraph(int vertexName) {
+            for(auto vertex : vertices) {
+                if(vertex.first == vertexName) return true;
+            }
+            return false;
+        }
+
+        // fungsi untuk mencari posisi vertex pada vertices
+        int findInGraph(int vertexName) {
+            for(int i = 0; i < vertices.size(); i++) {
+                if(vertices[i].first == vertexName) return i;
+            }
+            return -1;
         }
     public:
-        // constructor untuk mengisi nilai private variable
-        Graph(int numVertex) {
-            this->numVertex = numVertex;
-            this->adjMatrix = initializeMatrix(numVertex);
+        // constructor untuk menginisialisasi private variable;
+        Graph() {
+            this->numVertex = 0;
         }
 
         // fungsi untuk menambah x vertex ke graph
-        void addVertex(int count = 1) {
-            numVertex += count; 
-            int prevSize = adjMatrix.size();
-            for(int i = 0; i < prevSize; i++) {
-                for(int j = 0; j < count; j++) {
-                    adjMatrix.push_back(vector<int>(numVertex, 0));
-                    adjMatrix[i].push_back(0);
-                }
-            }    
+        void addVertex(int vertexName) {
+            if(isInGraph(vertexName)) {
+                cout << "vertex sudah ada dalam graph";
+                return;
+            }
+
+            numVertex++;     
+
+            // menambah relasi untuk vertex baru
+            for(auto & vertex : vertices) {
+                vertex.second.push_back(0);
+            }
+
+
+            // menambah vertex baru
+            pair<int, vector<int>> vertex;
+            vertex.first = vertexName;
+            for(int i = 0; i < numVertex; i++) {
+                vertex.second.push_back(0);
+            }
+            vertices.push_back(vertex);
         }
 
         // fungsi untuk mengurangi vertex x dari graph
-        void removeVertex(int vertexPosition) {
-            if(!isValid(vertexPosition)) {
-                cout << "input tidak valid\n";
+        void removeVertex(int vertexName) {
+            if(!isInGraph(vertexName)) {
+                cout << "vertex tidak ada dalam graph\n";
+                return;
             }
 
-            adjMatrix.erase(adjMatrix.begin() + vertexPosition);
+            // menghapus vertex
+            int pos = findInGraph(vertexName);
+            vector<pair<int, vector<int>>>::iterator vtxIt = vertices.begin() + pos;
+            vertices.erase(vtxIt);
+
+            // menghapus relasi vertex
+            for(auto & vertex : vertices) {
+                vector<int>::iterator elemIt = vertex.second.begin() + pos;
+                vertex.second.erase(elemIt);
+            }
         }
 
         // fungsi untuk menambah hubungan antar vertex
-        void addEdge(int srcVertex, int dstVertex) {
-            if(!isValid(srcVertex) && !isValid(dstVertex)) {
-                cout << "input tidak valid\n";
+        void addEdge(int srcVertexName, int dstVertexName) {
+            if(!isInGraph(srcVertexName) && !isInGraph(dstVertexName)) {
+                cout << "vertex tidak ada dalam graph\n";
             }
-               
-            adjMatrix[srcVertex][dstVertex] = 1;
+
+            int srcIndex = findInGraph(srcVertexName);
+            int dstIndex = findInGraph(dstVertexName);
+            vertices[srcIndex].second[dstIndex] = 1;
         }
 
         // fungsi untuk menghapus hubungan antar vertex
-        void removeEdge(int srcVertex, int dstVertex) {
-            if(!isValid(srcVertex) && !isValid(dstVertex)) {
-                cout << "input tidak valid\n";
+        void removeEdge(int srcVertexName, int dstVertexName) {
+            if(!isInGraph(srcVertexName) && !isInGraph(dstVertexName)) {
+                cout << "vertex tidak ada dalam graph\n";
             }
 
-            adjMatrix[srcVertex][dstVertex] = 0;
+            int srcIndex = findInGraph(srcVertexName);
+            int dstIndex = findInGraph(dstVertexName);
+            vertices[srcIndex].second[dstIndex] = 0;
         }
 
         // fungsi untuk mengecek hubungan antara 2 vertex
-        int query(int srcVertex, int dstVertex) {
-            if(!isValid(srcVertex) && !isValid(dstVertex)) {
-                cout << "input tidak valid\n";
+        int query(int srcVertexName, int dstVertexName) {
+            if(!isInGraph(srcVertexName) && !isInGraph(dstVertexName)) {
+                cout << "vertex tidak ada dalam graph\n";
             }
 
-            return adjMatrix[srcVertex][dstVertex];
+            int srcIndex = findInGraph(srcVertexName);
+            int dstIndex = findInGraph(dstVertexName);
+            return vertices[srcIndex].second[dstIndex];
         }
 
         // fungsi untuk mem-print graph
         void printGraph() {
-            for (int i = 0; i < adjMatrix.size(); i++) {
-                cout << i << " --> ";
-                for (int j = 0; j < adjMatrix[i].size(); j++) {
-                    cout << adjMatrix[i][j] << " ";
-                }    
-                cout << endl;
+            for(auto vertex : vertices) {
+                cout << vertex.first << " --> ";
+                for(auto elem : vertex.second) {
+                    cout << elem << " ";
+                }  
+
+                cout << "\n";
             }
         }
+
 };
 ```
 
