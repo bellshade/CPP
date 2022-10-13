@@ -31,12 +31,12 @@ int main(){
   // menghitung hasil dari persegi1
   // dan menampilkan hasil
   hasil = persegi1.panjang * persegi1.lebar;
-  std::cout<<"hasil persegi1: "<<hasil<<std::endl;
+  std::cout << "hasil persegi1: " << hasil << std::endl;
 
   // menghitung hasil dari persegi2
   // dan menampilkan hasil
   hasil = persegi2.panjang * persegi2.lebar;
-  std::cout<<"hasil persegi2: "<<hasil<<std::endl;
+  std::cout << "hasil persegi2: " << hasil << std::endl;
 
   return 0;
 }

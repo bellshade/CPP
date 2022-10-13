@@ -89,4 +89,5 @@ Berikut ini simbol-simbol untuk setiap tipe data. Penjelasan untuk masing-masing
 | double | `%lf` |
 | char | `%c` |
 
-lanjutan tentang variabel [disini](https://www.youtube.com/watch?v=vnYWr7jFl5M&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=12)
+# FYI (For Your Information) / Reference
+- :exclamation: Lanjutan tentang variabel [disini](https://www.youtube.com/watch?v=vnYWr7jFl5M&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=12)

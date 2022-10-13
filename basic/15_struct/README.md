@@ -11,7 +11,7 @@ class Kelas_saya{
 
 int main(){
     Kelas_saya objek_saya;
-    std::cout<<objek_saya.angka;
+    std::cout << objek_saya.angka;
 }
 ```
 Ketika kita menurunkan struktur dari kelas atau struktur, penentu akses default dari kelas dasar itu adalah publik, tetapi ketika kita menurunkan kelas, penentu akses default adalah private.
@@ -26,9 +26,10 @@ struct Struct_saya{
 int main(){
     Struct_saya objek_saya;
     
-    std::cout<<"angka pertama "<<objek_saya.angka_saya<<std::endl;
-    std::cout<<"angka kedua "<<objek_saya.angka_saya2<<std::endl;
+    std::cout << "angka pertama " << objek_saya.angka_saya << std::endl;
+    std::cout << "angka kedua " << objek_saya.angka_saya2 << std::endl;
 }
 ```
 
-informasi lebih lanjut dari struct bisa dilihat [disini](https://www.youtube.com/watch?v=ELCI_U4OF5w&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=61)
+# FYI (For Your Information) / Reference
+- Informasi lebih lanjut dari struct bisa dilihat [disini](https://www.youtube.com/watch?v=ELCI_U4OF5w&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=61)

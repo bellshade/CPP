@@ -1,6 +1,6 @@
 # kelas dan objek
 
-Tujuan utama dari pemograman c++ adalah untuk menambahkan orientasi objek ke bahasa pemograman C dan kelas adalah fitur utama dari C++ yang mendukung pemograman berorientasi objek dan dsering disebut tipe yang ditentukan pengguna.
+Tujuan utama dari pemograman c++ adalah untuk menambahkan orientasi objek ke bahasa pemograman C dan kelas adalah fitur utama dari C++ yang mendukung pemograman berorientasi objek dan sering disebut tipe yang ditentukan pengguna.
 
 kelas digunakan untuk menetukan objek dan menggabungkan representasi data dan metode untuk memanipulasi data tersebut menjadi paket yang rapi. Data dan fungsi di dalam kelas disebut anggota kelas.
 
@@ -20,7 +20,7 @@ class Persegi{
 
 ## mengakses data anggota
 
-Anggota data publik dari objek suatu kelas dapat diakses menggunakan oeprator akses anggota langsung ``(.)``. contoh
+Anggota data publik dari objek suatu kelas dapat diakses menggunakan oeprator akses anggota langsung (``.``). contoh
 
 ```cpp
 #include <iostream>
@@ -48,9 +48,10 @@ int main(){
   volume = persegi1.panjang * persegi1.lebar;
 
   // menampilkan hasil persegi
-  std::cout<<"hasil dari hitung persegi panjang"<<std::endl;
-  std::cout<<volume;
+  std::cout << "hasil dari hitung persegi panjang" << std::endl;
+  std::cout << volume;
 
   return 0;
 }
 ```
+# FYI (For Your Information) / Reference

@@ -70,4 +70,5 @@ Operator logika digunakan untuk menggabungkan dua—atau lebih—kondisi
 | `\|\|` | OR |
 | `!` | NOT |
 
-lebih lanjut dari operator logika bisa dilihat [disini](https://www.youtube.com/watch?v=k9nBTzvba34&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=17)
+# FYI (For Your Information) / Reference
+- :exclamation: Lebih lanjut dari operator logika bisa dilihat [disini](https://www.youtube.com/watch?v=k9nBTzvba34&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=17)

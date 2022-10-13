@@ -94,4 +94,5 @@ int main(){
 }
 ```
 
-topik lanjutan pada pointer bisa dilihat [disini](https://www.youtube.com/watch?v=O1kWNj5Ikro&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=43)
+# FYI (For Your Information) / Reference
+- :exclamation: Topik lanjutan pada pointer bisa dilihat [disini](https://www.youtube.com/watch?v=O1kWNj5Ikro&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=43)

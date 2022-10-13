@@ -1,6 +1,6 @@
 # constant / literal
 
-constant mengacu pada nilai tetap yang tidak dapat diubah oleh program dan disebut dengan literal. constant dapat berupa salah satu tipe data dasar dan dapat dibagi menjadi angka integer, angka floating atau float, char, string atau boolean.
+Constant mengacu pada nilai tetap yang tidak dapat diubah oleh program dan disebut dengan literal. constant dapat berupa salah satu tipe data dasar dan dapat dibagi menjadi angka integer, angka floating atau float, char, string atau boolean.
 
 sekali lagi, constant diperlakukan seperti variabel biasa kecualli bahaw nilainya tidak dapat diubah setelah definisinya.
 
@@ -8,7 +8,7 @@ sekali lagi, constant diperlakukan seperti variabel biasa kecualli bahaw nilainy
 
 literal integer dapat berupa konstant desimal, oktal, atau heksadesimal. awalan menetukan basis atau radix: 0x atau 0X untuk hekasdesimal, 0 untuk oktal dan tidak ada untuk desimal.
 
-literal integer juga dapat memiliki sufix ynag merupakan kombinasi dari U dan L. masing-masing untuk usigned dan long. akhiran dapat berupa huruf besar atau kecil dan dapat di dalam urutan apapun
+literal integer juga dapat memiliki sufix yang merupakan kombinasi dari U dan L. masing-masing untuk usigned dan long. akhiran dapat berupa huruf besar atau kecil dan dapat di dalam urutan apapun.
 
 berikut contoh dari literal integer
 ```
@@ -66,13 +66,13 @@ contoh penggunaan escape karakter
 #include <iostream>
 
 int main(){
-    std::cout<<"selamat\tdatang\n\n";
+    std::cout << "selamat\tdatang\n\n";
     return 0;
 }
 ```
-ketika kode diatas  dikompilasi dan dijalankan, menghasilkan berupa
+ketika kode diatas dikompilasi dan dijalankan, menghasilkan berupa
 ```
-selamat  datang
+selamat   datang
 ```
 
 ## string literal
@@ -84,8 +84,8 @@ Anda dapat memecah garis panjang menjadi beberapa baris menggunakan literal stri
 ## mendifinisikan konstanta
 
 ada dua cara sederhana dalam c++ untuk mendifinisikan konstanta
-- menggunakan preprosesor #define
-- menggunakan keyword const
+- menggunakan preprosesor `#define`
+- menggunakan keyword `const`
 
 ## menggunakan define
 
@@ -105,8 +105,8 @@ contoh
 int main(){
     int hasil;
     hasil = PANJANG * LEBAR;
-    std::cout<<hasil;
-    std::cout<<NEWLINE;
+    std::cout << hasil;
+    std::cout << NEWLINE;
 
     return 0;
 }
@@ -114,7 +114,7 @@ int main(){
 
 ## menggunakan const
 
-kita dapat menggunakan awalan const untuk mendeklarasikan konstanta dengan tipe tertentu sebagai berikut
+kita dapat menggunakan awalan `const` untuk mendeklarasikan konstanta dengan tipe tertentu sebagai berikut
 
 ```
 const type variabel = value;
@@ -137,3 +137,4 @@ int main(){
     return 0; 
 }
 ```
+# FYI (For Your Information) / Reference

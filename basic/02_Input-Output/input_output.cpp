@@ -1,6 +1,7 @@
 #include <iostream>
 
 int main(){
+    
     // deklarasi variabel
     char nama_hewan[20];
     std::cout << "Nama hewan: ";

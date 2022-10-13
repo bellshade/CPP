@@ -86,3 +86,5 @@ Kita dapat dengan bebas menggunakan fungsi yang mana saja, mengikuti/menyesuaika
 3. Jika kita memiliki nilai (_inputUser_) = `1`. 
     - Maka saat kita memanggil fungsi `dikali`, secara otomatis memanggil fungsi yang pertama (`dikali`)
     - `Hasil` 1 x 1 : 1
+
+# FYI (For Your Information) / Reference

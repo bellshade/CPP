@@ -50,11 +50,10 @@ for (int i = 0; i < 3; i++){
 }
 ```
 
-## Reference
-- [Arrays in CPP](https://www.w3schools.com/cpp/cpp_arrays.asp)
+# FYI (For Your Information) / Reference
+- [W3Schools - Arrays in CPP](https://www.w3schools.com/cpp/cpp_arrays.asp)
 
-contoh lebih lanjut dari array
-
+Contoh lebih lanjut dari array
 - [pendahuluan array](https://www.youtube.com/watch?v=8WhUADLI4RQ&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=47)
 - [array || standard library](https://www.youtube.com/watch?v=o1DegduG140&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=48)
 - [latihan array](https://www.youtube.com/watch?v=PGV8VigBVcg&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=49)

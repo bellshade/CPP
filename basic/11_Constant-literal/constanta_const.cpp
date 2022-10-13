@@ -1,6 +1,7 @@
 #include <iostream>
 
 int main(){
+    
     // deklarasi variabel dengan const
     const int PANJANG = 20;
     const int LEBAR = 2;

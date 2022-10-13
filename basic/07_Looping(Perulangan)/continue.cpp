@@ -6,12 +6,12 @@ int main(){
     for(int i = 0; i < 50; i++){
         // jika i adalah 20
         if (i == 20){
-            // maka akan menghentikan perulangan
-            break;
+            // maka akan melewati angka 20
+            continue;
         }
         // menampilkan i
         // atau hasil perulangan
-        std::cout<<i<<"\n";
+        std::cout << i << "\n";
     }
     return 0;
 }

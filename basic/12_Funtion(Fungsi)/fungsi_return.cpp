@@ -9,7 +9,7 @@ int main(){
     int hasil;
 
     hasil  = tambah(a, b);
-    std::cout<<"hasilnya adalah :"<<hasil;
+    std::cout << "hasilnya adalah :" << hasil;
 
     return 0;
 }

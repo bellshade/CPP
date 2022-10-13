@@ -19,7 +19,7 @@ int dikali(int var1, int var2, int var3) {
 }
 
  
-int main(int argc, char const *argv[])
+int main()
 {
     std::cout << dikali(1,2,3) << std::endl;
     std::cout << dikali(1,2) << std::endl;

@@ -45,11 +45,17 @@ int maian(){
 }
 ```
 
-contoh lebih lanjut dari string
+# FYI (For Your Information) / Reference
+Contoh lebih lanjut dari string
 
-- [pengenalan string](https://www.youtube.com/watch?v=DpVq7KUHjgY&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=55)
-- [operasi pada string](https://www.youtube.com/watch?v=Sq3_mzqdFj0&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=56)
-- [komparasi atau perbandingangn string](https://www.youtube.com/watch?v=iXWYWFZfP98&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=57)
-- [akses substring](https://www.youtube.com/watch?v=OpodtuA0xyI&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=58)
-- [substitusi string](https://www.youtube.com/watch?v=Sq-Efm6vRYA&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=59)
-- [getline console sting](https://www.youtube.com/watch?v=FkCkMV6wjDs&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=60)
+- [Pengenalan string](https://www.youtube.com/watch?v=DpVq7KUHjgY&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=55)
+
+- [Operasi pada string](https://www.youtube.com/watch?v=Sq3_mzqdFj0&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=56)
+
+- [Komparasi atau perbandingangn string](https://www.youtube.com/watch?v=iXWYWFZfP98&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=57)
+
+- [Akses substring](https://www.youtube.com/watch?v=OpodtuA0xyI&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=58)
+
+- [Substitusi string](https://www.youtube.com/watch?v=Sq-Efm6vRYA&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=59)
+
+- [Getline console sting](https://www.youtube.com/watch?v=FkCkMV6wjDs&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=60)

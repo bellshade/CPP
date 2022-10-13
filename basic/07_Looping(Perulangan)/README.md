@@ -45,7 +45,7 @@ Penjelasan:
 - Setelah sampai di akhir blok, program akan mengeksekusi bagian `perubahan`, yaitu menambah `i` dengan 1, lalu kembali ke awal dari `for`
 - Program akan kembali melakukan pengecekan dan mengulangi langkah di atas sampai kondisi tidak terpenuhi.
 
-contoh lebih lanjut dari operator ``for loop`` bisa dilihat [disini](https://www.youtube.com/watch?v=ZeqJewFm7zc&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=26)
+Contoh lebih lanjut dari operator ``for loop`` bisa dilihat di [Kelas terbuka - For Loop](https://www.youtube.com/watch?v=ZeqJewFm7zc&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=26)
 
 ## 2. While Loop
 Perulangan `while` merupakan perulangan yang biasa digunakan apabila jumlah perulangannya belum diketahui. Proses perulangan akan terus berlanjut selama kondisinya bernilai benar (`true`) dan akan berhenti apabila kondisinya bernilai salah (`false`).
@@ -86,7 +86,7 @@ Penjelasan:
 - Setelah sampai di akhir blok, program akan kembali ke awal dari `while`
 - Program akan kembali melakukan pengecekan dan mengulangi langkah-langkah di atas sampai kondisi tidak terpenuhi.
 
-contoh lebih lanjut dari opeartor ``while loop`` bisa dilihat [disini](https://www.youtube.com/watch?v=Pzy3XWzORNw&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=25)
+Contoh lebih lanjut dari opeartor ``while loop`` bisa dilihat [Kelas Terbuka - While Loop](https://www.youtube.com/watch?v=Pzy3XWzORNw&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=25)
 
 ## 3. Do While Loop
 Perulangan ini mirip dengan While Loop pada dasarnya. Perbedaannya, `do while` menjalankan aksinya terlebih dahulu kemudian mengecek persyaratan Looping.
@@ -128,7 +128,7 @@ Penjelasan:
 - Karena kondisi terpenuhi, program akan menjalankan code di dalam blok dengan mencetak "Hello World"
 - Setelah sampai di akhir blok `do`, program akan kembali melakukan pengecekan terhadap `while` dan mengulangi aksi dalam `do` sampai kondisi tidak terpenuhi.
 
-contoh lebih lanjut dari operator ``do while`` bisa dilihat [disini](https://www.youtube.com/watch?v=Pzy3XWzORNw&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=25)
+Contoh lebih lanjut dari operator ``do while`` bisa dilihat [Kelas Terbuka - Do While](https://www.youtube.com/watch?v=Pzy3XWzORNw&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=25)
 
 ## Keyword Spesial dalam Perulangan
 
@@ -141,7 +141,7 @@ for (int i = 0; i < 50; i++){
     if(i == 20){
         break
     }
-    std::cout<<i<<"\n";
+    std::cout << i << "\n";
 }
 ```
 pada penjelasan diatas variabel ``i`` yang semula 0 akan bertambah berulang ``0 ke 49``, tetapi disini memliki kondisi dimana jika value dari i sudah mencapai 20 (``0 ke 19``) maka looping akan memberhentikan prosesnya
@@ -157,7 +157,7 @@ for (int i = 0; i < 50; i++){
     if(i == 20){
         continue;
     }
-    std::cout<<i<<"\n";
+    std::cout << i << "\n";
 }
 ```
 pada penjelasan diatas variabel ``i`` yang semula 0 akan bertambah berulang ``0 ke 49``, tetapi disini memliki kondisi dimana jika value dari i sudah mencapai 20 (``0 ke 19``) maka value yang ``20`` akan dilewati
@@ -168,3 +168,10 @@ pada penjelasan diatas variabel ``i`` yang semula 0 akan bertambah berulang ``0 
 22
 23
 ```
+
+# FYI (For Your Information) / Reference
+1. Contoh lebih lanjut dari operator ``for loop`` bisa dilihat di [Kelas terbuka - For Loop](https://www.youtube.com/watch?v=ZeqJewFm7zc&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=26)
+
+2. Contoh lebih lanjut dari opeartor ``while loop`` bisa dilihat [Kelas Terbuka - While Loop](https://www.youtube.com/watch?v=Pzy3XWzORNw&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=25)
+
+3. Contoh lebih lanjut dari operator ``do while`` bisa dilihat [Kelas Terbuka - Do While](https://www.youtube.com/watch?v=Pzy3XWzORNw&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=25)

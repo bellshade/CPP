@@ -187,4 +187,5 @@ switch(x) {
 }
 ```
 
-**Catatan:** Ketika menggunakan `switch`, kamu hanya bisa membandingkan satu ekspresi.
+# FYI (For Your Information) / Reference
+> **Catatan:** Ketika menggunakan `switch`, kamu hanya bisa membandingkan satu ekspresi.

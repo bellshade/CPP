@@ -5,6 +5,7 @@
 #define LEBAR 2
 
 int main(){
+    
     // deklarasi variabel hasil
     int hasil;
     // kalkulasi
