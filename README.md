@@ -9,7 +9,7 @@
 
 Repositori ini berisi kumpulan berbagai macam *source code* struktur data, algoritma, analisis matematika dan sebagainya yang diimplementasikan dengan menggunakan bahasa pemrograman C++.
 
-![image](https://user-images.githubusercontent.com/68750286/140185089-b47098bf-695c-4a4a-b579-06169ce45d16.png)
+![image](https://cdn.discordapp.com/attachments/835845494109634602/1031183376964653136/140185089-b47098bf-695c-4a4a-b579-06169ce45d16-min.png)
 
 
 ## 🎉🎉 Selamat Datang di C++ 🎉🎉
