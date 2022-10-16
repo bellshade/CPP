@@ -1,4 +1,5 @@
 # Bellshade C++
+
 > Part of Bellshade Project, managed by [WPU Discord Community](http://discord.gg/wpu) <br>
 > WPU Community is the fastest growing software developer forum initiated by [Mr. Sandhika Galih](https://www.youtube.com/c/WebProgrammingUNPAS)
 
@@ -6,11 +7,9 @@
 ![build-cpp](https://img.shields.io/github/workflow/status/bellshade/CppAlgorithm/Cpp%20Testing?style=for-the-badge)
 [![discord](https://img.shields.io/discord/722002048643497994?label=discord&style=for-the-badge)](http://discord.gg/S4rrXQ)
 
-
 Repositori ini berisi kumpulan berbagai macam *source code* struktur data, algoritma, analisis matematika dan sebagainya yang diimplementasikan dengan menggunakan bahasa pemrograman C++.
 
-![image](https://user-images.githubusercontent.com/68750286/140185089-b47098bf-695c-4a4a-b579-06169ce45d16.png)
-
+![image](https://cdn.discordapp.com/attachments/835845494109634602/1031183376964653136/140185089-b47098bf-695c-4a4a-b579-06169ce45d16-min.png)
 
 ## 🎉🎉 Selamat Datang di C++ 🎉🎉
 C++ adalah bahasa pemograman multi fungsi dengan tipe *compiled language*. Artinya, kode yang ditulis dalam C++ harus dikompilasi atau diubah terlebih dahulu menjadi file `binary` yang dapat dimengerti komputer. 
@@ -38,7 +37,9 @@ Setelah menyelesaikan seluruh rangkaian pengenalan dasar - dasar pemograman, kal
 Untuk sekarang, mulai saja dulu dengan [Object Oriented Programming]()
 
 ## 🎓 Topik Lanjutan 🎓
+
 Jika kalian sudah menguasai dasar - dasar pemograman berserta dengan paradigma *Object Oriented Programming*, kalian bisa langsung mengeksplorasi topik - topik lain yang jauh lebih menantang dan tidak kalah seru. Di repositori ini, kami telah menyiapkan beberapa topik yang mungkin kamu suka.
+
 01. [Manipulasi Pointer]()
 02. [Algoritma Struktur Data]()
 03. [Statistik dan Probabilitas]()
@@ -68,12 +69,15 @@ g++ nama_file_kode.cpp -o nama_file_kode.exe
 contoh penginstalan c++ pada windows menggunakan codeblocks bisa lihat [disini](https://www.youtube.com/watch?v=KSMQXpoBfzY&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=3), serta untuk yang ingin menggunakan visual studio code bisa dilihat [disini](https://www.youtube.com/watch?v=UUX1vHGIcNQ&list=PLZS-MHyEIRo4Ze0bbGB1WKBSNMPzi-eWI&index=4)
 
 ## ⚡ Quick Access ⚡
+
 Semua *script* yang ada pada repositori ini, dapat diakses dengan cepat lewat link berikut:
+
 - [Basic](basic/)
 - [Backtracking](backtracking/)
-- [Sorting](sorting)
+- [Sorting](algorithm/sorting/)
 
-## 🤩 Ayo ikut kami dan berkontribusi! 🤩 
+## 🤩 Ayo ikut kami dan berkontribusi! 🤩
+
 Bantuan kalian diperlukan! Untuk Bellshade dapat lebih jauh lagi membantu anak - anak Indonesia belajar *programming*, kita butuh tenaga kalian.
 > "Dengan Bellshade, aku jadi bisa *ngoding*! Terima kasih Bellshade!!"
 
