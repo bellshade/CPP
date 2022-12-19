@@ -4,7 +4,7 @@
 > WPU Community is the fastest growing software developer forum initiated by [Mr. Sandhika Galih](https://www.youtube.com/c/WebProgrammingUNPAS)
 
 ![lisensi](https://img.shields.io/github/license/bellshade/CPP?style=for-the-badge)
-![build-cpp](https://img.shields.io/github/workflow/status/bellshade/CppAlgorithm/Cpp%20Testing?style=for-the-badge)
+![build-cpp](https://img.shields.io/github/actions/workflow/status/bellshade/CPP/cpp.yml?branch=main&style=for-the-badge)
 ![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=bellshade&repo=cpp&label=VISITOR&style=for-the-badge&color=%2338FF26&contentType=svg)
 [![discord](https://img.shields.io/discord/722002048643497994?label=discord&style=for-the-badge)](http://discord.gg/S4rrXQ)
 
@@ -84,4 +84,4 @@ Bantuan kalian diperlukan! Untuk Bellshade dapat lebih jauh lagi membantu anak -
 
 Kami sangat senang bila kalian ingin melakukan kontribusi pada repositori **CPP** ini. Tapi, sebelum itu, silahkan baca terlebih dahulu [peraturan dan pedomannya](CONTRIBUTING.md) yang telah kami siapkan. Terima kasih! 
 
-Untuk informasi lebih lanjut, mari gabung dalam komunitas [Discord Channel WPU](http://discord.gg/S4rrXQU)
+Untuk informasi lebih lanjut, mari gabung dalam komunitas [Discord Channel WPU](http://discord.gg/S4rrXQU) dan [Discord Channel Kelas Terbuka](https://discord.gg/QnRSMk2C)
