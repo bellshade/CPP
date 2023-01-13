@@ -43,13 +43,22 @@ static void test() {
 
   uint64_t test_case_3 = fibonacci(2);
   assert(test_case_3 == 1);
-  std::cout << "Test 2 : berhasil !" << std::endl;
+  std::cout << "Test 3 : berhasil !" << std::endl;
+
+  uint64_t test_case_4 = fibonacci(9);
+  assert(test_case_4 == 34);
+  std::cout << "Test 4 : berhasil !" << std::endl;
+
+  uint64_t test_case_5 = fibonacci(10);
+  assert(test_case_5 == 55);
+  std::cout << "Test 5 : berhasil !" << std::endl;
 }
 
 // Fungsi utama
 int main() {
   test();
   int n = 0;
+  std::cout << "Masukan angka: ";
   std::cin >> n;
   assert(n >= 0);
   std::cout << "F(" << n << ") = " << fibonacci(n) << std::endl;
