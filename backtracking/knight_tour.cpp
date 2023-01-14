@@ -39,9 +39,8 @@ namespace backtracking {
             }
             return false;
         }
-    }  
-}  
-
+        }  // namespace knight_tour
+        }  // namespace backtracking
 
 int main() {
     const int n = 8;
