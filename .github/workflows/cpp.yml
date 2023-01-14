@@ -53,7 +53,7 @@ jobs:
           import sys
           import subprocess
         
-          print("Python [}.{}.{}".format(*sys.version_info))
+          print("Python {}.{}.{}".format(*sys.version_info))
           with open("git_diff.txt") as in_file:
             file_modifikasi = sorted(in_file.read().splitlines())
           print("{} file yang termodifikasi".format(len(file_modifikasi)))
