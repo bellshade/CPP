@@ -21,8 +21,8 @@ jobs:
     name: cpp test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
       - name: install requirement
         run: |
           sudo apt-get -qq update
@@ -40,14 +40,12 @@ jobs:
 
       - name: mengambil file yang telah dirubah
         run: |
-          git remote -v
           git branch
-          git remote set-url origin https://x-acces-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
           git diff --diff-filter=dr --name-only origin/main > git_diff.txt
           echo "file diubah-- `cat git_diff.txt`"
 
-      - name: Konfigurasi statik lint cpp
-        run: cmake -B build -S . -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+      # - name: Konfigurasi statik lint cpp
+      #  run: cmake -B build -S . -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
       - name: lint file yang telah di commit
         shell: python
         run: |
