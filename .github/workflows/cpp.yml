@@ -36,7 +36,7 @@ jobs:
         run: |
           wget https://raw.githubusercontent.com/bellshade/CPP/main/.github/workflows/format_nama_file.sh
           chmod +x format_nama_file.sh
-          ./format_nama_file.sh . .cpp, .hpp
+          ./format_nama_file.sh .cpp, .hpp
 
       - name: mengambil file yang telah dirubah
         run: |
