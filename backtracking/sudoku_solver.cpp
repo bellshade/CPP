@@ -6,11 +6,15 @@
  * https://en.wikipedia.org/wiki/Sudoku
  */
 
-#include <array>
-#include <iostream>
+#include <array>     /// for assert
+#include <iostream>  /// for IO operations
 
+/**
+ * @namespace backtracking
+ * @brief Backtracking algorithms
+ */
 namespace backtracking {
-namespace sudoku_solve {
+namespace sudoku_solver {
 template <size_t V>
 bool isPossible(const std::array<std::array<int, V>, V> &mat, int i, int j,
                 int no, int n) {
@@ -33,6 +37,7 @@ bool isPossible(const std::array<std::array<int, V>, V> &mat, int i, int j,
 
     return true;
 }
+
 template <size_t V>
 void printMat(const std::array<std::array<int, V>, V> &mat,
               const std::array<std::array<int, V>, V> &starting_mat, int n) {
@@ -54,13 +59,11 @@ void printMat(const std::array<std::array<int, V>, V> &mat,
         std::cout << std::endl;
     }
 }
-
 template <size_t V>
 bool solveSudoku(std::array<std::array<int, V>, V> &mat,
                  const std::array<std::array<int, V>, V> &starting_mat, int i,
                  int j) {
     if (i == 9) {
-        /// Solved for 9 rows already
         printMat<V>(mat, starting_mat, 9);
         return true;
     }
@@ -82,7 +85,7 @@ bool solveSudoku(std::array<std::array<int, V>, V> &mat,
     mat[i][j] = 0;
     return false;
 }
-}  // namespace sudoku_solve
+}  // namespace sudoku_solver
 }  // namespace backtracking
 
 int main() {
@@ -98,10 +101,10 @@ int main() {
         std::array<int, V>{0, 0, 0, 4, 1, 9, 0, 0, 5},
         std::array<int, V>{0, 0, 0, 0, 8, 0, 0, 7, 9}};
 
-    backtraking::sudoku_solve::printMat<V>(mat, mat, 9);
-    std::cout<<"solusi "<<std::endl;
+    backtracking::sudoku_solver::printMat<V>(mat, mat, 9);
+    std::cout << "Solution " << std::endl;
     std::array<std::array<int, V>, V> starting_mat = mat;
-    backtraking::sudoku_solve::solveSudoku<V>(mat, starting_mat, 8, 9);
+    backtracking::sudoku_solver::solveSudoku<V>(mat, starting_mat, 0, 0);
 
     return 0;
 }
