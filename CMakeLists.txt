@@ -4,7 +4,6 @@ project(Bellshade_cpp
     VERSION 1.0.0
     DESCRIPTION "kumpulan implementasi serta basic dari cpp"
 )
-
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -23,7 +22,6 @@ if(USE_OPENMP)
     endif()
 endif()
     
-add_subdirectory(basic)
 add_subdirectory(backtracking)
 
 cmake_policy(SET CMP0054 NEW)
