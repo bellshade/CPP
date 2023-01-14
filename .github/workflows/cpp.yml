@@ -13,6 +13,8 @@ on: [push, pull_request]
   #   branches: [ main ]
   # pull_request:
   #   branches: [ main ]
+permissions:
+  contents: write
 
 jobs:
   TestingUtama:
@@ -23,8 +25,8 @@ jobs:
       - uses: actions/setup-python@v2
       - name: install requirement
         run: |
-          sudo apt -qq -y update
-          sudo apt -qq install clang-tidy-10 clang-format-10
+          sudo apt-get -qq update
+          sudo apt-get -qq install clang-tidy clang-format
       - name: git
         run: |
           git config --global user.name bellshadebot
@@ -32,25 +34,9 @@ jobs:
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
       - name: format filename
         run: |
-          IFS=$'\n'
-          for fname in `find . -type f -name '*.cpp' -o -name '*.cc' -o -name '*.h'`
-          do 
-            echo "${fname}"
-            new_fname=`echo ${fname} | tr ' ' '_'`
-            echo "      ${new_fname}"
-            new_fname=`echo ${new_fname} | tr 'A-Z' 'a-z'`
-            echo "      ${new_fname}"
-            new_fname=`echo ${new_fname} | tr '-' '_'`
-            echo "      ${new_fname}"
-            new_fname=${new_fname/.cc/.cpp}
-            echo "      ${new_fname}"
-            if [ ${fname} != ${new_fname} ]
-            then
-              echo "      ${fname} --> ${new_fname}"
-              git "mv" "${fname}" ${new_fname}
-            fi
-          done
-          git commit -am "formatting filenames ${GITHUB_SHA::8}" ||  true
+          wget https://raw.githubusercontent.com/bellshade/CPP/main/.github/workflows/format_nama_file.sh
+          chmod +x format_nama_file.sh
+          ./format_nama_file.sh . .cpp, .hpp
 
       - name: mengambil file yang telah dirubah
         run: |
@@ -58,7 +44,8 @@ jobs:
           git branch
           git remote set-url origin https://x-acces-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
           git diff --diff-filter=dr --name-only origin/main > git_diff.txt
-          echo "file diubah-- `cat git_diff.txt`" 
+          echo "file diubah-- `cat git_diff.txt`"
+
       - name: Konfigurasi statik lint cpp
         run: cmake -B build -S . -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
       - name: lint file yang telah di commit
@@ -117,7 +104,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macOS-latest]
     steps:
-    - uses: actions/checkout@main
+    - uses: actions/checkout@v3
       with:
         submodules: true
     - run: cmake -B ./build -S .
