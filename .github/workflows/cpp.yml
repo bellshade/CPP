@@ -37,12 +37,6 @@ jobs:
           chmod +x filename_formatter.sh
           ./filename_formatter.sh .cpp, .hpp
 
-      - name: mengambil file yang telah dirubah
-        run: |
-          git branch
-          git diff --diff-filter=dr --name-only origin/main > git_diff.txt
-          echo "file diubah-- `cat git_diff.txt`"
-
       - name: Konfigurasi statik lint cpp
         run: cmake -B build -S . -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 
