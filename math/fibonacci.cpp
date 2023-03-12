@@ -18,7 +18,7 @@
 uint64_t fibonacci(uint64_t n) {
     // Jika inputnya 0 atau 1 maka return n
     // ini akan mengatur 2 nilai pertama dari urutan
-    if (n == 0 || n == 1) {
+    if (n <= 1) {
         return n;
     }
 
