@@ -33,7 +33,7 @@ jobs:
           git config --global user.email 'github-actions@users.noreply.github.com'
       - name: format filename
         run: |
-          wget wget https://raw.githubusercontent.com/bellshade/unitesting-script/main/filename_formatter.sh
+          wget https://raw.githubusercontent.com/bellshade/unitesting-script/main/filename_formatter.sh
           chmod +x filename_formatter.sh
           ./format_nama_file.sh .cpp, .hpp
 
