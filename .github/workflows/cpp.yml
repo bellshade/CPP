@@ -29,13 +29,12 @@ jobs:
           sudo apt-get -qq install clang-tidy clang-format
       - name: git
         run: |
-          git config --global user.name bellshadebot
-          git config --global user.email 'bellshade07@gmail.com'
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git config --global user.name github-actions[bot]
+          git config --global user.email 'github-actions@users.noreply.github.com'
       - name: format filename
         run: |
-          wget https://raw.githubusercontent.com/bellshade/CPP/main/.github/workflows/format_nama_file.sh
-          chmod +x format_nama_file.sh
+          wget wget https://raw.githubusercontent.com/bellshade/unitesting-script/main/filename_formatter.sh
+          chmod +x filename_formatter.sh
           ./format_nama_file.sh .cpp, .hpp
 
       - name: mengambil file yang telah dirubah
@@ -46,6 +45,7 @@ jobs:
 
       - name: Konfigurasi statik lint cpp
         run: cmake -B build -S . -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+
       - name: lint file yang telah di commit
         shell: python
         run: |
@@ -86,8 +86,8 @@ jobs:
 
       - name: commit
         run: |
-          git commit -am "clang formatter and clang-tidy fixing ${GITHUB_SHA:8}" || true
-          git push --force origin HEAD:$GITHUB_REF || true 
+          git commit -am "chore: clang formatter and clang-tidy fixing ${GITHUB_SHA:8}" || true
+          git push origin HEAD:$GITHUB_REF || true
     
   build:
     name: cek compile
