@@ -22,6 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v4
       - name: install requirement
         run: |
@@ -40,7 +42,7 @@ jobs:
       - name: mengambil file yang telah dirubah
         run: |
           git branch
-          git diff --diff-filter=dr --name-only origin/main origin/${GITHUB_HEAD_REF} > git_diff.txt
+          git diff --diff-filter=dr --name-only origin/main > git_diff.txt
           echo "file diubah-- `cat git_diff.txt`"
 
       - name: Konfigurasi statik lint cpp
