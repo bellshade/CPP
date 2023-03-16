@@ -34,7 +34,7 @@ vector<int> snail_sort(const Matrix& mat) {
     // melakukan binding pada variable yang dibutuhkan (C++17)
     auto [x, y] = pos;
     auto [dx, dy] = delta;
-    auto [next_x, next_y] = pair{x + dx, y + dy};
+    auto [next_x, next_y] = pair<int, int>{x + dx, y + dy};
 
     // mengecek agar posisi (pointer) selanjut nya
     // tidak keluar dari index matrix
