@@ -31,25 +31,25 @@ vector<int> snail_sort(const Matrix& mat) {
   pair<int, int> delta = {0, 1};  // arah pointer sekarang
 
   while (snail.size() < (n * n)) {
-    // melakukan binding pada variable yang dibutuhkan (C++17)
-    auto [x, y] = pos;
-    auto [dx, dy] = delta;
-    auto [next_x, next_y] = pair<int, int>{x + dx, y + dy};
+    // posisi pointer selanjutnya
+    pair<int, int> next_pos = {pos.first + delta.first,
+                               pos.second + delta.second};
 
     // mengecek agar posisi (pointer) selanjut nya
     // tidak keluar dari index matrix
-    auto left_right = (next_x < 0 || next_x >= n);
-    auto up_down = (next_y < 0 || next_y >= n);
+    auto left_right = (next_pos.first < 0 || next_pos.first >= n);
+    auto up_down = (next_pos.second < 0 || next_pos.second >= n);
 
     // mengecek mark, jika 1 maka ubah arah pointer (delta)
     // jika 0 masukan posisi selanjut nya ke hasil sorting (snail),
     // mark posisi sekarang menjadi 1 dan ganti posisi sekarang (pos)
-    if (left_right || up_down || marker.at(next_x).at(next_y)) {
+    if (left_right || up_down ||
+        marker.at(next_pos.first).at(next_pos.second)) {
       delta = redirect(delta);
     } else {
-      snail.push_back(mat.at(next_x).at(next_y));
-      marker.at(x).at(y) = true;
-      pos = {next_x, next_y};
+      snail.push_back(mat.at(next_pos.first).at(next_pos.second));
+      marker.at(pos.first).at(pos.second) = true;
+      pos = next_pos;
     }
   }
 
