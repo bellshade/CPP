@@ -16,19 +16,19 @@ vector<int> snail_sort(const Matrix& mat) {
 
   // mengontrol arah pointer
   auto redirect = [](pair<int, int> delta) -> pair<int, int> {
-    if (delta == pair{0, 1}) return {-1, 0};   // kanan ke bawah
-    if (delta == pair{-1, 0}) return {0, -1};  // bawah ke kiri
-    if (delta == pair{0, -1}) return {1, 0};   // kiri ke atas
-    return {0, 1};                             // atas ke kanan
+    if (delta == pair<int, int>{0, 1}) return {-1, 0};   // kanan ke bawah
+    if (delta == pair<int, int>{-1, 0}) return {0, -1};  // bawah ke kiri
+    if (delta == pair<int, int>{0, -1}) return {1, 0};   // kiri ke atas
+    return {0, 1};                                       // atas ke kanan
   };
 
   size_t n = mat.size();
 
-  Matrix marker(n, vector<int>(n));  // matrix untuk mark
-  vector snail = {mat.at(0).at(0)};  // hasil dari sorting
+  Matrix marker(n, vector<int>(n));       // matrix untuk mark
+  vector<int> snail = {mat.at(0).at(0)};  // hasil dari sorting
 
-  pair pos = {0, 0};    // posisi saat ini (pointer)
-  pair delta = {0, 1};  // arah pointer sekarang
+  pair<int, int> pos = {0, 0};    // posisi saat ini (pointer)
+  pair<int, int> delta = {0, 1};  // arah pointer sekarang
 
   while (snail.size() < (n * n)) {
     // melakukan binding pada variable yang dibutuhkan (C++17)
