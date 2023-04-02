@@ -26,36 +26,30 @@ Efeknya, *runtime* C++ dapat disandingkan dengan bahasa C yang notabene memiliki
 | :-----------: | :----------------------------------------: |:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------: |
 | 01 | Introduksi Pemograman dan C++ | Memahami apa itu membuat program dan apa peran C++ dalam proses pembuatan program | [Materi](basic/01_introduction) |
 | 02 | Variabel dan Tipe Data | Memahami apa itu variabel dan tipe data berserta dengan perannya terhadap memori dan pointer | [Materi](basic/02_variabel_datatype) |
-| 03 | Operasi Aritmatik | Dapat melakukan operasi aritmatika sederhana menggunakan program yang ditulis menggunakan C++ | [Video]() |
-| 04 | Operasi Boolean | Mengenal operasi boolean dan perannya dalam proses pemograman | [Video]() |
-| 05 | Pengkondisian | Memahami salah satu dari inti dari membuat pemograman yaitu melakukan pengkondisian | [Video]() |
-| 06 | Perulangan | Memahami inti kedua dari pemograman yaitu melakukan perulangan | [Video]() |
-| 07 | Konsep Array | Memahami konsep Array dan mencoba untuk mengimplemntasikannya dalam program | [Video]() |
-| 08 | Array Multi-dimensi | Mengenal berbagai macam konsep array multi-dimensi dan implementasinya dalam program | [Video]() |
-| 09 | Fungsi | Mengenal konsep fungsi dalam teknik pemograman | [Video]() |
+| 03 | Operasi Aritmatik | Dapat melakukan operasi aritmatika sederhana menggunakan program yang ditulis menggunakan C++ | [Video](https://youtu.be/bxNqTu4N-Is) |
+| 04 | Operasi Boolean | Mengenal operasi boolean dan perannya dalam proses pemograman | [Video](https://youtu.be/rgdgn4yFg18) |
+| 05 | Pengkondisian | Memahami salah satu dari inti dari membuat pemograman yaitu melakukan pengkondisian | [Video](https://youtu.be/6dAAX5B85PM) |
+| 06 | Perulangan | Memahami inti kedua dari pemograman yaitu melakukan perulangan | [Video](https://youtu.be/ZeqJewFm7zc) |
+| 07 | Konsep Array | Memahami konsep Array dan mencoba untuk mengimplemntasikannya dalam program | [Video](https://youtu.be/PGV8VigBVcg) |
+| 08 | Array Multi-dimensi | Mengenal berbagai macam konsep array multi-dimensi dan implementasinya dalam program | [Video](https://youtu.be/3d9jG9V6ouM) |
+| 09 | Fungsi | Mengenal konsep fungsi dalam teknik pemograman | [Video](https://youtu.be/iTUO1DWVUv8) |
 
 Setelah menyelesaikan seluruh rangkaian pengenalan dasar - dasar pemograman, kalian dapat mulai untuk mempelajari topik - topik lain yang jauh lebih seru!
-Untuk sekarang, mulai saja dulu dengan [Object Oriented Programming]()
+Untuk sekarang, mulai saja dulu dengan [Object Oriented Programming](object_oriented_programming)
 
 ## 🎓 Topik Lanjutan 🎓
 
 Jika kalian sudah menguasai dasar - dasar pemograman berserta dengan paradigma *Object Oriented Programming*, kalian bisa langsung mengeksplorasi topik - topik lain yang jauh lebih menantang dan tidak kalah seru. Di repositori ini, kami telah menyiapkan beberapa topik yang mungkin kamu suka.
 
-01. [Manipulasi Pointer]()
-02. [Algoritma Struktur Data]()
-03. [Statistik dan Probabilitas]()
-04. [Matematika Komputasi]()
-05. [Aljabar Linear]()
-06. [Metode Numerik Dasar]()
-07. [Metode Numerik Lanjut]()
-08. [Fisika Komputasi]()
-09. [Simulasi Fisika]()
-10. [struktur data](struktur_data)
-11. [*Game Engine*]()
+01. [Manipulasi Bit](algorithm/bit_manipulation)
+02. [Dynamic programming](algorithm/dynamic_programming)
+03. [Algoritma Sorting](algorithm/sorting)
+04. [Backtracking](bactracking)
+05. [Matematika](math)
 
 ## 📃 Panduan Pengunaan 📃
 Seluruh kode yang tersedia pada repositori ini dapat kalian jalankan dengan melakukan kompilasi terlebih dahulu. <br>
-Kami menyarankan untuk menggunakan *compiler* `g++` yang dapat kalian dapatkan di [sini]() dan tutorial instalasi [berikut](). <br>
+Kami menyarankan untuk menggunakan *compiler* `g++` yang dapat kalian dapatkan di [sini](https://en.wikipedia.org/wiki/List_of_compilers#C++_compilers) dan tutorial instalasi [berikut untuk windows](https://youtu.be/U9LfAoW8NXs).<br>
 Untuk melakukan kompilasi, buka terminal pada folder kode yang ingin kalian *compile* lalu jalankan perintah
 ```
 LINUX
