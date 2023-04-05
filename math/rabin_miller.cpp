@@ -9,8 +9,7 @@
  * mirip dengan model uji primalitas fermat
  * dan rumus solovay strassen
  */
-template <typename T>
-std::vector<T> reverse_biner(T angka) {
+template <typename T> std::vector<T> reverse_biner(T angka) {
   std::vector<T> hasil;
   T temp = angka;
   while (temp > 0) {
@@ -24,7 +23,7 @@ std::vector<T> reverse_biner(T angka) {
  * fungsi eksponen modul
  * untuk memberikan  hasil masalah
  * eksponensial modular dengan relatif cepat
-*/
+ */
 template <typename T>
 T modular_eksponen(T base, const std::vector<T> &eksponen_biner, T modulus) {
   if (modulus == 1) {
@@ -39,7 +38,9 @@ T modular_eksponen(T base, const std::vector<T> &eksponen_biner, T modulus) {
     b = base;
   }
 
-  for (typename std::vector<T>::const_iterator iterator = eksponen_biner.cbegin() +1; iterator != eksponen_biner.cend(); ++iterator) {
+  for (typename std::vector<T>::const_iterator iterator =
+           eksponen_biner.cbegin() + 1;
+       iterator != eksponen_biner.cend(); ++iterator) {
     A = A * A % modulus;
     if (*iterator == 1) {
       b = A * b % modulus;
@@ -49,10 +50,9 @@ T modular_eksponen(T base, const std::vector<T> &eksponen_biner, T modulus) {
 }
 
 /**
-* fungsi untuk mengetes fungsi diatas
-*/
-template <typename T>
-bool testing(T d, T angka) {
+ * fungsi untuk mengetes fungsi diatas
+ */
+template <typename T> bool testing(T d, T angka) {
   std::random_device rd_seed;
   std::mt19937 gen(rd_seed());
   std::uniform_int_distribution<> distribution(2, angka - 2);
@@ -76,8 +76,7 @@ bool testing(T d, T angka) {
   return false;
 }
 
-template <typename T>
-bool testing_rabin_miller(T angka, T perulangan) {
+template <typename T> bool testing_rabin_miller(T angka, T perulangan) {
   if (angka <= 4) {
     if (angka == 2 || angka == 3) {
       return true;
@@ -103,6 +102,4 @@ bool testing_rabin_miller(T angka, T perulangan) {
   return true;
 }
 
-int main() {
-  testing_rabin_miller(2, 1);
-}
+int main() { testing_rabin_miller(2, 1); }
