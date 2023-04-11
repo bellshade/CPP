@@ -19,9 +19,6 @@
  * @param arr2 actual values
  * @throw invalid_argument The length of both arrays must be the same
  * @return Mean Squared Error dari kedua array
- *
- * @note `constexpr` specifier digunakan untuk mendeklarasikan fungsi atau
- * variable yang akan di evaluate pada waktu compile
  */
 double mse(const std::vector<double>& arr1, const std::vector<double>& arr2) {
   if (arr1.size() != arr2.size()) {
