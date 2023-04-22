@@ -17,6 +17,8 @@ C++ adalah bahasa pemograman multi fungsi dengan tipe *compiled language*. Artin
 
 C++ dikembangkan dari predesesornya yaitu C dengan mengimplementasi paradigma *Object Oriented Programming* (OOP). Karena didasarkan pada bahasa C, program yang ditulis dalam C++ dapat dijalankan dekat sekali dengan mesin tanpa perantara. 
 
+> **Note**: Melansir dari KBBI arti dari Predesesor adalah _pendahulu, leluhur_.
+
 Efeknya, *runtime* C++ dapat disandingkan dengan bahasa C yang notabene memiliki waktu `runtime` yang tercepat diantara semua bahasa pemograman. Alhasil, C++ sering digunakan untuk implementasi perangkat lunak yang membutuhkan tenaga komputasi yang besar seperti *Game Engine*, *Physics Simulations*, dan bahkan *library* yang digunakan bahasa lain (e.g. Numpy, Scipy, dll)
 
 > ### Baru Belajar? Mulai dari [sini](basic) 🌟
@@ -32,14 +34,14 @@ Efeknya, *runtime* C++ dapat disandingkan dengan bahasa C yang notabene memiliki
 | 06 | Perulangan | Memahami inti kedua dari pemograman yaitu melakukan perulangan | [Video](https://youtu.be/ZeqJewFm7zc) |
 | 07 | Konsep Array | Memahami konsep Array dan mencoba untuk mengimplementasikannya ke dalam program | [Video](https://youtu.be/PGV8VigBVcg) |
 | 08 | Array Multi-dimensi | Mengenal berbagai macam konsep array multi-dimensi dan implementasinya dalam program | [Video](https://youtu.be/3d9jG9V6ouM) |
-| 09 | Fungsi | Mengenal konsep fungsi dalam teknik pemograman | [Video](https://youtu.be/iTUO1DWVUv8) |
+| 09 | Fungsi | Mengenal konsep fungsi dalam teknik pemrograman | [Video](https://youtu.be/iTUO1DWVUv8) |
 
-Setelah menyelesaikan seluruh rangkaian pengenalan dasar - dasar pemograman, kalian dapat mulai untuk mempelajari topik - topik lain yang jauh lebih seru!
+Setelah menyelesaikan seluruh rangkaian pengenalan dasar - dasar pemrograman, kalian dapat mulai untuk mempelajari topik - topik lain yang jauh lebih seru!
 Untuk sekarang, mulai saja dulu dengan [Object Oriented Programming](object_oriented_programming)
 
 ## 🎓 Topik Lanjutan 🎓
 
-Jika kalian sudah menguasai dasar - dasar pemograman berserta dengan paradigma *Object Oriented Programming*, kalian bisa langsung mengeksplorasi topik - topik lain yang jauh lebih menantang dan tidak kalah seru. Di repositori ini, kami telah menyiapkan beberapa topik yang mungkin kamu suka.
+Jika kalian sudah menguasai dasar - dasar pemrograman berserta dengan paradigma *Object Oriented Programming*, kalian bisa langsung mengeksplorasi topik - topik lain yang jauh lebih menantang dan tidak kalah seru. Di repositori ini, kami telah menyiapkan beberapa topik yang mungkin kamu suka.
 
 01. [Manipulasi Bit](algorithm/bit_manipulation)
 02. [Dynamic programming](algorithm/dynamic_programming)
