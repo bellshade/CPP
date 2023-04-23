@@ -17,6 +17,8 @@ C++ adalah bahasa pemograman multi fungsi dengan tipe *compiled language*. Artin
 
 C++ dikembangkan dari predesesornya yaitu C dengan mengimplementasi paradigma *Object Oriented Programming* (OOP). Karena didasarkan pada bahasa C, program yang ditulis dalam C++ dapat dijalankan dekat sekali dengan mesin tanpa perantara. 
 
+> **Note**: Melansir dari KBBI arti dari Predesesor adalah _pendahulu, leluhur_.
+
 Efeknya, *runtime* C++ dapat disandingkan dengan bahasa C yang notabene memiliki waktu `runtime` yang tercepat diantara semua bahasa pemograman. Alhasil, C++ sering digunakan untuk implementasi perangkat lunak yang membutuhkan tenaga komputasi yang besar seperti *Game Engine*, *Physics Simulations*, dan bahkan *library* yang digunakan bahasa lain (e.g. Numpy, Scipy, dll)
 
 > ### Baru Belajar? Mulai dari [sini](basic) 🌟
@@ -25,21 +27,21 @@ Efeknya, *runtime* C++ dapat disandingkan dengan bahasa C yang notabene memiliki
 | Langkah | Topik | Target Pembelajaran | Video Rujukan |
 | :-----------: | :----------------------------------------: |:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------: |
 | 01 | Introduksi Pemograman dan C++ | Memahami apa itu membuat program dan apa peran C++ dalam proses pembuatan program | [Materi](basic/01_introduction) |
-| 02 | Variabel dan Tipe Data | Memahami apa itu variabel dan tipe data berserta dengan perannya terhadap memori dan pointer | [Materi](basic/02_variabel_datatype) |
+| 02 | Variabel dan Tipe Data | Memahami apa itu variabel dan tipe data beserta dengan perannya terhadap memori dan pointer | [Materi](basic/02_variabel_datatype) |
 | 03 | Operasi Aritmatik | Dapat melakukan operasi aritmatika sederhana menggunakan program yang ditulis menggunakan C++ | [Video](https://youtu.be/bxNqTu4N-Is) |
 | 04 | Operasi Boolean | Mengenal operasi boolean dan perannya dalam proses pemograman | [Video](https://youtu.be/rgdgn4yFg18) |
-| 05 | Pengkondisian | Memahami salah satu dari inti dari membuat pemograman yaitu melakukan pengkondisian | [Video](https://youtu.be/6dAAX5B85PM) |
+| 05 | Pengkondisian | Memahami salah satu inti dari membuat pemograman yaitu melakukan pengkondisian | [Video](https://youtu.be/6dAAX5B85PM) |
 | 06 | Perulangan | Memahami inti kedua dari pemograman yaitu melakukan perulangan | [Video](https://youtu.be/ZeqJewFm7zc) |
-| 07 | Konsep Array | Memahami konsep Array dan mencoba untuk mengimplemntasikannya dalam program | [Video](https://youtu.be/PGV8VigBVcg) |
+| 07 | Konsep Array | Memahami konsep Array dan mencoba untuk mengimplementasikannya ke dalam program | [Video](https://youtu.be/PGV8VigBVcg) |
 | 08 | Array Multi-dimensi | Mengenal berbagai macam konsep array multi-dimensi dan implementasinya dalam program | [Video](https://youtu.be/3d9jG9V6ouM) |
-| 09 | Fungsi | Mengenal konsep fungsi dalam teknik pemograman | [Video](https://youtu.be/iTUO1DWVUv8) |
+| 09 | Fungsi | Mengenal konsep fungsi dalam teknik pemrograman | [Video](https://youtu.be/iTUO1DWVUv8) |
 
-Setelah menyelesaikan seluruh rangkaian pengenalan dasar - dasar pemograman, kalian dapat mulai untuk mempelajari topik - topik lain yang jauh lebih seru!
+Setelah menyelesaikan seluruh rangkaian pengenalan dasar - dasar pemrograman, kalian dapat mulai untuk mempelajari topik - topik lain yang jauh lebih seru!
 Untuk sekarang, mulai saja dulu dengan [Object Oriented Programming](object_oriented_programming)
 
 ## 🎓 Topik Lanjutan 🎓
 
-Jika kalian sudah menguasai dasar - dasar pemograman berserta dengan paradigma *Object Oriented Programming*, kalian bisa langsung mengeksplorasi topik - topik lain yang jauh lebih menantang dan tidak kalah seru. Di repositori ini, kami telah menyiapkan beberapa topik yang mungkin kamu suka.
+Jika kalian sudah menguasai dasar - dasar pemrograman berserta dengan paradigma *Object Oriented Programming*, kalian bisa langsung mengeksplorasi topik - topik lain yang jauh lebih menantang dan tidak kalah seru. Di repositori ini, kami telah menyiapkan beberapa topik yang mungkin kamu suka.
 
 01. [Manipulasi Bit](algorithm/bit_manipulation)
 02. [Dynamic programming](algorithm/dynamic_programming)
@@ -50,14 +52,14 @@ Jika kalian sudah menguasai dasar - dasar pemograman berserta dengan paradigma *
 ## 📃 Panduan Pengunaan 📃
 Seluruh kode yang tersedia pada repositori ini dapat kalian jalankan dengan melakukan kompilasi terlebih dahulu. <br>
 Kami menyarankan untuk menggunakan *compiler* `g++` yang dapat kalian dapatkan di [sini](https://en.wikipedia.org/wiki/List_of_compilers#C++_compilers) dan tutorial instalasi [berikut untuk windows](https://youtu.be/U9LfAoW8NXs).<br>
-Untuk melakukan kompilasi, buka terminal pada folder kode yang ingin kalian *compile* lalu jalankan perintah
+Untuk melakukan kompilasi, buka terminal pada folder kode yang ingin kalian *compile* lalu jalankan perintah:
+- Untuk Pengguna GNU/Linux
 ```
-LINUX
 g++ nama_file_kode.cpp -o nama_file_kode
 ./nama_file_kode
 ```
+- Untuk Pengguna Windows
 ```
-WINDOWS
 g++ nama_file_kode.cpp -o nama_file_kode.exe
 .\nama_file_kode.exe
 ```
