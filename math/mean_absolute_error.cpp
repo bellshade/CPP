@@ -16,7 +16,7 @@
 */
 double mae(const std::vector<double> &predict,const std::vector<double>&actual){
     if (predict.size() != actual.size()){
-        std::invalid_argument("panjang datanya tidak sama\ntolong check lagi");
+        throw std::invalid_argument("panjang datanya tidak sama\ntolong check lagi");
     }
     double abs_sum=0.0;
     for(int i=0;i<predict.size();i++){
