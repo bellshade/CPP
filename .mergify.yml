@@ -16,57 +16,8 @@ pull_request_rules:
         message: terima kasih atas kontribusinya @{{author}}!
       # menambahkan label jika sudah di merge
       label:
-        add: 
+        add:
           - sudah dirieview!
       # metode sistem dari automerge
       merge:
-        method: merge
-  # menghapus branch pada pull_request
-  - name: menghapus head branch ketika pull request selesai di merged
-    conditions:
-      - merged
-    actions:
-      delete_head_branch: true
-  
-  # membuat label dengan kondisi jika pull request terdapat
-  # file cpp
-  - name: label cpp
-    conditions:
-      - files~=\.cpp$
-    actions:
-      # menambahkan lebel 'cpp files'
-      # dan label 'request tim cpp untuk review'
-      label:
-        add:
-          - cpp files
-          - request tim cpp untuk review
-
-  - name: label header
-    conditions:
-      - files~=\.h$
-    actions:
-      label:
-        add:
-          - header file
-  
-  # membuat label dengan kondisi jika di dalam pull request
-  # terdapat file markdown
-  - name: markdown label
-    conditions:
-      - files~=\.md$
-    actions:
-      # menambahkan label 'markdown files'
-      label:
-        add:
-          - markdown files
-  
-  # membuat sistem bot me mention cpp team untuk mereciew
-  # dari pull request jika terdapat file cpp
-  - name: review tim cpp untuk review markdown
-    conditions:
-      - label=cpp files
-    actions:
-      request_reviews:
-        teams:
-          - "@bellshade/cpp-team"
-          
+        method: squash
