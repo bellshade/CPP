@@ -19,7 +19,6 @@ float relu(float n){
 
     // ini kondisi untuk mengfilter inputnya
     if (n > 0.0){
-
         return n;
     }else{
         return 0.0;
