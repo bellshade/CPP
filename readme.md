@@ -26,7 +26,7 @@ Efeknya, *runtime* C++ dapat disandingkan dengan bahasa C yang notabene memiliki
 
 | Langkah | Topik | Target Pembelajaran | Video Rujukan |
 | :-----------: | :----------------------------------------: |:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------: |
-| 01 | Introduksi Pemograman dan C++ | Memahami apa itu membuat program dan apa peran C++ dalam proses pembuatan program | [Materi](basic/01_introduction) |
+| 01 | Introduksi Pemograman & Pengenalan C++ | Memahami apa itu membuat program dan apa peran C++ dalam proses pembuatan program | [Materi](basic/01_introduction) |
 | 02 | Variabel dan Tipe Data | Memahami apa itu variabel dan tipe data beserta dengan perannya terhadap memori dan pointer | [Materi](basic/02_variabel_datatype) |
 | 03 | Operasi Aritmatik | Dapat melakukan operasi aritmatika sederhana menggunakan program yang ditulis menggunakan C++ | [Video](https://youtu.be/bxNqTu4N-Is) |
 | 04 | Operasi Boolean | Mengenal operasi boolean dan perannya dalam proses pemograman | [Video](https://youtu.be/rgdgn4yFg18) |
@@ -49,7 +49,7 @@ Jika kalian sudah menguasai dasar - dasar pemrograman berserta dengan paradigma 
 04. [Backtracking](bactracking)
 05. [Matematika](math)
 
-## 📃 Panduan Pengunaan 📃
+## 📃 Panduan Penggunaan 📃
 Seluruh kode yang tersedia pada repositori ini dapat kalian jalankan dengan melakukan kompilasi terlebih dahulu. <br>
 Kami menyarankan untuk menggunakan *compiler* `g++` yang dapat kalian dapatkan di [sini](https://en.wikipedia.org/wiki/List_of_compilers#C++_compilers) dan tutorial instalasi [berikut untuk windows](https://youtu.be/U9LfAoW8NXs).<br>
 Untuk melakukan kompilasi, buka terminal pada folder kode yang ingin kalian *compile* lalu jalankan perintah:
@@ -67,7 +67,7 @@ contoh penginstalan c++ pada windows menggunakan codeblocks bisa lihat [disini](
 
 ## ⚡ Quick Access ⚡
 
-Semua *script* yang ada pada repositori ini, dapat diakses dengan cepat lewat link berikut:
+Semua *script* yang ada pada repositori ini, dapat diakses dengan cepat melalui link berikut:
 
 - [Basic](basic/)
 - [Backtracking](backtracking/)
