@@ -35,6 +35,7 @@ int factorial(int n){
 
 
 template <typename T> double cosinus(T sudut,int iterable=4){
+
     float result = 0.0;
     for (int n = 0; n <= iterable; ++n){
         numerator = pow(-1,n) * pow(sudut,2*n);
