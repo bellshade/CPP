@@ -14,16 +14,15 @@ void PrintVec(vector<int>& val){ //gunakan referencing
     }
 }
 void SelectionSort(vector<int>& val){  //gunakan referencing untuk menghindari banyak penggunaan variabel
-    int i,j,min;
     /*
     Lakukan iterasi untuk setiap elemen vector dengan i sebagai indeks elemen pertama.
     Karena elemen terakhir secara otomatis sudah berada di posisi yang benar setelah semua iterasi,
     maka loop untuk i berhenti di val.size() - 1.
     */
-    for(i = 0; i < val.size() - 1; i++){
+    for(int i = 0; i < val.size() - 1; i++){
         //asumsikan elemen minimum adalah element index pertama atau i(karena index dimulai dari 0)
-        min = i;
-        for(j = i + 1; j<val.size(); j++){
+        int min = i;
+        for(int j = i + 1; j<val.size(); j++){
             /*jika angka kedua lebih kecil dari angka pertama maka update nilai min menjadi angka kedua(j)*/
             if(val[j] < val[i]){
                 min = j;
