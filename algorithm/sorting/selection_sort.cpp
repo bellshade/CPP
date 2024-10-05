@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <array>
-
 using namespace std;
 // Fungsi untuk menukar posisi dua elemen
 void swap(int *a, int *b) {
@@ -9,14 +8,11 @@ void swap(int *a, int *b) {
   *a = *b;
   *b = temp;
 }
-
 void PrintVec(vector<int>& val){ //gunakan referencing
     for(int print = 0; print < val.size(); print++){
         cout << val[print] << " ";
     }
-
 }
-
 void SelectionSort(vector<int>& val){  //gunakan referencing untuk menghindari banyak penggunaan variabel
     int i,j,min;
     /*
@@ -41,7 +37,6 @@ void SelectionSort(vector<int>& val){  //gunakan referencing untuk menghindari b
         if(min != i){
             swap(val[i],val[min]);
         }
-
     }
 }
 int main(){
@@ -56,13 +51,9 @@ int main(){
         cin >> value;
         val.push_back(value); //memasukkan nilai yg dimasukkan(value) ke vector val
     }
-
     SelectionSort(val);
     cout << "sesudah sorting " << endl;
     PrintVec(val);
-
-
     cin.get();
     return 0;
-
 }
