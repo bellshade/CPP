@@ -3,14 +3,14 @@
 using namespace std;
 //fungsi untuk menampilkan vector setelah sort secara Ascending(terkecil)
 void tampilkanAscending(vector<int>& value){
-    for(int printAscending = 0; printAscending <= value.size(); printAscending++){
-        cout << value[printAscending] << " ";
+    for(int i = 0; i <= value.size(); i++){
+        cout << value[i] << " ";
     }
 }
 //fungsi untuk menampilkan vector setelah sort secara Descending(terbesar)
 void tampilkanDescending(vector<int>& value){
-    for(int printDescending = 0; printDescending <= value.size(); printDescending++){
-        cout << value[printDescending] << " ";
+    for(int i = 0; i <= value.size(); i++){
+        cout << value[i] << " ";
     }
 }
 void InsertionSortAscending(vector<int>& value, int &key){  //insertion sort menaik
