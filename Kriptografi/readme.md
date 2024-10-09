@@ -1,3 +1,4 @@
+
 # Pengenalan Kriptografi
 
 ## Daftar Isi
@@ -56,5 +57,3 @@ Kriptografi diterapkan dalam berbagai bidang dan teknologi, termasuk:
    - Vigenère Cipher
    - Substitution Cipher
    - Transposition Cipher
-<!-- 
-Setiap algoritma memiliki kekuatan dan kelemahan tersendiri, serta penggunaan yang spesifik dalam konteks keamanan informasi modern -->
