@@ -1,6 +1,4 @@
 
-# Pengenalan Kriptografi
-
 ## Daftar Isi
 
 1. [Pendahuluan Kriptografi](#pendahuluan-kriptografi)
@@ -9,7 +7,9 @@
 
 ## Pendahuluan Kriptografi
 
-Kriptografi adalah ilmu dan seni untuk menjaga keamanan informasi. Berasal dari bahasa Yunani, "kryptos" yang berarti tersembunyi, dan "graphein" yang berarti menulis. Kriptografi melibatkan teknik-teknik untuk mengamankan komunikasi dan data dari pihak yang tidak berwenang.
+Kriptografi adalah ilmu dan seni untuk menjaga keamanan informasi. Berasal dari
+bahasa Yunani, "kryptos" yang berarti tersembunyi, dan "graphein" yang berarti
+menulis. Kriptografi mengamankan komunikasi dan data dari pihak tak berwenang
 
 Tujuan utama kriptografi:
 
