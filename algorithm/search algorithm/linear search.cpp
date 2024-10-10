@@ -4,41 +4,63 @@
 #include<array>
 #include <stdlib.h>
 using namespace std;
-/*sumber crud
+/*sumber crud dan saya memodifikasi sedikit
 https://gist.github.com/nihitx/1f56c129b35c992d35ba9c11647d2721
-karena program ini fokus ke implementasi linear search bukan membuat crud
+karena program ini fokus ke implementasi linear search bukan membuat crud maka 
+penjelesan nya hanya fokus ke linear search
 */
 bool SearchName(vector<string>& nama, string &DataNama){
+    // Menampilkan pesan untuk meminta pengguna memasukkan nama penulis yang ingin dicari.
     cout << "Masukkan nama penulis yang anda ingin cari ";
-    getline(cin,DataNama);
+    
+    // Mengambil input dari pengguna dan menyimpannya dalam variabel DataNama.
+    getline(cin, DataNama);
+
+    // Looping melalui vektor 'nama' untuk mencari kecocokan dengan input pengguna.
     for(int i = 0; i < nama.size(); i++){
+        // Jika nama penulis yang dicari ditemukan di vektor, kembalikan nilai true.
         if(DataNama == nama[i]){
             return true;
         }
     }
+    
+    // Jika looping selesai tanpa menemukan kecocokan, kembalikan nilai false.
     return false;
 }
-
 bool SearchBook(vector<string>& buku, string &DataBuku){
+    // Menampilkan pesan untuk meminta pengguna memasukkan nama buku yang ingin dicari.
     cout << "Masukkan nama buku yang anda ingin cari ";
+    
+    // Looping melalui vektor 'buku' untuk mencari buku berdasarkan input pengguna.
     for(int i = 0; i < buku.size(); i++){
+        // Jika buku yang dicari ditemukan di vektor, kembalikan nilai true.
         if(DataBuku == buku[i]){
             return true;
         }
     }
+    
+    // Jika looping selesai tanpa menemukan kecocokan, kembalikan nilai false.
     return false;
 }
-
 bool LinearSearch(vector<string>& bookarray, string &data){
+    // Menampilkan pesan untuk meminta pengguna memasukkan buku yang ingin dicari.
     cout << "Masukkan buku yang anda ingin cari ";
-    getline(cin,data);
+    
+    // Mengambil input dari pengguna dan menyimpannya dalam variabel 'data'.
+    getline(cin, data);
+    
+    // Looping melalui vektor 'bookarray' untuk mencari buku berdasarkan input pengguna.
     for(int i = 0; i < bookarray.size(); i++){
+        // Jika buku yang dicari ditemukan di vektor, kembalikan nilai true.
         if(data == bookarray[i]){
             return true;
         }
     }  
+    
+    // Jika looping selesai tanpa menemukan kecocokan, kembalikan nilai false.
     return false;
 }
+
 int main(){
     cout << "**  welcome to the database **" << endl;
     char choice;
