@@ -30,7 +30,7 @@ bool SearchName(vector<string>& nama, string &DataNama){
 bool SearchBook(vector<string>& buku, string &DataBuku){
     // Menampilkan pesan untuk meminta pengguna memasukkan nama buku yang ingin dicari.
     cout << "Masukkan nama buku yang anda ingin cari ";
-    
+    getline(cin,DataBuku);
     // Looping melalui vektor 'buku' untuk mencari buku berdasarkan input pengguna.
     for(int i = 0; i < buku.size(); i++){
         // Jika buku yang dicari ditemukan di vektor, kembalikan nilai true.
@@ -124,7 +124,6 @@ int main(){
                 cout << "Daftar buku dalam database " << endl;
                 for(int i = 0; i < bookarray.size() ; i++){
                     cout << i + 1 << " " << bookarray[i] <<  " " << endl; ;
-
                 }
                 cout << " " << endl;
             }else if(choice == 'f'){
