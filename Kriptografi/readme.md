@@ -1,8 +1,8 @@
-## Daftar Isi
+# Daftar Isi
 
 1. [Pendahuluan Kriptografi](#pendahuluan-kriptografi)
 2. [Implementasi Kriptografi](#implementasi-kriptografi)
-3. [Macam-macam Algoritma Enkripsi/Kriptografi]
+3. [Macam-macam Algoritma Enkripsi/Kriptografi](## Macam-macam Algoritma Enkripsi/Kriptografi)
 
 ## Pendahuluan Kriptografi
 
