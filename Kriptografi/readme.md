@@ -1,4 +1,4 @@
-# Daftar Isi
+## Daftar Isi
 
 1. [Pendahuluan Kriptografi](#pendahuluan-kriptografi)
 2. [Implementasi Kriptografi](#implementasi-kriptografi)
