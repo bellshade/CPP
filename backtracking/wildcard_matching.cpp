@@ -1,4 +1,5 @@
 #include <cassert>  
+#include <cstdint>
 #include <iostream>  
 #include <vector>    
 
@@ -6,7 +7,7 @@ namespace backtracking {
 namespace wildcard_matching {
 std::vector<std::vector<int64_t>> dpTable(1000, std::vector<int64_t>(1000, -1));
 bool wildcard_matching(std::string s, std::string p, uint32_t pos1,
-                       uint32_t pos2) {
+                       std::uint32_t pos2) {
     uint32_t n = s.length();
     uint32_t m = p.length();
     if (pos1 == n && pos2 == m) {

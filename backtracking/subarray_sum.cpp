@@ -10,6 +10,7 @@
  * array saja.
  */
 
+#include <cstdint>
 #include <iostream>
 #include <cassert>
 #include <unordered_map>
