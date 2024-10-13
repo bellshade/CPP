@@ -15,106 +15,107 @@ struct Queue {
 Queue queue;
 
 void enqueue(node *n) { queue.t[queue.rear++] = n; }
-void *dequeue() { return (queue.t[queue.front++]);} 
+node *dequeue() { return (queue.t[queue.front++]); } 
 
 
-// membuat fungsi dari memasukkan value
+// membuat fungsi untuk memasukkan value
 void Insert(node *n, int x) {
-    if (x < n -> val) {
-        if (n -> left == NULL) {
+    if (x < n->val) {
+        if (n->left == NULL) {
             node *temp = new node;
-            temp -> val = x;
-            temp -> left = NULL;
-            temp -> right = NULL;
-            n -> left  = temp;
+            temp->val = x;
+            temp->left = NULL;
+            temp->right = NULL;
+            n->left = temp;
         } else {
-            Insert(n -> left, x);
+            Insert(n->left, x);
         }
     } else {
-        if (n -> right = NULL) {
+        if (n->right == NULL) {
             node *temp = new node;
-            temp -> val = x;
-            temp -> left = NULL;
-            temp -> right = NULL;
-            n -> right = temp;
+            temp->val = x;
+            temp->left = NULL;
+            temp->right = NULL;
+            n->right = temp;
         } else {
-            Insert(n -> right, x);
+            Insert(n->right, x);
         }
     }
 }
 
 int floatMaxInLeftST(node *n) {
-    while (n -> right != NULL) {
-        n = n -> right;
+    while (n->right != NULL) {
+        n = n->right;
     }
-
-    return n -> val;
+    return n->val;
 }
 
-// membuaat fugnsi dari remove
+// membuat fungsi untuk remove
 void Remove(node *p, node *n, int x) {
-    if (n -> val == x) {
-        if (n -> right == NULL && n -> left == NULL) {
-            if (x < p -> val ) {
-                p -> right = NULL;
+    if (n->val == x) {
+        if (n->right == NULL && n->left == NULL) {
+            if (x < p->val) {
+                p->left = NULL;
             } else {
-                p -> left = NULL;
+                p->right = NULL;
             }
-        } else if (n -> right == NULL) {
-            if (x < p -> val) {
-                p -> right = n -> left;
+        } else if (n->right == NULL) {
+            if (x < p->val) {
+                p->left = n->left;
             } else {
-                p -> left = n -> left;
+                p->right = n->left;
             }
-        } else if (n -> left == NULL) {
-            if (x < p -> val) {
-                p -> right = n -> right;
+        } else if (n->left == NULL) {
+            if (x < p->val) {
+                p->left = n->right;
             } else {
-                p -> left = n -> right;
+                p->right = n->right;
             }
         } else {
-            int y = floatMaxInLeftST(n -> left);
-            n -> val = y;
-            Remove(n, n -> right, y);
+            int y = floatMaxInLeftST(n->left);
+            n->val = y;
+            Remove(n, n->left, y);  // perbaikan disini
         }
-    } else if(n < x -> val) {
-        Remove(n, n -> left, x);
+    } else if (x < n->val) {
+        Remove(n, n->left, x);
     } else {
-        Remove(n, n -> right, x);
+        Remove(n, n->right, x);
     }
 }
 
 void BFT(node *n) {
     if (n != NULL) {
-        std::cout << n -> val << " ";
-        enqueue(n -> left);
-        enqueue(n -> right);
-        BFT(dequeue());
+        std::cout << n->val << " ";
+        if (n->left != NULL) enqueue(n->left);
+        if (n->right != NULL) enqueue(n->right);
+        if (queue.front != queue.rear) {
+            node *next = dequeue();
+            BFT(next);
+        }
     }
 }
 
-
 void Pre(node *n) {
     if (n != NULL) {
-        std::cout << n -> val << " ";
-        Pre(n -> left);
-        Pre(n -> right);
+        std::cout << n->val << " ";
+        Pre(n->left);
+        Pre(n->right);
     }
 }
 
 void In(node *n) {
     if (n != NULL) {
-        In(n -> left);
-        std::cout<< n -> val << " ";
-        In(n -> right);
+        In(n->left);
+        std::cout << n->val << " ";
+        In(n->right);
     }
 }
 
 void Post(node *n) {
-    if (n  != NULL) {
-        Post(n -> left);
-        Post(n -> right);
-        std::cout<<n -> val << " ";
+    if (n != NULL) {
+        Post(n->left);
+        Post(n->right);
+        std::cout << n->val << " ";
     }
 }
 
@@ -124,31 +125,30 @@ int main() {
     int value;
     int ch;
     node *root = new node;
-    std::cout<< "\nMasukkan jumlah node dari root: ";
-    std::cin>>value;
-    root -> val = value;
-    root -> left = NULL:
-    root -> right = NULL;
-    
+    std::cout << "\nMasukkan root value: ";
+    std::cin >> value;
+    root->val = value;
+    root->left = NULL;
+    root->right = NULL;
+
     do {
-        std::cout<<"\n1. Insert"
-                << "\n2. Delete"
-                << "\n3. Breadth First"
-                << "\n4. Preorder depth first"
-                << "\n5. Inorder depth first"   
-                << "\n6. Postorder depth first"
-        
-        std::cout<<"\nPilih menu: ";
+        std::cout << "\n1. Insert"
+                  << "\n2. Delete"
+                  << "\n3. Breadth First"
+                  << "\n4. Preorder depth first"
+                  << "\n5. Inorder depth first"
+                  << "\n6. Postorder depth first"
+                  << "\nPilih menu: ";
         std::cin >> ch;
         int x;
-        switch(ch) {
+        switch (ch) {
             case 1:
-                std::cout<<"\nmasukkan value: ";
-                std::cin>> x;
+                std::cout << "\nmasukkan value: ";
+                std::cin >> x;
                 Insert(root, x);
                 break;
             case 2:
-                std::cout<<"\nmasukkan value untuk dihapus: ";
+                std::cout << "\nmasukkan value untuk dihapus: ";
                 std::cin >> x;
                 Remove(root, root, x);
                 break;
@@ -164,7 +164,7 @@ int main() {
             case 6:
                 Post(root);
                 break;
-        } 
+        }
     } while (ch != 0);
 
     return 0;
