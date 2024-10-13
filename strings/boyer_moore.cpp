@@ -160,9 +160,13 @@ std::vector<size_t> cari(const std::string &teks, const pola &arg) {
  * @return `false` jika pola bukan prefiks dari teks
  */
 bool adalah_prefix(const char *teks, const char *pola, size_t panjang) {
-  if (strlen(teks) < panjang) {
-    // pola tidak mungkin menjadi prefiks jika teks lebih pendek
-    return false;
+  // iterasi melalui setiap karakter dari teks dan pola
+  for (size_t i = 0; i < panjang; i++) {
+    // jika mencapai akhir teks (karakter null) atau karakter tidak cocok
+    if (teks[i] == '\0' || teks[i] != pola[i]) {
+      // pola tidak cocok
+      return false;
+    }
   }
 
   // bandingkan karakter satu per satu
@@ -206,6 +210,5 @@ void uji_and(const char *teks) {
 int main() {
   const char *teks_uji = "and here and there";
   uji_and(teks_uji);
-  return 0;
   return 0;
 }
