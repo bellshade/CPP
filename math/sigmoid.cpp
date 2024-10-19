@@ -1,7 +1,5 @@
 #include <iostream>
 #include <cmath>  // Untuk fungsi exp()
-using namespace std;
-
 /**
  * @file sigmoid.cpp
  * @brief Program ini menghitung fungsi sigmoid yang digunakan
@@ -23,12 +21,12 @@ double sigmoid(double x) {
 
 int main() {
     double x;
-    cout << "Masukkan angka: ";
-    cin >> x;
+    std::cout << "Masukkan angka: ";
+    std::cin >> x;
     
     // Memanggil fungsi sigmoid dan menampilkan hasilnya
     double result = sigmoid(x);
-    cout << "Hasil Sigmoid: " << result << endl;
+    std::cout << "Hasil Sigmoid: " << result << std::endl;
 
     return 0;
 }
