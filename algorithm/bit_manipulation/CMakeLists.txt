@@ -7,5 +7,6 @@ foreach( testsourcefile ${APP_SOURCES} )
     if(OpenMP_CXX_FOUND)
         target_link_libraries(${testname} OpenMP::OpenMP_CXX)
     endif()
-    install(TARGETS ${testname} DESTINATION "bin/math")
-    endforeach( testsourcefile ${APP_SOURCES} )
+    install(TARGETS ${testname} DESTINATION "bin/backtracking")
+
+endforeach( testsourcefile ${APP_SOURCES} )

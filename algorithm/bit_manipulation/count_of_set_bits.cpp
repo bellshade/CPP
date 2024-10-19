@@ -5,7 +5,7 @@
  */
 
 #include <cassert>
-#include <iostream>
+#include <cstdint>
 
 namespace bit_manipulation{
     namespace count_of_set_bits{
