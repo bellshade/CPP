@@ -21,6 +21,7 @@ if(USE_OPENMP)
         message(STATUS "No OpenMP found, no multithreading.")
     endif()
 endif()
+
     
 add_subdirectory(backtracking)
 add_subdirectory(algorithm/algoritma_greedy)
@@ -29,8 +30,17 @@ add_subdirectory(algorithm/dynamic_programming)
 add_subdirectory(algorithm/search_algorithm)
 add_subdirectory(algorithm/sorting)
 add_subdirectory(artificial_intelligence)
-add_subdirectory(math)
 add_subdirectory(strings)
+
+# FIXME: ada beberapa fungsi header math terkhusus untuk
+#        windows, oleh karena itu maka setting kompilasi
+#        berjalan dari subdirektori `math` bekerja untuk
+#        non windows
+#        error tersebut ditemui pada pull request:
+#        https://github.com/bellshade/CPP/pull/117
+if(NOT WIN32)
+add_subdirectory(math)
+endif()
 
 cmake_policy(SET CMP0054 NEW)
 cmake_policy(SET CMP0057 NEW)
