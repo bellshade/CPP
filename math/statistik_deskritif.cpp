@@ -23,50 +23,53 @@ void sort(vector<float>& val){
             if(val[j] < val[i]){
                 min = j;
             }
-            if(min != i){
-                swap(val[i],val[min]);
-            }
+        }
+        if(min != i){
+            swap(val[i],val[min]);
         }
     }
 }
-void median(vector<float>& val,int &count){
+void median(vector<float>& val,int &count,DataStatistic &stats){
     if(count % 2 == 0){
-        float EvenMedian = (val[count / 2] + val[(count / 2) + 1]) / 2;
-        cout << EvenMedian << endl;
+        stats.EvenMedian = (val[count / 2] + val[(count / 2) + 1]) / 2;
+        cout << stats.EvenMedian << endl;
     }else if(count % 2 == 1){
-        float OddMedian = val[(count + 1)/2];
-        cout << OddMedian << endl;
+        stats.OddMedian = val[(count + 1)/2];
+        cout << stats.OddMedian << endl;
     }
 }
 void mean(vector<float>& val,int &count){
     float jumlah;
     for(int i = 0; i <= val.size(); i++){
         jumlah =+ val[i];
+        float ResultMean = (jumlah / count);
+        cout << ResultMean << endl;
     }
-    float ResultMean = (jumlah / count);
-    cout << ResultMean << endl;
 }
 
 void range(vector<float>& val,int &count){
-    float ResultRange = val[count] - val[0];
+    float ResultRange = abs(val[count] - val[0]);
     cout << ResultRange << endl;
 }
-
-void IQR(vector<float>& val,int &count,float &EvenMedian,float &OddMedian){
+void IQR(vector<float>& val,int &count,DataStatistic& stats){
+    float EvenQ3,EvenQ1;
     if(count % 2 == 0){
         for(int i = 0; i <= int(count / 2) ; i++){
             float EvenQ1 = val[(count + 1)/2];
-            for(int j = count; i >= EvenMedian; i--){
-                float EvenQ3 = val[(count + 1)/2];
+            for(int j = count; j >= stats.EvenMedian; j--){
+                EvenQ3 = val[(count + 1)/2];
             }
         }
+        float EvenIQR = EvenQ3 - EvenQ1;
     }else{
+        float OddQ3,OddQ1;
         for(int i = 0; i <= int(count / 2);i++){
-            float OddQ1 = val[(count + 1)/2];
-            for(int j = count; j >= OddMedian; i--){
-                float OddQ3 = val[(count + 1)/2];
+            OddQ1 = val[(count + 1)/2];
+            for(int j = count; j >= stats.OddMedian; j--){
+                OddQ3  = val[(count + 1)/2];
             }
         }
+    float OddIQR = OddQ3 - OddQ1;
     }
 }
 
@@ -83,13 +86,16 @@ int main(){
         val.push_back(value);
     }
     cout << "Hasil Statistik dasar \n";
-    cout << "Data ter-urut " << " ";
     sort(val);
-    cout << "Rata-rata " << " ";
+    cout << "Data ter-urut " << endl;
+    PrintData(val);
+    cout << "Rata-rata \n" << endl;
     mean(val,count);
-    cout << "Nilai Tengah(median) " << " ";
-    median(val,count);
-    cout << "Range " << " ";
+    cout << "Nilai Tengah(median) \n" << endl;
+    median(val,count,stats);
+    cout << "Range \n" << endl;
     range(val,count);
+    cout << "Nilai IQR: \n" << endl;
+    IQR(val,count,stats);
     
 }
