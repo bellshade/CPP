@@ -12,6 +12,7 @@
  * space kompleksitas: O(1)
  */
 #include <cassert>
+#include <cstdint>
 #include <iostream>
 
 namespace bit_manipulation {
