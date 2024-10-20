@@ -6,7 +6,10 @@ using namespace std;
 struct DataStatistic{
     float EvenMedian;
     float OddMedian;
-    float mid;
+    float size;
+    float IQR;
+    float Q1;
+    float Q3;
 };
 void swap(int *a, int *b){
     int temp = *a;
@@ -18,11 +21,18 @@ void PrintData(vector<float>& val){
         cout << val[i] << " ";
     }
 }
-void sort(vector<float>& val){
-    for(int i = 0; i < val.size() - 1; i++){
+
+void PrintOutliers(vector<float>& val){
+    for(float hasil: val){
+        cout << hasil << " ";
+    }
+}
+void sort(vector<float>& val, DataStatistic &stats){
+    stats.size = val.size();
+    for(int i = 0; i < stats.size - 1; i++){
         //asumsikan elemen minimum adalah element index pertama atau i(karena index dimulai dari 0)
         int min = i;
-        for(int j = i + 1; j<val.size(); j++){
+        for(int j = i + 1; j<stats.size; j++){
             /*jika angka kedua lebih kecil dari angka pertama maka update nilai min menjadi angka kedua(j)*/
             if(val[j] < val[i]){
                 min = j;
@@ -49,7 +59,7 @@ void median(vector<float>& val,int &count,DataStatistic &stats){
         cout << "Invalid Input " << endl;
     }
 }
-void mean(vector<float>& val,int &count){ //rata -rata
+void mean(vector<float>& val,DataStatistic &stats){ //rata -rata
     float sum = 0;
     for(int i = 0; i < val.size(); i++){
         sum += val[i];
@@ -59,39 +69,41 @@ void mean(vector<float>& val,int &count){ //rata -rata
         cout << "Nilai rata-rata: " << ResultMean << " \n"  << endl;
 }
 
-void range(vector<float>& val){
+void range(vector<float>& val,DataStatistic &stats){
     float ResultRange = val[val.size() - val[0]] - 1;
     cout << "Nilai Range: " << ResultRange << "\n" << endl;
 }
-void IQR(vector<float>& val,int &count,DataStatistic& stats){
-    float EvenQ3,EvenQ1;
-    int size = val.size();
-    if(count % 2 == 0){
-        for(int i = 0; i <= int(size / 2) ; i++){
-            float EvenQ1 = val[(size + 1)/2];
-            for(int j = size; j >= stats.EvenMedian; j--){
-                EvenQ3 = val[(size + 1)/2];
-            }
-        }
-        float EvenIQR = EvenQ3 - EvenQ1;
-        cout << "Nilai IQR: " << EvenIQR << endl;
+void IQR(vector<float>& val,DataStatistic& stats){
+    stats.Q1 = val[val.size() / 4]; //// Elemen pada posisi 25% dari data
+    stats.Q3 = val[3 * val.size() / 4];      // Elemen pada posisi 75% dari data
+    stats.IQR = stats.Q3 - stats.Q1;
+    cout << "Nilai IQR: " << stats.IQR << endl;
+}
 
-    }else{
-        float OddQ3,OddQ1;
-        for(int i = 0; i <= int(size / 2);i++){
-            OddQ1 = val[(size + 1)/2];
-            for(int j = size; j >= stats.OddMedian; j--){
-                OddQ3  = val[(size + 1)/2];
-            }
+void outliers(vector<float> &val,DataStatistic &stats){
+    float lower = stats.Q1 - (1.5 * stats.IQR);
+    cout << "Nilai Lower: " << lower << endl;
+    float upper = stats.Q3 + (1.5 * stats.IQR);
+    cout << "Nilai Upper: " << upper << endl;
+    for(int i = 0;i < val.size(); ){
+        while(val[i] < lower || val[i] > upper){
+            cout << "Terdapat outliers pada data " << val[i] << endl;
+            val.erase(val.begin() + i);
         }
-    float OddIQR = OddQ3 - OddQ1;
-    cout << "Nilai IQR: " << OddIQR << endl;
+        // if(val[i] < lower || val[i] > upper){
+        //     cout << "Terdapat outliers pada data " << val[i] << endl;
+        //     val.erase(val.begin() + i);
+        // }else{
+        //     ++i;
+        // }
+            
     }
 }
 
+
 int main(){
     DataStatistic stats;
-    int count,CountElement;
+    int count;
     float value;
     vector<float> val;
     cout << "Masukkan panjang sample data: ";
@@ -115,19 +127,21 @@ int main(){
 
     if (!sorted) {
         cout << "Data tidak terurut!\n";
-        sort(val);
+        sort(val,stats);
         cout << "Data yang telah di sort: ";
         PrintData(val);
     } else {
         std::cout << "Data sudah terurut: ";
         PrintData(val);
     }
-    mean(val,count);
+    mean(val,stats);
     // cout << "Nilai Tengah(median) \n" << endl;
     median(val,count,stats);
     // cout << "Range \n" << endl;
-    range(val);
+    range(val,stats);
     // cout << "Nilai IQR: \n" << endl;
-    IQR(val,count,stats);
+    IQR(val,stats);
+    outliers(val,stats);
+    PrintOutliers(val);
     
 }
