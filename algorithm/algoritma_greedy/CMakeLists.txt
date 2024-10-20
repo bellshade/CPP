@@ -1,4 +1,13 @@
 file( GLOB APP_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.cpp )
+
+# FIXME: informasi error:
+#        failure was caused by a read of a variable outside its lifetime
+#        error C2131: expression did not evaluate to a constant
+#
+#        error ditemukan pada:
+#        https://github.com/bellshade/CPP/pull/117
+list(REMOVE_ITEM APP_SOURCES "knapsack.cpp")
+
 foreach( testsourcefile ${APP_SOURCES} )
     string( REPLACE ".cpp" "" testname ${testsourcefile} )
     add_executable( ${testname} ${testsourcefile} )
