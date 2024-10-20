@@ -6,14 +6,6 @@
 #include <string>
 #include <vector>
 
-void clearScreen() {
-#ifdef _WIN32
-  std::system("cls");
-#else
-  std::system("clear");
-#endif // DEBUG
-}
-
 /*sumber crud dan saya memodifikasi sedikit
 https://gist.github.com/nihitx/1f56c129b35c992d35ba9c11647d2721
 karena program ini fokus ke implementasi linear search bukan membuat crud maka
@@ -60,7 +52,6 @@ int main() {
   int countnum;
 
   do {
-    clearScreen();
     std::cout << "a. tambah buku" << std::endl;
     std::cout << "b. hapus buku" << std::endl;
     std::cout << "c. kosongkan database" << std::endl;
