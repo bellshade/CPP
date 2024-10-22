@@ -11,7 +11,7 @@ namespace dynamic_programming {
  */
 template <typename T> bool cek_armstrong(const T &angka) {
   // inisialisasi variabel
-  int jumlah_digit = 0, sementara = angka, hasil = 0, sisa = 0;
+  int jumlah_digit = 0, sementara = angka, hasil = 0;
 
   // hitung jumlah digit dari angka yang diberikan
   // contoh: 153 memiliki 3 digit
@@ -28,7 +28,7 @@ template <typename T> bool cek_armstrong(const T &angka) {
   sementara = angka;
   while (sementara != 0) {
     // ambil digit terakhir
-    sisa = sementara % 10;
+    int sisa = sementara % 10;
     // pengkatkan dengan jumlah digit
     hasil += static_cast<T>(std::pow(sisa, jumlah_digit));
     // hapus digit terakhir
