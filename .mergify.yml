@@ -29,7 +29,7 @@ pull_request_rules:
           This Commit License
           https://github.com/bellshade/CPP/blob/main/license
 
-          Co-authored-by: {{ bellshadebot }} <{{ bellshade07@gmail.com }}>
+          Co-authored-by: bellshadebot <bellshade07@gmail.com>
 
   - name: cpp labels
     conditions:
