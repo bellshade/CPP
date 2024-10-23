@@ -47,14 +47,6 @@ jobs:
 
       - name: Konfigurasi statik lint cpp
         run: cmake -B build -S . -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
-
-      - name: cek lint hasil modifikasi
-        shell: bash
-        run: python3 .linter/file_linter.py
-      - name: commit
-        run: |
-          git commit -am "chore: clang formatter and clang-tidy fixing ${GITHUB_SHA:8}" || true
-          git push origin HEAD:$GITHUB_REF || true
     
   build:
     name: cek compile
