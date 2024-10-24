@@ -32,6 +32,7 @@ add_subdirectory(algorithm/sorting)
 add_subdirectory(artificial_intelligence)
 add_subdirectory(strings)
 add_subdirectory(geometri)
+add_subdirectory(graf)
 
 # FIXME: ada beberapa fungsi header math terkhusus untuk
 #        windows, oleh karena itu maka setting kompilasi
