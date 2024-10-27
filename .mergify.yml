@@ -21,3 +21,23 @@ pull_request_rules:
       # metode sistem dari automerge
       merge:
         method: squash
+        commit_message_template: |
+          {{ title }}
+
+          {{ body }}
+
+          This Commit License
+          https://github.com/bellshade/CPP/blob/main/license
+
+          Co-authored-by: bellshadebot <bellshade07@gmail.com>
+
+  - name: cpp labels
+    conditions:
+      - or:
+        - body~=(?m)^\[X\] Saya menambah algoritma terbaru.
+        - body~=(?m)^\[X\] Saya membperbaiki algoritma yang sudah ada.
+        - files~=\.cpp$
+    actions:
+      label:
+        add:
+          - cpp file    

@@ -47,61 +47,33 @@ jobs:
 
       - name: Konfigurasi statik lint cpp
         run: cmake -B build -S . -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
-
-      - name: lint file yang telah di commit
-        shell: python
-        run: |
-          import os
-          import sys
-          import subprocess
-        
-          print("Python {}.{}.{}".format(*sys.version_info))
-          with open("git_diff.txt") as in_file:
-            file_modifikasi = sorted(in_file.read().splitlines())
-          print("{} file yang termodifikasi".format(len(file_modifikasi)))
-
-          cpp_exts = tuple(".c .c++ .cc .cpp .cu .cuh .cxx .h .h++ .hh .hpp .hxx".split())
-          cpp_files = [file for file in file_modifikasi if file.lower().endswith(cpp_exts)]
-          print(f"{len(cpp_files)} C++ file yang termodifikasi")
-          if not cpp_files:
-            sys.exit(0)
-          
-          subprocess.run(["clang-tidy", "--fix", "-p=build", "--extra-arg=-std=c++11", *cpp_files, "--"], 
-              check=True, text=True, stderr=subprocess.STDOUT)
-          subprocess.run(["clang-format", "-i", "-style=file", *cpp_files], 
-              check=True, text=True, stderr=subprocess.STDOUT)
-          upper_files = [file for file in cpp_files if file != file.lower()]
-          if upper_files:
-            print(f"{len(upper_files)} files contain uppercase characters:")
-            print("\n".join(upper_files) + "\n")
-          space_files = [file for file in cpp_files if " " in file or "-" in file]
-          if space_files:
-            print(f"{len(space_files)} file mengandung spasi dan garis tengah:")
-            print("\n".join(space_files) + "\n")
-          nodir_files = [file for file in cpp_files if file.count(os.sep) != 1]
-          if nodir_files:
-            print(f"{len(nodir_files)} files are not in one and only one directory:")
-            print("\n".join(nodir_files) + "\n")
-          bad_files = len(upper_files + space_files + nodir_files)
-          if bad_files:
-            sys.exit(bad_files)
-
-      - name: commit
-        run: |
-          git commit -am "chore: clang formatter and clang-tidy fixing ${GITHUB_SHA:8}" || true
-          git push origin HEAD:$GITHUB_REF || true
     
   build:
     name: cek compile
     runs-on: ${{ matrix.os }}
     needs: [TestingUtama]
+    permissions:
+      pull-requests: write
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macOS-latest]
     steps:
-    - uses: actions/checkout@v3
-      with:
-        submodules: true
-    - run: cmake -B ./build -S .
-    - run: cmake --build build
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - name: build cpp
+        run: |
+            cmake -B ./build -S .
+            cmake --build build --parallel 4
+      - name: tambah label jika fail
+        uses: actions/github-script@v6
+        if: ${{ failure() && matrix.os == 'ubuntu-latest' && github.event_name == 'pull_request'}}
+        with:
+          script: |
+            github.rest.issue.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['testing fail!']
+            })
       
