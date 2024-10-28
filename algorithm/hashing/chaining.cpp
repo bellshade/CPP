@@ -51,7 +51,6 @@ public:
       kepala[indeks] = temp;
       curr = kepala[indeks];
     } else {
-
       while (curr->next) {
         curr = curr->next;
       }
