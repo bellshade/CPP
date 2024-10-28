@@ -42,17 +42,16 @@ public:
    * @param indeks indeks dari node
    */
   void tambah(int nilai, int indeks) {
-    std::shared_ptr<Node> curr;
     std::shared_ptr<Node> temp(new Node);
     temp->data = nilai;
     temp->next = nullptr;
-
+    std::shared_ptr<Node> curr;
     // jika chaining pada indeks kosong, tambahkan node baru
     if (!kepala[indeks]) {
       kepala[indeks] = temp;
       curr = kepala[indeks];
     } else {
-      curr = kepala[indeks];
+
       while (curr->next) {
         curr = curr->next;
       }
