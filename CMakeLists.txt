@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.9)
+cmake_minimum_required(VERSION 3.22)
 project(Bellshade_cpp
     LANGUAGES CXX
     VERSION 1.0.0
@@ -21,8 +21,28 @@ if(USE_OPENMP)
         message(STATUS "No OpenMP found, no multithreading.")
     endif()
 endif()
+
     
 add_subdirectory(backtracking)
+add_subdirectory(algorithm/algoritma_greedy)
+add_subdirectory(algorithm/bit_manipulation)
+add_subdirectory(algorithm/dynamic_programming)
+add_subdirectory(algorithm/search_algorithm)
+add_subdirectory(algorithm/sorting)
+add_subdirectory(artificial_intelligence)
+add_subdirectory(strings)
+add_subdirectory(geometri)
+add_subdirectory(graf)
+
+# FIXME: ada beberapa fungsi header math terkhusus untuk
+#        windows, oleh karena itu maka setting kompilasi
+#        berjalan dari subdirektori `math` bekerja untuk
+#        non windows
+#        error tersebut ditemui pada pull request:
+#        https://github.com/bellshade/CPP/pull/117
+if(NOT WIN32)
+add_subdirectory(math)
+endif()
 
 cmake_policy(SET CMP0054 NEW)
 cmake_policy(SET CMP0057 NEW)
@@ -44,7 +64,7 @@ if(DOXYGEN_FOUND)
     set(DOXYGEN_ENABLE_PREPROCESSING YES)
     set(DOXYGEN_CLANG_ASSISTED_PARSING YES)
     set(DOXYGEN_FILE_PATTERNS *.cpp *.h *.hpp *.md)
-    set(DOXYGEN_MATHJAX_EXTENSIONS  TeX/AMSmath TeX/AMSsymbols)
+set(DOXYGEN_MATHJAX_EXTENSIONS  TeX/AMSmath TeX/AMSsymbols)
     set(DOXYGEN_TAGFILES "doc/cppreference-doxygen-web.tag.xml=http://en.cppreference.com/w/")
     if(MSVC)
         set(DOXYGEN_CPP_CLI_SUPPORT YES)
