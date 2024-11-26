@@ -28,7 +28,7 @@ void Z_Score(std::vector<int>& data,int &x){
     float Standar_Dev;
     float sum_numerator = 0;
     for(int i = 0; i <= data.size() - 1;i++){
-        numerator = sqrt((data[i] - resultMean) * (data[i] - resultMean)); //sqrt(pow((data[i] - mean))); 
+        int numerator = sqrt((data[i] - resultMean) * (data[i] - resultMean)); //sqrt(pow((data[i] - mean))); 
         sum_numerator += numerator;
     }
 
