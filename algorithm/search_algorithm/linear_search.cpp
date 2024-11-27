@@ -21,8 +21,7 @@ bool SearchName(std::vector<std::string> &nama, std::string &DataNama) {
   return false;
 }
 
-bool SearchBook(const std::vector<std::string> &buku,
-                const std::string &DataBuku) {
+bool SearchBook(const std::vector<std::string> &buku,const std::string &DataBuku) {
   // looping melalui vektor `buku` untuk mencari buku berdasarkan input
   for (const auto &book : buku) {
     if (DataBuku == book) {
