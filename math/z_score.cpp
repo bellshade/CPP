@@ -38,7 +38,6 @@ void Z_Score(std::vector<int>& data,int &x){
 
 
     // Z score
-
     double score;
     score = (x - resultMean) / Standar_Dev;
     std::cout << "Nilai Z-Score: " << score << std::endl;
