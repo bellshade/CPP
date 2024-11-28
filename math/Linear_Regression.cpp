@@ -25,8 +25,6 @@ void Squared(std::vector<float>& independen, std::vector<float>& dependen,DataSt
     }
     stats.Xsquared = SumSquared;
     std::cout << "Hasil X squared " << stats.Xsquared << std::endl;
-
-
     //contoh metode manual
     float SumYSquared = 0;
     float Ysquared;
@@ -41,7 +39,6 @@ void Squared(std::vector<float>& independen, std::vector<float>& dependen,DataSt
 void sum(std::vector<float>& independen, std::vector<float>& dependen,DataStatistic &stats){
     float sumx = 0;
     float sumy = 0;
-
     for(int i = 0; i <= independen.size() - 1;i++){
         // karena panjang data sama maka cukup 1 for loop
         sumx += independen[i];
@@ -49,12 +46,9 @@ void sum(std::vector<float>& independen, std::vector<float>& dependen,DataStatis
     }
     stats.SumX = sumx;
     stats.SumY = sumy;
-
     std::cout << "SumX: " << stats.SumX << std::endl;
     std::cout << "SumY: " << stats.SumY << std::endl;
 }
-
-
 void multiple(std::vector<float>& independen, std::vector<float>& dependen,DataStatistic &stats){
     float multiply;
     float SumMultiply = 0;
