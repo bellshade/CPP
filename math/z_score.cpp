@@ -24,24 +24,27 @@ void Z_Score(std::vector<int>& data,int &x){
 
     //standart deviation
     int denominator = data.size() - 1;
-    int numerator;
     float Standar_Dev;
     float sum_numerator = 0;
     for(int i = 0; i <= data.size() - 1;i++){
-        numerator = sqrt((data[i] - resultMean) * (data[i] - resultMean)); //sqrt(pow((data[i] - mean))); 
+        int numerator = sqrt((data[i] - resultMean) * (data[i] - resultMean)); //sqrt(pow((data[i] - mean)));
         sum_numerator += numerator;
     }
 
-    Standar_Dev = static_cast<double>(sum_numerator) / denominator;
+    Standar_Dev = static_cast<float>(sum_numerator) / denominator;
     std::cout << "nilai Standar Deviation: " << Standar_Dev << std::endl;
 
 
 
     // Z score
 
-    double score;
+    float score;
     score = (x - resultMean) / Standar_Dev;
     std::cout << "Nilai Z-Score: " << score << std::endl;
+
+    if(score >= - 3 || score <= -3){
+        std::cout << "nilai " << x << "adalah outliers! " << "karena sangat jauh di atas rata-rata" << std::endl;
+    }
 
 
 }
