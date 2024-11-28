@@ -14,8 +14,6 @@ struct DataStatistic{
     float Ysquared;
     float multiply;
 };
-
-
 void Squared(std::vector<float>& independen, std::vector<float>& dependen,DataStatistic &stats){
     // bisa menggunakan pow bawaan STL cmath atau langsung dengan metode manual
     //contoh menggunakan pow
@@ -40,8 +38,6 @@ void Squared(std::vector<float>& independen, std::vector<float>& dependen,DataSt
     std::cout << "Hasil Y squared " << stats.Ysquared << std::endl;
 
 }
-
-
 void sum(std::vector<float>& independen, std::vector<float>& dependen,DataStatistic &stats){
     float sumx = 0;
     float sumy = 0;
@@ -92,7 +88,6 @@ void LinearRegression(std::vector<float>& independen, std::vector<float>& depend
 
     Intercept = (stats.SumY - (Slope * stats.SumX)) / independen.size();
 
-
     std::cout << "Model Regresi Linear = " << Intercept << " + " << Slope << "x ";
 }
 
@@ -103,6 +98,10 @@ int main(){
     int count,IndependenValue,DependenValue;
 
     //karena tahap production kita akan memakai data yg sudah ada saja
+    //anda dapat men uncomment code dibawah dan menghapus data pada vector dependen dan dependen
+
+
+
     // std::cout << "Masukkan panjang data: ";
     // std::cin >> count;
     // for(int i = 0; i <= count - 1; i++){
@@ -115,12 +114,6 @@ int main(){
     // }
     float sum_x = independen.size();
     float sum_y = dependen.size();
-
-    // stats.SumX = sum_x;
-    // stats.SumY = sum_y;
-
-    // std::cout << "SUM X: " << sum_x << std::endl;
-    // std::cout << "SUM Y: " << sum_y << std::endl;
     sum(independen,dependen,stats);
     Squared(independen,dependen,stats);
     multiple(independen,dependen,stats);
