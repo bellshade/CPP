@@ -1,6 +1,6 @@
 #include <iostream>
 
-int maian(){
+int main(){
     char salam[] = "Hello boys";
     std::cout<<salam;
 
