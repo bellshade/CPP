@@ -1,8 +1,8 @@
 #include <iostream>
 
-int maian(){
+int main(){
     char salam[] = "Hello boys";
     std::cout<<salam;
 
-    return 0
+    return 0;
 }
