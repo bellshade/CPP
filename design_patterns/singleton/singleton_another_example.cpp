@@ -6,7 +6,6 @@ class Logger {
     Logger ();
 
   public:
-
     static Logger& getInstance ();
     virtual std::string log (std::string message) = 0;
 };
