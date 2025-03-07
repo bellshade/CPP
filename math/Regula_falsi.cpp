@@ -6,7 +6,7 @@
 #define EPSILON 1e-6 //Epsilon dipakai untuk membatasi toleransi error
 //sumber 1 : https://www.geeksforgeeks.org/regula-falsi-method/
 //sumber 2:https://byjus.com/maths/false-position-method/
-double FungsiPolynomial(double x,const std::vector<double> Koefisien){
+double FungsiPolynomial(double x,const std::vector<double>& Koefisien){
     double result = 0;
     int pangkat = Koefisien.size() - 1;
     for(int i = 0; i <= pangkat; i++){
@@ -87,6 +87,9 @@ int main(){
             //derajat 0 adalah kostanta
             step--;
         }
+    }else{
+        std::cerr << "Pilihan tidak valid! Harap masukkan 1 atau 2.\n";
+
     }
     // anda dapat men ublock code dibawah untuk menginput nilai a dan b secara manual
     // std::cout << "Masukkan nilai a: ";
