@@ -78,7 +78,7 @@ Operator Bitwise adalah operator yang melakukan operasi pada level bit (biner) d
 Operator ini bekerja dengan mengoperasikan bit per bit dari dua operand.
 
 | Operator | Nama Operasi | Keterangan |
-| - | - | - |h
+| - | - | - |
 | `&` | AND | Menghasilkan 1 jika kedua bit bernilai 1 |
 | `\|` | OR | Menghasilkan 1 jika salah satu bit bernilai 1 |
 | `^` | XOR | Menghasilkan 1 jika kedua bit bernilai berbeda |
