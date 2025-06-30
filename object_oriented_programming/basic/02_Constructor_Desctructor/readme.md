@@ -100,13 +100,5 @@ Dengan destructor seperti di atas, saat `delete head;` dipanggil, semua node ber
 
 ---
 
-## Kesimpulan
 
-* **Constructor** menginisialisasi nilai awal data member ketika objek dibuat.
-* **Destructor** membersihkan resource/memori saat objek dihapus, sangat penting untuk class dengan data dinamis (pointer & `new`).
-* Data yang disimpan langsung di objek akan otomatis dibersihkan oleh C++.
-* Data dinamis wajib dibersihkan dengan destructor untuk mencegah *memory leak*.
-
----
-
-> **Catatan Singkat:** Destructor tidak memiliki parameter, sedangkan constructor dapat memiliki parameter untuk memudahkan inisialisasi data member.
+> **Catatan Penting:** Destructor tidak memiliki parameter, sedangkan constructor dapat memiliki parameter untuk memudahkan inisialisasi data member.
