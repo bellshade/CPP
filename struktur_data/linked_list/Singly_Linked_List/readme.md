@@ -37,7 +37,9 @@ void traversal_linkedList(Node* head){
 time complexity = O(n),Auxiliary Space O(1)
 
 
-![gambar_traversel_inked_list](struktur_data/linked_list/Singly_Linked_List/img/traversal.png)
+![gambar_traversel_inked_list](img/traversal.png)
+
+
 Iterasi pada linked-list dilakukan dengan menggerakkan pointer kerja (misalnya. `curr`) dari head hingga elemen terakhir; sepanjang proses, pointer head sendiri tidak pernah bergeser, sehingga setelah loop selesai (ketika curr sudah nullptr) Anda tetap memiliki pegangan utuh ke daftar—dan, jika sebelumnya menyimpan pointer ke node terakhir (tail), Anda bisa langsung menambah simpul baru di ujung (insert-at-end) tanpa perlu menelusuri ulang dari awal.
 ## Searching in Singly Linked List
 `Searching (pencarian)` adalah operasi untuk menemukan nilai tertentu dalam struktur data. Pada singly linked list, metode yang lazim dipakai adalah linear search: kita menelusuri node dari head ke tail sampai data cocok atau daftar habis. Algoritmanya O(n) waktu dan O(1) ruang. Binary search tidak praktis di linked list karena tidak ada akses acak ke elemen tengah.
@@ -96,7 +98,9 @@ time complexity = O(n),Auxiliary Space O(1)
 `Insert`(memasukkan) adalah operasi untuk menyisipkan atau menambahkan nilai dalam sebuah linked list,dalam praktiknya kita mengenai 3 insertion yaitu `InsertionAtFront`(insertion didepan),`InsertionAtEnd`(Insertion diakhir),dan `InsertionSpecPosition`(insertion di posisi tertentu),nah kita akan membahas ketiganya
 ### 1.InsertionAtFront
 `Insertion At front` berarti kita menyisipkan nilai dari depan,dengan kata lain nilai yang kita insert akan menjadi element paling pertama,pada array kita melakukan operasi ini dengan menggeser nilai lainnya kekanan,di linked list alih-alih melakukan itu kita justru membuat node baru dan menghubungkannya dengan node head.(lihat gambar)
-![gambar_insertiom](struktur_data/linked_list/Singly_Linked_List/img/InsertionAtFront.png)
+
+
+![gambar_insertiom](img/InsertionAtFront.png)
 
 
 ide utama untuk melakukan insertion dari depan
@@ -117,7 +121,9 @@ time complexity = O(1),Auxiliary Space O(1)
 
 ### 2.InsertionAtEnd
 `Insertion At End` berarti kita menyisipkan nilai dari belakang,dengan menyisipkan dari belakang maka nilai yang kita sisipkan akan menjadi tail(element terakhir),karena penunjuk saat diloop tidak tereset saat iterasi berakhir maka kita dapat memanfaatkan ini untuk menyisipkan nilai dari belakang
-![gambar_insertiom](struktur_data/linked_list/Singly_Linked_List/img/InsertionAtEnd.png)
+
+
+![gambar_insertiom](img/InsertionAtEnd.png)
 
 
 ide utama untuk melakukan insertion dari belakang
