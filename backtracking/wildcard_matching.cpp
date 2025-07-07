@@ -14,8 +14,8 @@ namespace wildcard_matching {
  * @param p - referensi ke pattern (const&)
  * @return true jika cocok, false jika tidak
  */
-bool wildcard_matching(std::string s, std::string p, uint32_t pos1,
-                       std::uint32_t pos2) {
+bool wildcard_matching(const std::string &s, const std::string &p,
+                       uint32_t pos1, std::uint32_t pos2) {
   const uint32_t n = static_cast<uint32_t>(s.length());
   const uint32_t m = static_cast<uint32_t>(p.length());
   std::vector<std::vector<int8_t>> dp(n + 1, std::vector<int8_t>(m + 1, -1));
