@@ -46,8 +46,9 @@ void bubbleSort(std::vector<int> &numbers) {
     }
   }
 }
-void tampilkanUrutan(const std::vector<int> numbers) {
-  for (auto &x : numbers) {
+
+void tampilkanUrutan(const std::vector<int> &numbers) {
+  for (const auto &x : numbers) {
     std::cout << x << " ";
   }
   std::cout << "\n";
