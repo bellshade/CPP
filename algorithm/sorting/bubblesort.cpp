@@ -22,15 +22,13 @@ dapat ditukar posisi Final        [3, 4, 5, 6, 8] Array selesai diurutkan
 
 #include <cassert>
 #include <iostream>
-#include <utility>
 #include <vector>
 
 namespace sorting {
 void bubbleSort(std::vector<int> &numbers) {
   int n = numbers.size();
-  bool swapping;
   for (int i = 0; i < n; i++) {
-    swapping = false;
+    bool swapping = false;
     for (int x = 0; x < (n - i - 1); x++) {
       // jika current number yang direprsentasikan oleh numbers[x] lebih besar
       // dari nextNumber numbers[x+1] maka tukarkan posisi 2 angka tersebut
