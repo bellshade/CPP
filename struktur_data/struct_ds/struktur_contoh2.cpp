@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
 
-void printKomputer(strcut Komputer komputer);
+void printKomputer(struct Komputer komputer);
 
 struct Komputer {
   char pemilik[30];
@@ -31,7 +31,7 @@ int main() {
   
 }
 
-void printKomputer(struct Komputer komputer) {
+void printKomputer(const struct Komputer& komputer) {
   std::cout<<"pemilik :"<<komputer.pemilik<<std::endl;
   std::cout<<"tujuan :"<<komputer.tujuan<<std::endl;
   std::cout<<"jumlah :"<<komputer.jumlah<<std::endl;
