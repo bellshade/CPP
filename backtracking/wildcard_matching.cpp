@@ -1,45 +1,57 @@
 #include <cassert>
 #include <cstdint>
+#include <functional>
 #include <iostream>
 #include <vector>
 
 namespace backtracking {
 namespace wildcard_matching {
-std::vector<std::vector<int64_t>> dpTable(1000, std::vector<int64_t>(1000, -1));
+
+/**
+ * @brief wildcard matching - cek apakah string cocok dengan pattern wildcard
+ *
+ * @param s - referensi ke string input
+ * @param p - referensi ke pattern (const&)
+ * @return true jika cocok, false jika tidak
+ */
 bool wildcard_matching(std::string s, std::string p, uint32_t pos1,
                        std::uint32_t pos2) {
-  uint32_t n = s.length();
-  uint32_t m = p.length();
-  if (pos1 == n && pos2 == m) {
-    return true;
-  }
-  if (pos1 != n && pos2 == m) {
-    return false;
-  }
-  if (pos1 == n && pos2 != m) {
-    while (pos2 < m && p[pos2] == '*') {
-      pos2++;
+  const uint32_t n = static_cast<uint32_t>(s.length());
+  const uint32_t m = static_cast<uint32_t>(p.length());
+  std::vector<std::vector<int8_t>> dp(n + 1, std::vector<int8_t>(m + 1, -1));
+
+  std::function<bool(uint32_t, uint32_t)> match = [&](uint32_t i,
+                                                      uint32_t j) -> bool {
+    if (dp[i][j] != -1) {
+      return static_cast<bool>(dp[i][j]);
     }
 
-    return pos2 == m;
-  }
-  if (dpTable[pos1][pos2] != -1) {
-    return dpTable[pos1][pos2];
-  }
-  if (s[pos1] == p[pos2]) {
-    return dpTable[pos1][pos2] = wildcard_matching(s, p, pos1 + 1, pos2 + 1);
-  }
-
-  else {
-    if (p[pos2] == '?') {
-      return dpTable[pos1][pos2] = wildcard_matching(s, p, pos1 + 1, pos2 + 1);
-    } else if (p[pos2] == '*') {
-      return dpTable[pos1][pos2] = wildcard_matching(s, p, pos1, pos2 + 1) ||
-                                   wildcard_matching(s, p, pos1 + 1, pos2);
-    } else {
-      return dpTable[pos1][pos2] = 0;
+    if (i == n && j == m) {
+      return dp[i][j] = true;
     }
-  }
+
+    if (i < n && j == m) {
+      return dp[i][j] = false;
+    }
+
+    if (i == n && j < m) {
+      while (j < m && p[j] == '*') {
+        ++j;
+      }
+      return dp[i][j] = (j == m);
+    }
+
+    if (s[i] == p[j] || p[j] == '?') {
+      return dp[i][j] = match(i + 1, j + 1);
+    }
+
+    if (p[j] == '*') {
+      return dp[i][j] = (match(i, j + 1) || match(i + 1, j));
+    }
+    return dp[i][j] = false;
+  };
+
+  return match(0, 0);
 }
 
 } // namespace wildcard_matching
