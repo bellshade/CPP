@@ -8,7 +8,6 @@
 #include <iostream>
 #include <queue>
 #include <string>
-#include <string_view>
 
 // huffman pohon node
 struct MinHeapNode {
@@ -36,7 +35,7 @@ struct komparasi {
 
 // menampilkan kode huffman dari
 // root pohon huffman
-void printKode(struct MinHeapNode *root, std::string_view str) {
+void printKode(struct MinHeapNode *root, const std::string& str) {
   if (!root) {
     return;
   }
