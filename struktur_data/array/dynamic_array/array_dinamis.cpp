@@ -1,9 +1,11 @@
 #include <iostream>
 class DynamicArray{
     private:
-        int *array;
+
+        int* array;
         int size;
         int capacity;
+
     public:
 
         DynamicArray(){
@@ -87,19 +89,17 @@ class DynamicArray{
         //mengalokasi blok memory sebanyak n
         //jika dan hanya jika kita mengetahui max capacity array
         //misal n = 5 capacity 4
-            void reserve(int n){
-                if(n > capacity){
-                    int* temp = new int[n]; //best practices
-                    capacity = n;
-
-                    for(int i = 0;i < size;i++){
-                        temp[i] = array[i];
-                    }
-
-                    delete[] array;//hapus array lama
-                    array = temp;
+        void reserve(int n){
+            if(n > capacity){
+                int* temp = new int[n]; //best practices
+                capacity = n;
+                for(int i = 0;i < size;i++){
+                    temp[i] = array[i];
                 }
+                delete[] array;//hapus array lama
+                array = temp;
             }
+        }
         //digunakan saat ingin menyemapan size = capacity biasanya setelah resize
         void shrink_to_fit(int n){
             if(size == capacity){
@@ -227,5 +227,4 @@ int main(){
     da.PrintDetail();
     std::cin.get();
     return 0;
-
 }
