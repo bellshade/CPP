@@ -15,15 +15,12 @@ class DynamicArray{
             array = new int[capacity];
             size = 0;
         }
-
         int getsize(){
             return size;   
         }
-
         int getcapacity(){
             return capacity;
         }
-
         void push_back(int value){
             if(size == capacity){
                 GrowArray();
@@ -35,7 +32,6 @@ class DynamicArray{
 
             // return array;
         }
-
         void pop_back(){
             array[size - 1] = 0;
             
@@ -45,7 +41,6 @@ class DynamicArray{
                 ShrinkArray();
             }
         }
-
         void InsertAt(int index,int value){
             if(size == capacity){
                 GrowArray();
@@ -57,7 +52,6 @@ class DynamicArray{
             array[index] = value;
             size++;
         }
-
         void DeleteAt(int index){
             for(size_t i = index;i < size;i++){
                 array[i] = array[i + 1];
@@ -70,7 +64,6 @@ class DynamicArray{
                 ShrinkArray();
             }
         }
-
         void resize(int n){
             if(n > size){//ini berarti ukuran array diperbesar
                 while(size < capacity){
@@ -88,16 +81,11 @@ class DynamicArray{
                     array[i] = 0;
                 }
                 size = n; //ukuran array diperkecil hingga n
-                
-                
             }
-
-
         }
         //mengalokasi blok memory sebanyak n
         //jika dan hanya jika kita mengetahui max capacity array
         //misal n = 5 capacity 4
-
             void reserve(int n){
                 if(n > capacity){
                     // int* temp = new int[(n - capacity) + capacity];
@@ -131,20 +119,16 @@ class DynamicArray{
         int max_size(){
             return capacity;
         }
-
         int front(){
             return array[0];
         }
-
         int back(){
             return array[size - 1];
         }
-
         int accesAtIndex(int index){
             if(index < 1 || index >= size){
                 return -1;
             }
-
             return array[index];
         }
         void clear(){
@@ -167,7 +151,6 @@ class DynamicArray{
             for(int i = 0;i < size;i++){
                 temp[i] = array[i];
             }
-
             //hapus array lama
             delete array;
 
@@ -175,15 +158,11 @@ class DynamicArray{
         }
         void ShrinkArray(){
             capacity = size;
-
             int* temp = new int[capacity];
-
             for(size_t i = 0;i < size;i++){
                 temp[i] = array[i];
             }
-
             delete array;
-
             array = temp;
         }
         //linear search but std::find using BST(binary search tree)
@@ -199,7 +178,6 @@ class DynamicArray{
 
         void PrintDetail(){
             std::cout << "element array" << std::endl;
-
             for (size_t i = 0; i < size; i++)
             {
                 std::cout << array[i] <<  " ";
@@ -207,7 +185,6 @@ class DynamicArray{
             std::cout << std::endl;
 
             std::cout << "size array: " << size << " " << "capasitas array: " << capacity << std::endl;
-
         }
 
         bool IsEmpty(){
@@ -248,15 +225,6 @@ int main(){
     da.shrink_to_fit(resize);
     std::cout << "Tampilkan Array" << std::endl;
     da.PrintDetail();
-    //loop push back
-    //example insertion 3 data
-    // for(size_t i = 0;i < 3;i++){
-    //     int data;
-    //     da.push_back(data);
-    // }
-
-    
-    
     std::cin.get();
     return 0;
 
