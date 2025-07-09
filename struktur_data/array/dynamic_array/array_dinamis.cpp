@@ -5,6 +5,7 @@ class DynamicArray{
         int size;
         int capacity;
     public:
+
         DynamicArray(){
             capacity = 1;
             size = 0;
@@ -88,7 +89,6 @@ class DynamicArray{
         //misal n = 5 capacity 4
             void reserve(int n){
                 if(n > capacity){
-                    // int* temp = new int[(n - capacity) + capacity];
                     int* temp = new int[n]; //best practices
                     capacity = n;
 
