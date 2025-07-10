@@ -3,7 +3,7 @@
 2. [Searching in Singly Linked List](#searching-in-singly-linked-list)
 3. [Length of Singly Linked List](#length-of-singly-linked-list)
 4. [Insertion in Singly Linked List](#insertion-in-singly-linked-list)
-5. Deletion (front, back, spec pos) — *coming soon*
+5. [Deletion (front, back, spec pos)](#deletion)
 6. Modify Linked List — *coming soon*
 7. Reversing Linked List — *coming soon*
 
@@ -34,7 +34,7 @@ void traversal_linkedList(Node* head){
     std::cout<<std::endl;
 }
 ```
-time complexity = O(n),Auxiliary Space O(1)
+**time complexity = O(n),Auxiliary Space O(1)**
 
 
 ![gambar_traversel_inked_list](img/traversal.png)
@@ -63,7 +63,7 @@ bool searching(Node *head,int cari){
     return false;
 }
 ```
-time complexity = O(n),Auxiliary Space O(1)
+**time complexity = O(n),Auxiliary Space O(1)**
 
 
 <!-- konten bab 2 -->
@@ -89,7 +89,7 @@ void lenght_LinkedList(Node* head){
     std::cout << "panjang linked list: " << lenght << std::endl;
 }
 ```
-time complexity = O(n),Auxiliary Space O(1)
+**time complexity = O(n),Auxiliary Space O(1)**
 
 
 <!-- konten bab 3 -->
@@ -116,7 +116,7 @@ Node* InsertionAtFront(Node* head,int data_baru){
     return new_node;
 }
 ```
-time complexity = O(1),Auxiliary Space O(1)
+**time complexity = O(1),Auxiliary Space O(1)**
 
 
 ### 2.InsertionAtEnd
@@ -150,9 +150,157 @@ Node* InsertionAtEnd(Node* head,int data_baru){
     return head;
 }
 ```
-time complexity = O(n),Auxiliary Space O(1)
+**time complexity = O(n),Auxiliary Space O(1)**
 
 
 nah,jika kita melihat metode insertion sebelumnya,pada `inserrt at front` kita mengembalikan new_node sementara pada saat `insert at end` kita malah mengembalikan head,nah itu dikarenakan semua operasi yang kita selanjutnya kita wajib mengembalikan pointer `head`,pada operasi At Front kita menyisipkan nilai yang nantinya akan menjadi head,makanya kita mengembalikan new_node
 ### 3.Insertion at a Specific Position(Soon)
+
+
+Ide utama untuk melakukan Insertion di posisi tertentu
+1.buat node baru sebagai pointer penunjuk(misal `curr`)
+2.Buat node baru untuk menampung nilai(misal `new_node`)
+3.Traverse(looping) linked list sampai `node` posisi - 1
+4.Simpan sementara node setelah curr ke new_node->next → new_node->next = curr->next.
+5.Sambungkan `curr->next` ke `new_node` → `curr->next = new_node`.  
+6.return `head`
+
+anda dapat melihat visualisasinya dibawah ![dibawah](img/Insertion-at-a-Specific-Position-o.jpg)
+
+
+
+```cpp
+ Node* InsertionSpecPos(Node* head,int pos,int data){
+    if(pos < 1){
+        return head;
+    }
+    //jika pos  = head,maka ubah data menjadi head = insertAtFront
+    if(pos == 1){
+        Node* curr = new Node(data);    
+        curr->next = head;
+        return curr;
+    }
+
+    Node* curr = head;
+
+    //traverse sampai pos - 1
+    for(int i = 0;i < pos - 1 && curr != nullptr;i++){
+        curr = curr->next;
+    }
+    //jika posisi curr melebihi jumlah element node
+    if(curr == nullptr){
+        return head;
+    }
+
+    Node* new_node = new Node(data); 
+    new_node->next = curr->next;
+    curr->next = new_node;
+    return head;   
+ }
+```
+**time complexity = O(n),Auxiliary Space O(1)**
+
+
+jika pos < 1,kita dapat mengatakan bahwa pos invalid,maka dari itu kita mengembalikan
+head,jika pos = 1,kita tau yg mengisi pos 1 adalah head,jika kita ingin mengisi di pos 1 maka
+konsep nya sama dengan kita melakukan InsertionAtFront,setelah semua exception diatas,kita melakukan
+traverse(loop) sampai pos node -1,itu untuk tujuannya agar mengerakkan Node Poiner Penunjuk(`curr`)
+sampai pada posisi node sebelum diinsert.
+
+jika curr(pointer penunjuk) saat ini adalah nullpointer maka kita dapat menyatakan bahwa pos
+berada diluar list,tp tidak seperti ketika pos == 1 kita dapat melakukan insertion at front,untuk kondisi ini
+kita tidak dapat langsung menganggap ini sebagai insert at end
+karena:
+
+
+-  kita tidak mengetahui apa `pos` tepat **setelah node terakhir**(pos = panjang list + 1)
+misal kita punya 3 posisi node
+- atau pos melebihi batas list misal (misal `pos == 10` untuk list dengan 3 node)
+
+dalam kondisi ini,kita tidak dapat menjamin keamanan insert,ketika melakukan InsertAtEnd ketika `curr = nullptr`
+akan menyebabkan segmentation fault,maka kembalikan head dan abaikan operasi.
+```cpp
+1->2->3->null
+```
+Jika pos == 5, kita tidak tahu apakah harus insert setelah 3, atau apakah ini hanya kesalahan input. Maka lebih baik menghindari insert dan mengembalikan list seperti semula.
+
+
+nah lanjut sudah dipastikan **pos valid**,maka kita buat node baru misal `new_node` untuk menampung data yang ingin di insert lalu,new_node-> next = curr->next atau dengan kArtinya, node setelah new_node adalah node yang sebelumnya berada setelah `curr`.sekarang tinggal hubungkan node sebelum (`curr`) ke new_node dengan `curr->next = new_node`,Dengan ini, node baru telah berhasil disisipkan di antara `curr` dan `curr->next`.
 <!-- konten bab 4 -->
+## Deletion
+sama seperti Insertion,Deletion(menhapus Node) juga memiliki 3 metode yaitu:
+### 1.DeletionAtFront
+DeletionAtFront atau menghapus Node dari depan(head),memiliki beberapa ide utama antara lain:
+
+1.Buat `Node` baru untuk menyimpan nilai head(misal `temp`)
+2.Buat `head` menunjuk node selanjutnya (`head = head->next`)
+3.Hapus temp(head sebelumnya) dengan `delete temp`
+4.kembalikan `head` yang baru
+```cpp
+Node* DeletionAtFront(Node* head){
+    //jika list kosong
+    if(head == nullptr){
+        return nullptr;
+    }
+    //untuk track head,
+    Node* temp = head;
+    //head menunjuk ke node berikutnya
+    head = head->next;
+    //hapus temp(head sebelumnya)
+    delete temp;
+    //return head
+    return head;
+}
+```
+**time complexity = O(1),Auxiliary Space O(1)**
+
+
+pertama cek apakah head adalah nullptr,dengan `head == null` ptr dapat dipastikan
+bahwa list ini kosong maka kembalikan nullptr,jika list bukan null ptr kita buat
+node baru misal `temp` untuk menyimpan nilai head lama(Head yang akan dihapus),lalu
+pindahkan head ke node selanjutnya dengan `head = head->next`,setelah itu hapus Node
+temp berisi nilai Node `head yag lama` untuk menghindari **memory leak**,dan yang terakhir kembalikan head yang baru.
+
+### 2.DeletionAtEnd
+<p align="justify">
+Deletion at End, atau penghapusan node dari belakang, berarti kita akan menghapus node terakhir dalam linked list, yaitu node tepat sebelum penunjuk <code>nullptr</code>. Untuk melakukannya, terdapat beberapa langkah utama:
+<ol>
+<li>Buat pointer penunjuk, misalnya <code>second_last</code>, yang akan digunakan untuk melacak node kedua terakhir.</li>
+<li>Lakukan traversal hingga mencapai node kedua terakhir.</li>
+<li>Hapus node terakhir menggunakan <code>delete second_last-&gt;next</code>.</li>
+</ol>
+</p>
+
+
+```cpp
+Node* DeletionAtEnd(Node* head){
+    //cek jika list kosong
+    if(head == nullptr){
+        return nullptr;
+    }
+    //cek jika list hanya memiliki 1 elemnt saja
+    if(head->next == nullptr){
+        delete head;
+        return nullptr;
+    }
+    //buat Node baru untuk track dua node terakhir
+    Node* second_last = head;
+    while(second_last->next->next != nullptr){
+        second_last = second_last->next;
+    }
+    //hapus dua node terakhir
+    delete second_last->next;
+    //node terakhir adalah nullptr
+    second_last->next = nullptr;
+    //kembalikan head
+    return head;
+}
+```
+**time complexity = O(n),Auxiliary Space O(1)**
+
+
+langkah pertama yang kita lakukan adalah mengecek apakah `list kosong`,jika iya kembalikan `nullptr`
+lalu cek juga apakah list hanya memiliki 1 `Node` jika iya kembalikan nullptr,jika semua exception diatas
+tidak memenuhi baru kita dapat melakukan `deletionAtEnd`,langkah pertama yang dilakukan membuat Node baru
+misal `second_last` sebagai pointer penunjuk dan untuk mentrack Node kedua terakhir ,lalu lakukan loop dengan while sampai pada element kedua terakhir,hapus Node setelah kedua terakhir dengan second_last->next.Lalu Buat Node
+Second_last menunjuk `Node` berikutnya yaitu `Nullptr`
