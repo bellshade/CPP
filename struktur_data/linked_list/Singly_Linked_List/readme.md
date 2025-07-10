@@ -302,5 +302,4 @@ Node* DeletionAtEnd(Node* head){
 langkah pertama yang kita lakukan adalah mengecek apakah `list kosong`,jika iya kembalikan `nullptr`
 lalu cek juga apakah list hanya memiliki 1 `Node` jika iya kembalikan nullptr,jika semua exception diatas
 tidak memenuhi baru kita dapat melakukan `deletionAtEnd`,langkah pertama yang dilakukan membuat Node baru
-misal `second_last` sebagai pointer penunjuk dan untuk mentrack Node kedua terakhir ,lalu lakukan loop dengan while sampai pada element kedua terakhir,hapus Node setelah kedua terakhir dengan second_last->next.Lalu Buat Node
-Second_last menunjuk `Node` berikutnya yaitu `Nullptr`
+misal `second_last` sebagai pointer penunjuk dan untuk mentrack Node kedua terakhir ,lalu lakukan loop dengan `while` sampai pada element kedua terakhir,hapus Node setelah kedua terakhir dengan second_last->next.Lalu Buat Node `Second_last` menunjuk `Node` berikutnya yaitu `Nullptr`
