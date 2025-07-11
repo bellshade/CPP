@@ -17,11 +17,14 @@
 
 <p align="justify">
 ide utama untuk melakukan traversal di linked list
-1. Inisialisasi pointer salinan <code>curr</code> yang menunjuk <code>head</code>.
-2. Ulangi dengan <code>while</code> selama <code>curr != nullptr</code>.
-3. Proses data di node saat ini (mis. <code>print</code>, hitung, ubah, dsb.).
-4. Geser pointer: <code>curr = curr->next</code>.
 </p>
+
+<ol>
+<li>Inisialisasi pointer salinan <code>curr</code> yang menunjuk <code>head</code>.</li>
+<li>Ulangi dengan <code>while</code> selama <code>curr != nullptr</code>.</li>
+<li>Proses data di node saat ini (mis. <code>print</code>, hitung, ubah, dsb.).</li>
+<li>Geser pointer: <code>curr = curr->next</code>.</li>
+</ol>
 
 ```cpp
 
@@ -54,12 +57,18 @@ Iterasi pada linked-list dilakukan dengan menggerakkan pointer kerja (misalnya. 
 
 <p align="justify">
 ide utama searching pada linked list
-1.  inisialisasi node pointer(misal <code>curr</code>)
-2.  lakukan traversal     
-    - jika element sekarang sama dengan key(<code>curr->data = key</code>) maka return <code>true</code>
-    - jika tidak gerakkan node pointer ke element selanjutnya(<code>curr = curr->next</code>)
-3.  jika key tidak ditemukan maka return <code>false</code>
 </p>
+
+<ol>
+<li>inisialisasi node pointer(misal <code>curr</code>)</li>
+<li>lakukan traversal     
+    <ul>
+    <li>jika element sekarang sama dengan key(<code>curr->data = key</code>) maka return <code>true</code></li>
+    <li>jika tidak gerakkan node pointer ke element selanjutnya(<code>curr = curr->next</code>)</li>
+    </ul>
+</li>
+<li>jika key tidak ditemukan maka return <code>false</code></li>
+</ol>
 
 ```cpp
 bool searching(Node *head,int cari){
@@ -85,12 +94,15 @@ bool searching(Node *head,int cari){
 
 <p align="justify">
 ide utama untuk mendapatkan panjang dari linked list
-1. inisialisasi sebuah counter untuk menampung nilai(misal <code>length = 0</code>)
-2. buat pointer penunjuk(misal <code>curr</code>)
-3. lakukan iterasi sampai <code>tail</code>(node terakhir)
-4. tiap iterasi increment(naikkan) counter += 1
-5. gerakkan pointer ke element selanjutnya(<code>curr = curr->next</code>)
 </p>
+
+<ol>
+<li>inisialisasi sebuah counter untuk menampung nilai(misal <code>length = 0</code>)</li>
+<li>buat pointer penunjuk(misal <code>curr</code>)</li>
+<li>lakukan iterasi sampai <code>tail</code>(node terakhir)</li>
+<li>tiap iterasi increment(naikkan) counter += 1</li>
+<li>gerakkan pointer ke element selanjutnya(<code>curr = curr->next</code>)</li>
+</ol>
 
 ```cpp
 void lenght_LinkedList(Node* head){
@@ -122,10 +134,13 @@ void lenght_LinkedList(Node* head){
 
 <p align="justify">
 ide utama untuk melakukan insertion dari depan
-1. buatlah node baru(misal new_data) untuk dijadikan head yang baru sekaligus menyimpan nilai
-2. hubungkan node(new_data->next = head) tersebut ke head
-3. kembalikan pointer node yang kita buat(return new_data);
 </p>
+
+<ol>
+<li>buatlah node baru(misal new_data) untuk dijadikan head yang baru sekaligus menyimpan nilai</li>
+<li>hubungkan node(new_data->next = head) tersebut ke head</li>
+<li>kembalikan pointer node yang kita buat(return new_data);</li>
+</ol>
 
 ```cpp
 Node* InsertionAtFront(Node* head,int data_baru){
@@ -148,12 +163,15 @@ Node* InsertionAtFront(Node* head,int data_baru){
 
 <p align="justify">
 ide utama untuk melakukan insertion dari belakang
-1. buat Node baru(misal <code>new_node</code>) untuk menampung nilai
-2. jika head bernilai nullptr berarti linked list kosong maka kembalikan new_node
-3. buat pointer penunjuk(misal last)
-4. traversal linked list sampai akhir Node(tail)
-5. pada saat penunjuk sudah sampai pada tail(node terakhir) maka hubungkan dengan new_node
 </p>
+
+<ol>
+<li>buat Node baru(misal <code>new_node</code>) untuk menampung nilai</li>
+<li>jika head bernilai nullptr berarti linked list kosong maka kembalikan new_node</li>
+<li>buat pointer penunjuk(misal last)</li>
+<li>traversal linked list sampai akhir Node(tail)</li>
+<li>pada saat penunjuk sudah sampai pada tail(node terakhir) maka hubungkan dengan new_node</li>
+</ol>
 
 ```cpp
 Node* InsertionAtEnd(Node* head,int data_baru){
@@ -183,13 +201,16 @@ nah,jika kita melihat metode insertion sebelumnya,pada <code>inserrt at front</c
 
 <p align="justify">
 Ide utama untuk melakukan Insertion di posisi tertentu
-1.buat node baru sebagai pointer penunjuk(misal <code>curr</code>)
-2.Buat node baru untuk menampung nilai(misal <code>new_node</code>)
-3.Traverse(looping) linked list sampai <code>node</code> posisi - 1
-4.Simpan sementara node setelah curr ke new_node->next → new_node->next = curr->next.
-5.Sambungkan <code>curr->next</code> ke <code>new_node</code> → <code>curr->next = new_node</code>.  
-6.return <code>head</code>
 </p>
+
+<ol>
+<li>buat node baru sebagai pointer penunjuk(misal <code>curr</code>)</li>
+<li>Buat node baru untuk menampung nilai(misal <code>new_node</code>)</li>
+<li>Traverse(looping) linked list sampai <code>node</code> posisi - 1</li>
+<li>Simpan sementara node setelah curr ke new_node->next → new_node->next = curr->next.</li>
+<li>Sambungkan <code>curr->next</code> ke <code>new_node</code> → <code>curr->next = new_node</code>.</li>
+<li>return <code>head</code></li>
+</ol>
 
 <p align="justify">
 anda dapat melihat visualisasinya dibawah ![dibawah](img/Insertion-at-a-Specific-Position-o.jpg)
@@ -241,11 +262,11 @@ kita tidak dapat langsung menganggap ini sebagai insert at end
 karena:
 </p>
 
-<p align="justify">
--  kita tidak mengetahui apa <code>pos</code> tepat <strong>setelah node terakhir</strong>(pos = panjang list + 1)
-misal kita punya 3 posisi node
-- atau pos melebihi batas list misal (misal <code>pos == 10</code> untuk list dengan 3 node)
-</p>
+<ul>
+<li>kita tidak mengetahui apa <code>pos</code> tepat <strong>setelah node terakhir</strong>(pos = panjang list + 1)
+misal kita punya 3 posisi node</li>
+<li>atau pos melebihi batas list misal (misal <code>pos == 10</code> untuk list dengan 3 node)</li>
+</ul>
 
 <p align="justify">
 dalam kondisi ini,kita tidak dapat menjamin keamanan insert,ketika melakukan InsertAtEnd ketika <code>curr = nullptr</code>
@@ -275,12 +296,12 @@ sama seperti Insertion,Deletion(menhapus Node) juga memiliki 3 metode yaitu:
 DeletionAtFront atau menghapus Node dari depan(head),memiliki beberapa ide utama antara lain:
 </p>
 
-<p align="justify">
-1.Buat <code>Node</code> baru untuk menyimpan nilai head(misal <code>temp</code>)
-2.Buat <code>head</code> menunjuk node selanjutnya (<code>head = head->next</code>)
-3.Hapus temp(head sebelumnya) dengan <code>delete temp</code>
-4.kembalikan <code>head</code> yang baru
-</p>
+<ol>
+<li>Buat <code>Node</code> baru untuk menyimpan nilai head(misal <code>temp</code>)</li>
+<li>Buat <code>head</code> menunjuk node selanjutnya (<code>head = head->next</code>)</li>
+<li>Hapus temp(head sebelumnya) dengan <code>delete temp</code>)</li>
+<li>kembalikan <code>head</code> yang baru</li>
+</ol>
 
 ```cpp
 Node* DeletionAtFront(Node* head){
