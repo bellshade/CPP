@@ -38,6 +38,6 @@ int main(){
     *implementasi msb untuk mencari nilai terdekat atau sama dengan 2^n
     */
     int pangkat = 1 >> hasil; //bitwise trick untuk mendapat nilai 2^n,karena 1 >> msb,maka 2^msb
-    std::cout << hasil << std::endl;
+    std::cout << pangkat << std::endl;
     return 0;
 }
