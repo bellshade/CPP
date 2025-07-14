@@ -1,4 +1,5 @@
 #include <iostream>
+#pragma intrinsic(_BitScanReverse)
 /**
  * @brief fungsi untuk mendapatkan nilai most significat bit
  * @param n nilai integer yang ingin dicari most significat bit
@@ -15,19 +16,6 @@ int msb(int n){
         msb++;//increment msb
     }
     return msb;
-}
-/**
- * @brief best practices untuk mendapatkan nilai most significar bit
- * @param n nilai integer yang ingin dicari most significat bit
- * Fungsi ini menghitung posisi Most Significant Bit (MSB) dari `n` 
- * menggunakan built-in GCC `__builtin_clz`, lalu mengembalikan 2 pangkat posisi itu.
- * @return nilai msb
- */
-int best_practices(int n){
-    if(n == 0){
-        return 0;
-    }
-    return 1 << (31 - __builtin_clz(n));
 }
 int main(){
     int n;
