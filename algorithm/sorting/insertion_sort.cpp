@@ -13,7 +13,6 @@
  */
 #include <iostream>
 #include <vector>
-using namespace std;
 /**
  * @brief Menampilkan elemen-elemen vector.
  * 
@@ -21,24 +20,22 @@ using namespace std;
  * 
  * Menggunakan range-based loop dan `const reference` agar efisien.
  */
-void tampilkan(const vector<int>& value){
+void tampilkan(const std::vector<int>& value){
     for(const auto x: value){
-        cout << x << " ";
+        std::cout << x << " ";
     }
 }
 /**
  * @brief Mengurutkan elemen vector secara menaik (terkecil ke terbesar).
  * 
  * @param value Vector integer yang akan diurutkan.
- * @param key Variabel untuk menyimpan nilai sementara (key).
  * 
  * Menggunakan algoritma Insertion Sort. Setiap iterasi menyisipkan `key` ke posisi yang tepat
- * dengan menggeser elemen-elemen yang lebih besar ke kanan.
+ * dengan mesnggeser elemen-elemen yang lebih besar ke kanan.
  */
-void InsertionSortAscending(vector<int>& value){  //insertion sort menaik
-    int key;
+void InsertionSortAscending(std::vector<int>& value){  //insertion sort menaik
     for(int i = 1;i < value.size(); i++){
-        key = value[i]; //inialisasi bilangan kedua merupakan key(kunci)
+        int key = value[i]; //inialisasi bilangan kedua merupakan key(kunci)
         int j = i - 1;  //inialisasi j adalah bilangan pertama
         while(j >= 0 && value[j] > key){ //operator logika AND akan true jika kedua input true
             /*jka bilangan lebih besar dari 0 dan bilangan lebih besar dari key maka while akan berjalan*/
@@ -56,7 +53,7 @@ void InsertionSortAscending(vector<int>& value){  //insertion sort menaik
  * Insertion Sort dalam urutan descending: menyisipkan `key` di posisi yang benar
  * dengan menggeser elemen yang lebih kecil ke kanan.
  */
-void InsertionSortDescending(vector<int>& value) { //insertion sort menurun
+void InsertionSortDescending(std::vector<int>& value) { //insertion sort menurun
     for(int i = 1; i < value.size(); i++) {
         int key = value[i]; // key adalah elemen yang akan disisipkan
         int j = i - 1;
@@ -80,23 +77,24 @@ void InsertionSortDescending(vector<int>& value) { //insertion sort menurun
  * - Melakukan sorting descending dan menampilkan hasilnya
  */
 int main(){
-    int count,input,key;
+    int count;
     //meminta user untuk memasukkan panjang data(vector)
-    cout << "Masukkan panjang data: ";
-    cin >> count;
-    vector<int> value(count);
-    for(int i = 0;i <= count - 1 ; i++){
-        cout << "Masukkan data ke " << i + 1 << ": ";
-        cin >> value[i];
-        
+    std::cout << "Masukkan panjang data: ";
+    std::cin >> count;
+    std::vector<int> value(count);
+    for(int i = 0;i < count; i++){
+        std::cout << "Masukkan data ke " << i + 1 << ": ";
+        std::cin >> value[i];
     }
     //menampilkan vector setelah sorting
     InsertionSortAscending(value);
-    cout << "Data setelah di urut mulai dari terkecil ";
+    std::cout << "Data setelah di urut mulai dari terkecil ";
     tampilkan(value);
+    std::cout<<std::endl;
     InsertionSortDescending(value);
-    cout << "\ndata setelah di urut mulai terbesar ";
+    std::cout << "\ndata setelah di urut mulai terbesar ";
     tampilkan(value);
-    cin.get();
+    std::cout<<std::endl;
+    // cin.get();
     return 0;
 }
