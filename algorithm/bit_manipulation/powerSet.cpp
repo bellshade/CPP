@@ -39,7 +39,6 @@ void PowerSet(){
         }
         std::cout << "}";
     }
-    
 }
 int main(){
     PowerSet();
