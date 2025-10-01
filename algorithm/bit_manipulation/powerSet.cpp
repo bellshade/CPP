@@ -5,7 +5,8 @@
  * @author yusuf
  * @date 9 september 2025
  */
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 /**
  * @brief powerSet adalah salah satu algoritma untuk mendapatkan semua subset
  * sebuah himpunan(set),ini dibutuhkan ketika menghadapi masalah/problem seperti
