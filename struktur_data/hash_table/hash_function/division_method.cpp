@@ -21,7 +21,7 @@ class HashTable{
             int val;
             Node* next;
             //constructor list
-            Node(int val){
+            explicit Node(int val){
                 this->val = val;
                 this->next = nullptr;
             }
@@ -35,12 +35,27 @@ class HashTable{
         //default constructor
         HashTable(): m(0){
             table = new Node*[m];
+            table[m] = nullptr;
         }
-        HashTable(int size): m(size){
+        explicit HashTable(int size): m(size){
             table = new Node*[m];
             //isi index
             for(int i = 0; i < m;i++){
                 table[i] = nullptr;
+            }
+        }
+        HashTable(const HashTable& others){
+            m = others.m;
+            table  = new Node*[m];
+            for(int i = 0;i < m;i++){
+                table[i] = nullptr;
+                Node* curr = others.table[i];
+                Node** tail = &table[i]; //store memory addres to tail
+                while(curr != nullptr){
+                    *tail = new Node(curr->val);
+                    tail = &((*tail)->next);
+                    curr = curr->next;
+                }
             }
         }
         //range co
@@ -119,7 +134,6 @@ class HashTable{
                     Node* _next = curr;
                     prev->next = _next->next;
                     delete _next;
-                    curr = curr->next;
                     return true;
                 }
                     prev = curr;
@@ -171,5 +185,8 @@ int main(){
     }else{
         std::cout << "tidak ditemukan" << std::endl;
     }
+    //demo copy constructor
+    HashTable hash = hashMap;
+    hashMap.print_table();
     return 0;
 }
