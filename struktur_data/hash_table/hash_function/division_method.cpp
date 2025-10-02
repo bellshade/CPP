@@ -15,7 +15,6 @@
 
 #include <iostream>
 class HashTable{
-
     private:
         struct Node{
             int val;
