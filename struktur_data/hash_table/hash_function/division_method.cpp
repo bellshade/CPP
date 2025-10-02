@@ -15,6 +15,7 @@
 
 #include <iostream>
 class HashTable{
+
     private:
         struct Node{
             int val;
@@ -25,9 +26,11 @@ class HashTable{
                 this->next = nullptr;
             }
         };
+
     private:
         int m;
         Node** table;
+
     public://constructor
         //default constructor
         HashTable(): m(0){
@@ -45,10 +48,12 @@ class HashTable{
         ~HashTable(){
             clear();
         }
+
     public:
         int hash(int key){
             return key % m;
         }
+
     public:
         /**
         * @brief method untuk insert value pada hash table
@@ -122,6 +127,7 @@ class HashTable{
             }
             return false;
         }
+
     public:
         void print_table()const noexcept{
             for(int i = 0;i < m;i++){
@@ -134,6 +140,7 @@ class HashTable{
                 std::cout << " nullptr" << std::endl;
             }
         }
+        
     public:
         void clear()const noexcept{
             for(int i = 0;i < m;i++){
