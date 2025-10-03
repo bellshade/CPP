@@ -82,7 +82,6 @@ class HashTable{
         }
 
     public:
-
     //default constructor
         HashTable(){
             this->m = 0;
@@ -113,7 +112,6 @@ class HashTable{
                     curr = curr->next;
                 }
             }
-
         }
         ~HashTable(){
             clear();
@@ -156,6 +154,7 @@ class HashTable{
             }
             return false;
         }
+
     public:
         void print(){
             for(int i = 0;i < m;i++){
