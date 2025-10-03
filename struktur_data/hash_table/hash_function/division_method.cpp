@@ -105,7 +105,7 @@ public:
             if (curr->val == value) {
                 return true;
             }
-            curr = curr->next;  // <== perbaikan bug, harus majuin curr
+            curr = curr->next; 
         }
         return false;
     }
