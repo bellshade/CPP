@@ -35,7 +35,7 @@ class HashTable{
         struct Node{
             int x;
             Node* next;
-            Node(int x){
+            explicit Node(int x){
                 this->x = x;
                 this->next = nullptr;
             }
@@ -83,13 +83,13 @@ class HashTable{
 
     public:
     //default constructor
-        HashTable(){
+        explicit HashTable(){
             this->m = 0;
             this->n = 0;
             this->table = new Node*[m];
             table[m] = nullptr;
         }
-        HashTable(int size){
+        explicit HashTable(int size){
             this->m = size;
             this->n = 0;
             this->table = new Node*[m];
@@ -98,7 +98,7 @@ class HashTable{
             }
         }
         //copy constructor
-        HashTable(const HashTable& others){
+        explicit HashTable(const HashTable& others){
             m = others.m;
             n = others.n;
             table =new Node*[m];
@@ -136,9 +136,8 @@ class HashTable{
             while(curr != nullptr){
                 if(curr->x == value){
                     Node* temp = curr;
-                    curr = curr->next;
-                    n--;
                     delete temp;
+                    n--;
                     return true;
                 }
             }
