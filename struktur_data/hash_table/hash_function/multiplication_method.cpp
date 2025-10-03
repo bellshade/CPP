@@ -133,13 +133,22 @@ class HashTable{
         bool deletion(int value){
             int index = hash(value);
             Node* curr = table[index];
+            Node* prev = nullptr;
             while(curr != nullptr){
                 if(curr->x == value){
-                    Node* temp = curr;
-                    delete temp;
+                    if(prev == nullptr){
+                        //head menunjuk node setelah curr
+                        table[index] = curr->next;
+                    }else{
+                        //linking prev ke node setelah curr
+                        prev->next = curr->next;
+                    }
+                    delete curr;
                     n--;
                     return true;
-                }
+                }   
+                prev = curr;
+                curr = curr->next;
             }
             return false;
         }
