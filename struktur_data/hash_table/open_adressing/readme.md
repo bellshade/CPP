@@ -46,15 +46,9 @@ belajar pada
 
 <p style="text-allign: justify">
     <code>Linear Probing</code> adalah salah satu teknik <code>open adressing</code> pada hash table untuk menangani <code>collision(tabrakan)</code>.Jika sebuah slot <code>index hash</code>,maka algoritma akan mencari slot kosong secara <code>linear</code> didalam array hash table.
-<pre><code>
-    
-$$h(k) = (h(k + 1)) \bmod \text{Capacity}$$
 
-$${atau}$$
+`h(k) = (h(k + 1)) % Capacity`
 
-$$h(k) = (h(k + 1)) \% \text{Capacity}$$
-
-</code></pre>
 </p>
 
 
@@ -62,7 +56,9 @@ $$h(k) = (h(k + 1)) \% \text{Capacity}$$
 <p style="text-allign: justify">
 
 dimana:
+
 h(k) = hash index
+
 capacity = kapasitas hash table
 
 </p>
