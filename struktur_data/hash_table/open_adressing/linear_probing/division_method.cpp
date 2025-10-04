@@ -24,19 +24,28 @@ private:
 
 public:
   // default constructor
-  HashTable() {
+  explicit HashTable() {
     this->capacity = 8;
     this->size = 0;
     this->table = new int[capacity];
   }
   // constructor
-  HashTable(std::size_t cap) {
+  explicit HashTable(std::size_t cap) {
     this->capacity = cap;
     this->size = 0;
     this->table = new int[capacity];
     // assign(capacity,empty)
     for (std::size_t i = 0; i < capacity; i++) {
       table[i] = Empty;
+    }
+  }
+  //copy constructor
+  explicit HashTable(const HashTable& others){
+    size = others.size;
+    capacity = others.capacity;
+    table = new int[capacity];
+    for(std::size_t i = 0;i < others.capacity;i++){
+        table[i] = others.table[i];
     }
   }
   // destructor
