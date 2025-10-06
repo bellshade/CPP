@@ -46,3 +46,15 @@ Jika sebuah slot index hash penuh, maka algoritma akan mencari slot kosong secar
 Rumus probing:
 ```math
 h(k) = (h(k) + 1) \bmod \text{Capacity}
+```
+Dimana:
+- `h(k)` = hash index
+- `Capacity` = kapasitas hash table
+
+**Contoh langkah:**
+1. Hitung index awal: `idx = h(k) % m`
+2. Jika `table[idx]` kosong → simpan di `table[idx]`
+3. Jika penuh → coba `idx = (idx + 1) % m`
+4. Ulangi langkah 3 sampai menemukan slot kosong atau tabel penuh
+
+Salah satu implementasi Linear Probing dapat digunakan pada hash function: [division_method.cpp](struktur_data/hash_table/hash_table.cpp)
