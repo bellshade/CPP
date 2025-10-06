@@ -1,80 +1,48 @@
-# Daftar Isi
+# Hash Table - Open Addressing
 
-1. [Definisi open adressing](#definisi-open-adressing)  
-2. [Requirements](#requirements)   
+## Daftar Isi
+1. [Definisi Open Addressing](#definisi-open-addressing)  
+2. [Requirements](#requirements)  
 3. [Jenis Open Addressing](#jenis-open-addressing)  
    - [Linear Probing](#linear-probing)  
    - [Quadratic Probing](#quadratic-probing)  
    - [Double Hashing](#double-hashing)  
 
-## 1.definisi open adressing
-<p style="text-allign: justify;">
-Open Adressing adalah metode  dimana semua element disimpan langsung didalam hash table itu sendiri,tanpa menggunakan data struktur eksternal seperti linked list.jika terjadi collision, maka algoritma akan mencari slot kosong lain didalam array berdasarkan aturan pencarian(probing).  
-</p>
+---
 
-## 2.requirements
-<p style="text-allign: justify">
-Dibutuhkan prasyarat untuk Melankah ke linear probing diantaranya:
+## 1. Definisi Open Addressing
+Open Addressing adalah metode dimana semua elemen disimpan langsung di dalam hash table itu sendiri, tanpa menggunakan struktur data eksternal seperti linked list.  
+Jika terjadi **collision (tabrakan)**, maka algoritma akan mencari slot kosong lain di dalam array berdasarkan aturan pencarian (*probing*).  
 
-- memahami implementasi <code>Array</code>
+---
 
-- memahami implementasi <code>Circular Array</code>
+## 2. Requirements
+Dibutuhkan prasyarat untuk melangkah ke linear probing, di antaranya:
 
-- memahami implementasi dynamic array misal 
-<code>doubling method</code> untuk memperbesar ukuran hash table
+- Memahami implementasi **Array**  
+- Memahami implementasi **Circular Array**  
+- Memahami implementasi **Dynamic Array**, misalnya *doubling method* untuk memperbesar ukuran hash table  
+- Memahami **Hash Function**, misalnya *Division Method*  
 
-- memahami hash function misal <code>division method</code>
+Jika belum terlalu memahami requirements di atas, Anda dapat belajar pada:
 
-jika belum terlalu memahami requirements diatas,anda dapat
-belajar pada
+- [Hash Function](struktur_data/hash_table/hash_function)  
+- [Dynamic Array](https://www.geeksforgeeks.org/dsa/how-do-dynamic-arrays-work/)  
+- [Circular Array](https://www.geeksforgeeks.org/dsa/circular-array/)  
+- [Array](https://www.geeksforgeeks.org/dsa/array-data-structure-guide/)  
 
-- [hash function](struktur_data/hash_table/hash_function)
+---
 
-- [dynamic array](https://www.geeksforgeeks.org/dsa/how-do-dynamic-arrays-work/)
+## 3. Jenis Open Addressing
+Jenis *open addressing* dibedakan dari metode mencari slot kosong pada array.  
+Ada 3 jenis *open addressing* yaitu:  
 
-- [circular array](https://www.geeksforgeeks.org/dsa/circular-array/)
+---
 
-- [array](https://www.geeksforgeeks.org/dsa/array-data-structure-guide/)
-</p>
+### Linear Probing
+**Linear Probing** adalah salah satu teknik *open addressing* pada hash table untuk menangani **collision (tabrakan)**.  
+Jika sebuah slot index hash penuh, maka algoritma akan mencari slot kosong secara **linear** di dalam array hash table.  
 
-## 3.Jenis Open Adressing   
-<p style="text-allign: justify">
-    Jenis <code>open addressing</code> dibedakan dari metode mencari slot kosong pada array.Ada 3 jenis <code>open adressing</code> yaitu:
-</p>
-
-- ### Linear Probing
-
-<p style="text-allign: justify">
-    <code>Linear Probing</code> adalah salah satu teknik <code>open adressing</code> pada hash table untuk menangani <code>collision(tabrakan)</code>.Jika sebuah slot <code>index hash</code>,maka algoritma akan mencari slot kosong secara <code>linear</code> didalam array hash table.
-
-`h(k) = (h(k + 1)) % Capacity`
-
-</p>
-
-
-
-<p style="text-allign: justify">
-
-dimana:
-
-h(k) = hash index
-
-capacity = kapasitas hash table
-
-</p>
-
-**contoh**
-
-
-<p style="text-allign: justify>
-
-Misalkan fungsi hash <code>h(k)</code> dan kapasitas tabel <code>m</code>. Ketika ingin memasukkan kunci <code>k</code>:
-
-1. Hitung index awal: idx = h(k) % m
-2. Jika table[idx] kosong → simpan di table[idx]
-3. Jika penuh → coba idx = (idx + 1) % m
-4. Ulangi langkah 3 sampai menemukan slot kosong atau tabel penuh
-</p>
-
-salah satu implementasi Linear Probing dapat digunakan pada hash function
-[division method](struktur_data/hash_table/open_adressing/linear_probing/division_method.cpp).
+Rumus probing:
+```math
+h(k) = (h(k) + 1) \bmod \text{Capacity}
