@@ -19,7 +19,6 @@
 #include <vector>
 #include <algorithm>
 
-
 void pigeonholeSort(std::vector<int>& arr) {
     // Cari nilai minimum dan maksimum
     int min_val = *min_element(arr.begin(), arr.end());
