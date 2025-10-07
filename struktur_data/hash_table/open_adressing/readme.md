@@ -54,19 +54,19 @@ Dimana:
 **Contoh langkah:**
 1. Buat Hash Table
 
-![step1](../../asset/gift/step0.gif)
+![step1](../asset/gift/step0.gif)
 
 2. Hitung index awal: `idx = h(k) % m`
 
-![step2](../../asset/gift/step1.gif)
+![step2](../asset/gift/step1.gif)
 
 3. Jika `table[idx]` kosong → simpan di `table[idx]`
 
-![step 2](../../asset/gift/step2.gif)
+![step 2](../asset/gift/step2.gif)
 
 4. Jika penuh → coba `idx = (idx + 1) % m`
 
-![step 3](../../asset/gift/step3.gif)
+![step 3](../asset/gift/step3.gif)
 
 5. Ulangi langkah 3 sampai menemukan slot kosong atau tabel penuh
 
