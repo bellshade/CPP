@@ -52,9 +52,22 @@ Dimana:
 - `Capacity` = kapasitas hash table
 
 **Contoh langkah:**
-1. Hitung index awal: `idx = h(k) % m`
-2. Jika `table[idx]` kosong → simpan di `table[idx]`
-3. Jika penuh → coba `idx = (idx + 1) % m`
-4. Ulangi langkah 3 sampai menemukan slot kosong atau tabel penuh
+1. Buat Hash Table
+
+![step1](../asset/gift/step0.gif)
+
+2. Hitung index awal: `idx = h(k) % m`
+
+![step2](../asset/gift/step1.gif)
+
+3. Jika `table[idx]` kosong → simpan di `table[idx]`
+
+![step4](../asset/gift/step2.gif)
+
+4. Jika penuh → coba `idx = (idx + 1) % m`
+
+![step4](../asset/gift/step3.gif)
+
+5. Ulangi langkah 3 sampai menemukan slot kosong atau tabel penuh
 
 Salah satu implementasi Linear Probing dapat digunakan pada hash function: [division_method.cpp](struktur_data/hash_table/hash_table.cpp)
