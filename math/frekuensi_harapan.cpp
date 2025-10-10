@@ -15,6 +15,7 @@
 #include <iostream>
 #include <numeric>
 namespace expected_frequency {
+
 namespace koin {
 /**
  * @brief Menghitung frekuensi harapan untuk lemparan koin (1 sisi).
@@ -46,7 +47,8 @@ double frequency(int iteration, int number) {
   return iteration * Pa;
 }
 } // namespace koin
-namespace kartu_remi {
+
+namespace kartu_remi { // namespace kartu_remi
 /**
  * @brief Menghitung frekuensi harapan munculnya 1 kartu tertentu dari dek remi
  * (52 kartu).
@@ -76,8 +78,9 @@ double frequency(int iteration, int number) {
   double Pa = (1.0 / 52.0) * number;
   return iteration * Pa;
 }
-} // namespace kartu_remi
-namespace dadu {
+} 
+
+namespace dadu { // namespace dadu
 /**
  * @brief Menghitung frekuensi harapan munculnya satu angka pada 1 dadu.
  *
@@ -100,13 +103,14 @@ double frequency(int iteration) { return iteration * (1.0 / 6.0); }
  *
  * @example frequency(60, 2) = 60 × (2/6) = 20
  */
-
 double frequency(int iteration, int number) {
   double Pa = (1.0 / 6.0) * number;
   return iteration * Pa;
 }
-} // namespace dadu
-namespace dadu_custom {
+} 
+
+namespace dadu_custom {// namespace dadu
+
 /**
  * @brief Menghitung frekuensi harapan untuk dadu/custom set angka dengan syarat
  * tertentu.
@@ -134,8 +138,9 @@ double frequency(std::initializer_list<int> arr, UnaryPred p, int iteration) {
   double Pa = static_cast<double>(kriteria) / arr.size();
   return iteration * Pa;
 }
-} // namespace dadu_custom
-namespace others {
+} 
+
+namespace others {// namespace dadu_custom
 /**
  * @brief Menghitung frekuensi harapan berdasarkan distribusi bobot custom.
  *
@@ -165,7 +170,6 @@ double frequency(std::initializer_list<int> arr, int iteration, int a) {
  *
  * @example negasi_frequency(0.4, 60) = 36
  */
-
 double negasi_frequency(double peluang, int iteration) {
   return (1 - peluang) * iteration;
 }
