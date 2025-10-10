@@ -1,3 +1,31 @@
+/**
+ * @file quadratic_probing.cpp
+ * @brief Implementasi metode Quadratic Probing untuk menangani tabrakan
+ * (collision) pada hash table.
+ *
+ * # Deskripsi (Description)
+ * Menambahkan program salah satu metode untuk menangani tabrakan pada hash
+ * table dengan teknik *open addressing*, yaitu **Quadratic Probing**.
+ *
+ * Pada metode ini, jika terjadi tabrakan di posisi hasil hash awal `h(k)`, maka
+ * posisi baru dihitung menggunakan fungsi kuadrat dari indeks percobaan (`i`):
+ *
+ *
+ * h(k, i) = (h(k) + i^2) % m
+ *
+ * di mana:
+ * - `h(k)` : hasil hash awal.
+ * - `i`    : jumlah percobaan (0, 1, 2, 3, ...).
+ * - `m`    : kapasitas tabel hash.
+ *
+ * Metode ini mengurangi kemungkinan *primary clustering* yang sering muncul
+ * pada *linear probing*.
+ * @note Quadratic probing memerlukan bahwa ukuran tabel (`m`) sebaiknya
+ * bilangan prima agar distribusi posisi hasil probing lebih merata.
+ *
+ * @see linear_probing.cpp untuk perbandingan metode linear probing.
+ *
+ */
 #include <cstddef>
 #include <iostream>
 class HashTable {
@@ -5,6 +33,32 @@ private:
   enum Status { EMPTY, OCCUPIED, DELETED };
 
 private:
+  /**
+   * @struct Entry
+   * @brief Struktur data untuk merepresentasikan satu slot (entri) pada hash
+   * table.
+   *
+   * Struktur `Entry` digunakan untuk menyimpan elemen pada tabel hash,
+   * sekaligus menandai status dari setiap slot (apakah kosong, terisi, atau
+   * dihapus) saat menggunakan metode *open addressing* seperti **Quadratic
+   * Probing**.
+   *
+   * ---
+   * @details Field (Anggota Data)
+   * - `int key`
+   *   Menyimpan nilai kunci (key) yang akan dimasukkan ke dalam tabel hash.
+   *   Nilai `key` digunakan dalam perhitungan fungsi hash.
+   *
+   * - `Status status`
+   *   Menyimpan status dari entri:
+   *   - `Status::EMPTY` → slot belum pernah terisi.
+   *   - `Status::OCCUPIED` → slot saat ini terisi oleh sebuah kunci.
+   *   - `Status::DELETED` → slot pernah terisi tapi sekarang kosong (dihapus),
+   *     tetap dipertahankan agar probing tidak terputus.
+   *
+   * ---
+   *
+   */
   struct Entry {
     int key;
     Status status;
