@@ -71,3 +71,49 @@ Dimana:
 5. Ulangi langkah 3 sampai menemukan slot kosong atau tabel penuh
 
 Salah satu implementasi Linear Probing dapat digunakan pada hash function: [division_method.cpp](struktur_data/hash_table/hash_table.cpp)
+
+### Quadratic Probing
+**Quadratic Probing** adalah salah satu metode penanganan collision pada `hash table` untuk menangani **collision (tabrakan)**
+
+Jika sebuah slot index hash penuh, maka algoritma akan mencari slot kosong menggunakan **fungsi kuadrat** terhadap jumlah percobaan `probe`
+
+Rumus **Quadratic probing**
+```math
+h(k) = (h(k) + c1 * i + c2 *i * i) \bmod \text{capacity}
+```
+
+dimana:
+
+`h(k)` = index hash
+
+`i` = jumlah percobaan(probe) ke -i
+
+`c1,c2` = kostanta(biasanya `c1 = c2 = 1`) 
+
+`capacity` = kapasitas hash table(banyak bucket)
+
+**Langkah-langkah Quadratic Probing**
+1.Gunakan fungsi hash untuk mendapatkan posisi awal
+```math
+h(k) = key \bmod \text{capacity}
+```
+2.periksa apakah slot kosong
+
+- jika posisi h(k) kosong -> simpan data disitu
+
+- jika sudah terisi lanjut ke langkah berikutnya
+
+3.Gunakan fungsi kuadrat untuk mencari posisi baru
+saat terjadi `collision` ke-i,hitung posisi baru:
+```math
+h(k) = (h(k) + c1 * i + c2 *i * i) \bmod \text{capacity}
+```
+4.cek apakah slot hasil probing kosong
+
+- jika posisi h(k) kosong -> simpan data disitu
+
+- jika sudah terisi ->increment i(i++)
+
+5.berhenti jika ditemukan posisi kosong atau table penuh
+
+Salah satu implementasi Quadratic Probing dapat digunakan pada hash function: [Quadratic Probing.cpp](struktur_data/hash_table/open_adressing/quadratic_probing/division_method.cpp)
