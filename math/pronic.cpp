@@ -24,13 +24,14 @@
  */
 
 bool adalah_pronic(int n) {
-        int x = static_cast<int>(sqrt(n)); 
-        return (x * (x + 1) == n); //rumus pronic
         /**
          * Aproksimasi nilai x.
          * Contoh: n = 12, aproksimasi dari sqrt(12) adalah 3.162277
          * Hasil kemudian di-cast ke int sehingga menjadi 3 (truncation)
          */
+        int x = static_cast<int>(sqrt(n)); 
+        return (x * (x + 1) == n); //rumus pronic
+        
 }
 
 int main() {
