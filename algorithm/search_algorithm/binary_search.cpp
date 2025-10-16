@@ -13,7 +13,7 @@
  * Jika titik tengah lebih besar daripada data yang dicari maka pencarian dimulai dari titik awal pencarian sampai index tengah
  * Jika titik tengah lebih kecil daripada data yang dicari maka pencarian dimulai dari index tengah sampai index terakhir
  * 
- * Hasilnya akan ditampilkan di terminal.
+ * Hasilnya ditampilkan di terminal.
  */
 
 #include <iostream>
