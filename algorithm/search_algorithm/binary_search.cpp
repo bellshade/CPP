@@ -19,7 +19,7 @@
 #include <iostream>
 #include <vector>
 
-int binary_search(const std::vector<int>& arr, int n) {
+int binary_search(std::vector<int>& arr, int n) {
     // Inisialisasi indeks paling kiri dan kanan
     int left = 0;
     int right = arr.size() - 1;
