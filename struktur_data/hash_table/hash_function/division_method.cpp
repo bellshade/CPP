@@ -33,9 +33,7 @@ private:
 
 public:
     // default constructor
-    HashTable() : m(0) {
-        table = new Node*[m];
-        table[m] = nullptr;
+    HashTable() : m(0), table(nullptr) {
     }
 
     explicit HashTable(int size) : m(size) {
